@@ -11,7 +11,8 @@
 
 ```text
 .
-├── index.html                  # 원본 기사 + 최소 연결 코드
+├── index.html                  # 원본 기사 + 네트워크 시각화 삽입
+├── network-visualization.html  # 별도 문서로 격리한 인터랙티브 네트워크 시각화
 ├── manifest.webmanifest        # PWA 설치 메타데이터
 ├── sw.js                       # 오프라인 캐시 서비스워커
 ├── offline.html                # 최초 오프라인 방문 안내
@@ -86,3 +87,21 @@ Cloudflare 대시보드에서 Zaraz를 활성화한 뒤, `article_scroll_depth`�
 - Cloudflare Pages Git integration: https://developers.cloudflare.com/pages/get-started/git-integration/
 - Cloudflare Web Analytics: https://developers.cloudflare.com/pages/how-to/web-analytics/
 - Cloudflare Zaraz track: https://developers.cloudflare.com/zaraz/web-api/track/
+
+## 이번 통합에서 변경한 부분
+
+- 기존 `어디에, 얼마나 쌓였나 → 자세히 보기` 접이식 영역을 제거했습니다.
+- 그 위치에 네트워크 시각화를 기본 노출하는 섹션을 넣었습니다.
+- 시각화는 `network-visualization.html`로 분리해 CSS/JavaScript 충돌을 막고, 기존 노드·연결 선택 기능을 보존했습니다.
+- 색상은 기사 본문의 남색/아이보리/코랄/블루 계열에 맞추되, 네트워크의 발광 효과와 3그룹 색상 구분을 유지했습니다.
+- 서비스워커가 네트워크 시각화 페이지도 별도 캐시하도록 수정했습니다.
+- 시각화 내부의 외부 툴팁/아이콘 라이브러리는 원본과 같이 unpkg에서 불러옵니다. 해당 CDN에 접속할 수 없는 환경에서는 일부 보조 UI만 제한될 수 있습니다.
+
+## GitHub 업데이트
+
+기존 GitHub 저장소의 최상위에 아래 파일을 덮어쓰거나 추가한 뒤 커밋하면 Cloudflare Pages가 자동 배포합니다.
+
+- `index.html` 덮어쓰기
+- `network-visualization.html` 새 파일 추가
+- `sw.js` 덮어쓰기
+- `_headers` 덮어쓰기
