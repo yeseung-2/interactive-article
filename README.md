@@ -1,107 +1,58 @@
-# 인터랙티브 기사 — Cloudflare Pages 배포 프로젝트
+# 연락처 너머에서는 답이 왔다 | 인터랙티브 기사
 
-## 원본을 보존한 변경 원칙
+이 저장소는 인터랙티브 기사 웹사이트의 배포용 파일입니다. GitHub 저장소의 최상위에 `index.html`이 있어야 Cloudflare Pages가 첫 화면을 정상적으로 찾을 수 있습니다.
 
-- 원본 HTML의 인라인 CSS/JavaScript와 `srcdoc` iframe 3개를 그대로 유지했습니다.
-- 기존 HTML을 `index.html`로 배치하고, PWA 메타데이터/manifest 연결/서비스워커 등록만 추가했습니다.
-- `analytics.js`는 기사 스크롤 25/50/75/90%와 의미 있는 컨트롤 클릭을 Cloudflare Zaraz로 보냅니다. 화면 텍스트, 입력값, 개인식별정보는 수집하지 않습니다.
-- `sw.js`는 설치 시 16.6MB 본문을 선캐시하지 않습니다. 온라인으로 기사를 성공적으로 연 뒤에만 해당 문서를 캐시에 저장해 재방문 오프라인 접근을 지원합니다.
-
-## 프로젝트 구조
+## 파일 구성
 
 ```text
 .
-├── index.html                  # 원본 기사 + 네트워크 시각화 삽입
-├── network-visualization.html  # 별도 문서로 격리한 인터랙티브 네트워크 시각화
-├── manifest.webmanifest        # PWA 설치 메타데이터
-├── sw.js                       # 오프라인 캐시 서비스워커
-├── offline.html                # 최초 오프라인 방문 안내
-├── robots.txt                  # 검색 크롤러 허용
-├── _headers                    # 보안/캐시 응답 헤더
-├── assets/
-│   ├── icons/                  # SVG, 192px, 512px 앱 아이콘
-│   └── js/analytics.js         # Zaraz 커스텀 이벤트
-└── README.md
+├── index.html                 # 메인 인터랙티브 기사
+├── manifest.webmanifest       # 웹앱 설치 정보
+├── sw.js                      # 서비스 워커 및 오프라인 캐시
+├── offline.html               # 오프라인 안내 화면
+├── robots.txt                 # 검색엔진 크롤러 안내
+├── _headers                   # Cloudflare 응답 헤더 설정
+└── assets/
+    └── icons/
+        ├── icon.svg
+        ├── icon-192.png
+        └── icon-512.png
 ```
+
+## 팀원이 수정하는 방법
+
+1. Git으로 저장소를 Clone합니다.
+2. Clone한 저장소 폴더를 VS Code 또는 Codex에서 엽니다.
+3. 기사 내용과 화면 구성은 `index.html`에서 수정합니다.
+4. 수정한 뒤 로컬 웹서버 또는 배포 미리보기에서 PC와 모바일 화면을 확인합니다.
+5. `git status`와 `git diff`로 변경 사항을 확인합니다.
+6. 팀 작업 규칙에 따라 Commit하고 GitHub에 Push합니다.
+
+## 중요한 주의사항
+
+- `index.html` 파일은 저장소 최상위에 유지합니다.
+- 파일 이름과 상대 경로를 임의로 바꾸지 않습니다.
+- 기존 인터랙션을 수정하기 전 관련 JavaScript와 HTML 구조를 확인합니다.
+- 이 버전은 업로드된 최신 HTML을 메인 페이지로 사용합니다. 기사에 필요한 콘텐츠와 스크립트는 HTML 내부에 포함되어 있습니다.
+- 서비스 워커는 이전 버전이 캐시되는 상황을 줄이도록 네트워크 우선 방식으로 동작합니다. 배포 후 화면이 갱신되지 않으면 브라우저에서 강력 새로고침을 해 주세요.
 
 ## Cloudflare Pages 배포
 
-1. 이 폴더의 파일을 GitHub 새 저장소(예: `interactive-article`) 루트에 올립니다.
-2. Cloudflare 대시보드 → Workers & Pages → Create application → Pages → Connect to Git.
-3. GitHub 저장소를 선택하고 다음처럼 설정합니다.
-   - Production branch: `main`
-   - Framework preset: `None` / `No framework`
-   - Build command: `exit 0` (정적 파일만 배포하므로 빌드 작업 없음)
-   - Build output directory: `/` 또는 `.` (화면에서 루트 디렉터리를 요구하는 형식에 맞춤)
-   - Root directory: 저장소 루트
-4. Save and Deploy를 누릅니다. 배포 후 `https://프로젝트명.pages.dev`에서 확인합니다.
-5. Git 연동은 커밋/푸시할 때 자동 배포되고, 브랜치/PR 미리보기 주소도 제공합니다.
+기존 GitHub 연동 프로젝트를 사용한다면 저장소의 `main` 브랜치에 Push한 뒤 Cloudflare Pages의 Deployments에서 배포 성공 여부를 확인합니다.
 
-**중요:** Cloudflare Pages 프로젝트 생성 시 Git 연동을 선택하세요. Direct Upload로 시작하면 이후 Git 연동 방식으로 전환할 수 없습니다.
+새 프로젝트로 연결한다면:
+- Framework preset: None
+- Build command: 비워 두거나 `exit 0`
+- Build output directory: `/` 또는 프로젝트 루트에 해당하는 `.`
 
-## 분석 설정
+Cloudflare Pages가 이 저장소의 `main` 브랜치를 배포하도록 연결되어 있어야 자동 배포됩니다.
 
-### 1) 페이지뷰/성능 지표
+## 로컬 미리보기
 
-Cloudflare 대시보드 → Workers & Pages → 해당 Pages 프로젝트 → Metrics → Web Analytics → Enable. Pages가 다음 배포에서 beacon을 자동 삽입합니다.
+프로젝트 루트에서 다음 명령어를 실행합니다.
 
-### 2) 기사 인터랙션 이벤트
+```bash
+python3 -m http.server 8000
+```
 
-Cloudflare 대시보드에서 Zaraz를 활성화한 뒤, `article_scroll_depth`와 `article_interaction` 이벤트를 수신하는 Trigger를 만들고, 사용할 분석 도구(GA4 등)의 Event action에 연결합니다. 이벤트 코드는 Zaraz가 켜져 있지 않으면 아무 데이터도 전송하지 않습니다.
-
-참고: iframe 내부에서 일어나는 클릭은 부모 문서의 이벤트 리스너에 전달되지 않습니다. 첫 버전에서는 부모 페이지의 버튼/링크/요약 요소와 스크롤 깊이부터 측정합니다. iframe 안의 스토리·지도·차트 상호작용까지 분석하려면 각 iframe `srcdoc` 내부에 별도 이벤트 코드를 넣고 회귀 테스트해야 합니다.
-
-## SEO 후속 작업
-
-- 현재 문서의 제목과 description은 기존 값을 유지하고 Open Graph title/description/type을 추가했습니다.
-- 실제 배포 주소와 대표 이미지가 정해지면 `og:url`, `og:image`, canonical URL, `sitemap.xml`을 절대 URL로 확정하세요. 주소를 모르는 상태에서 가짜 도메인을 넣지 않았습니다.
-- 검색 결과에 노출되기 전 배포 URL에서 제목/설명/대표 이미지 미리보기를 검증하세요.
-
-## PWA 검증
-
-- 반드시 HTTPS 배포 주소에서 확인합니다.
-- Chrome DevTools → Application → Manifest에서 이름/아이콘/시작 URL 확인.
-- Application → Service Workers에서 활성 상태 확인.
-- 온라인으로 기사 1회 열기 → 새로고침 → 개발자도구 Network에서 Offline 전환 → 재접속해 캐시 동작 확인.
-- iframe 내부 콘텐츠/스크롤 연동이 온라인·오프라인 양쪽에서 유지되는지 확인합니다.
-
-## 성능 최적화 2차 단계 (회귀 테스트 후)
-
-원본 문서가 약 16.6MB이며 이미지가 data URI로 HTML/CSS 안에 포함돼 있습니다. 따라서 이번 보존형 1차 배포에서는 이미지를 추출하거나 iframe을 분리하지 않았습니다. 다음 단계에서 이미지 data URI를 WebP/AVIF 파일로 추출하고, CSS 배경/iframe srcdoc 참조를 바꾼 뒤 모바일/데스크톱에서 모든 인터랙션을 회귀 테스트하세요. 이 변경이 초기 로딩 크기 개선의 가장 큰 후보입니다.
-
-## 배포 전 체크리스트
-
-- [ ] 데스크톱/모바일에서 전체 기사 스크롤
-- [ ] 본문 버튼, 탭, 차트/확대 기능
-- [ ] iframe 3개 로딩 및 부모 스크롤/메시지 연동
-- [ ] 브라우저 콘솔 오류 없음
-- [ ] manifest 아이콘 192/512 정상 표시
-- [ ] service worker 설치/오프라인 재방문
-- [ ] Web Analytics 페이지뷰 표시
-- [ ] Zaraz 이벤트 테스트 모드에서 이벤트 수신
-- [ ] Lighthouse 모바일/데스크톱 측정 및 결과 기록
-
-## 참고
-
-- Cloudflare Pages 정적 HTML: https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
-- Cloudflare Pages Git integration: https://developers.cloudflare.com/pages/get-started/git-integration/
-- Cloudflare Web Analytics: https://developers.cloudflare.com/pages/how-to/web-analytics/
-- Cloudflare Zaraz track: https://developers.cloudflare.com/zaraz/web-api/track/
-
-## 이번 통합에서 변경한 부분
-
-- 기존 `어디에, 얼마나 쌓였나 → 자세히 보기` 접이식 영역을 제거했습니다.
-- 그 위치에 네트워크 시각화를 기본 노출하는 섹션을 넣었습니다.
-- 시각화는 `network-visualization.html`로 분리해 CSS/JavaScript 충돌을 막고, 기존 노드·연결 선택 기능을 보존했습니다.
-- 색상은 기사 본문의 남색/아이보리/코랄/블루 계열에 맞추되, 네트워크의 발광 효과와 3그룹 색상 구분을 유지했습니다.
-- 서비스워커가 네트워크 시각화 페이지도 별도 캐시하도록 수정했습니다.
-- 시각화 내부의 외부 툴팁/아이콘 라이브러리는 원본과 같이 unpkg에서 불러옵니다. 해당 CDN에 접속할 수 없는 환경에서는 일부 보조 UI만 제한될 수 있습니다.
-
-## GitHub 업데이트
-
-기존 GitHub 저장소의 최상위에 아래 파일을 덮어쓰거나 추가한 뒤 커밋하면 Cloudflare Pages가 자동 배포합니다.
-
-- `index.html` 덮어쓰기
-- `network-visualization.html` 새 파일 추가
-- `sw.js` 덮어쓰기
-- `_headers` 덮어쓰기
+Windows에서 `python3`가 동작하지 않으면 `python -m http.server 8000`을 사용합니다. 브라우저에서 `http://localhost:8000`을 엽니다.
