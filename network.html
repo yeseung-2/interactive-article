@@ -1,0 +1,2933 @@
+<!DOCTYPE html>
+
+<html data-visualize-standalone="" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="no-referrer" name="referrer"/>
+<meta content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" http-equiv="Content-Security-Policy"/>
+<title>어떤 마약을, 누가, 어디서 광고하나?</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:0;margin:0;background:#0c1015}iframe{display:block;width:100%;height:100vh;min-height:0;margin:0 auto;border:0}</style>
+<style>html,body{background:#000!important}</style><style>html{-webkit-text-size-adjust:100%} body{max-width:100%;margin-inline:auto} svg,img,canvas{max-width:100%} @media(max-width:600px){button{min-height:44px} input,select{font-size:16px}}</style></head>
+<body>
+<iframe data-srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;ko&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'&quot;&gt;
+&lt;title&gt;어떤 마약을, 누가, 어디서 광고하나?&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 16px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans:
+    -apple-system-body, ui-sans-serif, -apple-system, system-ui, &quot;Segoe UI&quot;,
+    Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;,
+    &quot;Segoe UI Symbol&quot;;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 8px);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath d='M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z'/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-weight: var(--font-weight-normal);
+}
+
+.cursor-interaction {
+  cursor: var(--cursor-interaction, pointer);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+  text-underline-offset: 2px;
+  font-weight: inherit;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+.table {
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: calc(var(--font-size-base) * 1.5);
+  line-height: 1.3333333333;
+}
+
+h2 {
+  font-size: calc(var(--font-size-base) * 1.25);
+  line-height: 1.4;
+}
+h3 {
+  font-size: calc(var(--font-size-base) * 1.125);
+  line-height: 1.5555555556;
+}
+h4 {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+h5,
+h6 {
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: 600;
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+pre,
+pre code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: calc(var(--font-size-base) * 0.875);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-family: var(--font-sans);
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 5%, transparent);
+}
+.table :is(th, td):not(:last-child) {
+  padding-inline-end: calc(var(--font-size-base) * 1.5);
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead :is(th, td) {
+  border-bottom-color: var(--border-strong, var(--input));
+  padding-block: calc(var(--font-size-base) / 2);
+  line-height: var(--font-size-base);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+.table tbody :is(th, td) {
+  padding-block: calc(var(--font-size-base) * 0.625);
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 8px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+.widget {
+  min-width: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  box-shadow: 0 0 0 0.5px var(--border-strong, var(--border));
+  color: var(--foreground);
+  background: var(--background);
+}
+
+#widget &gt; :not(.card, .widget, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  border: 1px solid var(--border);
+  corner-shape: var(--corner-shape);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-sans);
+  padding: 5px 12px;
+  border-color: color-mix(
+    in oklab,
+    light-dark(var(--primary-foreground), var(--foreground)) 5%,
+    transparent
+  );
+  border-radius: var(--radius-2xl);
+  color: light-dark(var(--primary-foreground), var(--foreground));
+  background: light-dark(var(--foreground), var(--popover));
+  box-shadow: 0 8px 18px rgb(15 23 42 / 20%);
+  letter-spacing: -0.15px;
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  color: color-mix(in srgb, var(--foreground) 40%, var(--muted-foreground));
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-family: var(--font-sans);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+}
+
+small,
+.text-small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+/* Match inline alignment without overriding a containing flex or grid layout. */
+.btn,
+.nav-link,
+.form-control,
+.form-select,
+.form-range,
+.form-check {
+  vertical-align: middle;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: inherit;
+  font-family: var(--font-sans);
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  border-color: transparent;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.btn {
+  border-color: var(--border);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.btn-primary {
+  border-color: var(--border);
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: border-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: border-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--muted-foreground);
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+/* Shared preview chrome; product styles stay inside each variant. */
+.viz-dotted-background {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--foreground) 14%, transparent) 0.8px,
+    transparent 0.8px
+  );
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.viz-carousel {
+  position: relative;
+  min-width: 0;
+}
+
+.viz-carousel:has(&gt; .viz-carousel-controls) {
+  min-height: calc(60px + var(--viz-carousel-picker-height, 0px));
+  padding-bottom: 60px;
+}
+
+.viz-carousel &gt; [data-variant][hidden] {
+  display: none !important;
+}
+
+.viz-carousel &gt; [data-variant] {
+  isolation: isolate;
+}
+
+.viz-carousel-controls {
+  --viz-carousel-hover: light-dark(
+    color-mix(in srgb, var(--foreground) 5.4%, transparent),
+    color-mix(in srgb, var(--foreground) 7.8%, transparent)
+  );
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  left: 50%;
+  display: flex;
+  width: max-content;
+  /* Leave room for the host's design-controls launcher at the trailing edge. */
+  max-width: calc(100% - 96px);
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  /* Match the settings dropdown chrome independently of the content font size. */
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+/* Keep authored mockup button styles out of the shared carousel chrome. */
+.viz-carousel-controls button,
+.viz-carousel-picker &gt; summary {
+  display: flex !important;
+  height: auto !important;
+  min-height: 30px;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px;
+  padding: 0 6px !important;
+  -webkit-app-region: no-drag;
+  border: 0 !important;
+  border-radius: 14px !important;
+  color: inherit !important;
+  background: transparent !important;
+  font: inherit !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-picker &gt; summary {
+  position: relative;
+  isolation: isolate;
+}
+
+.viz-carousel-controls &gt; button {
+  --icon-size: 16px;
+  width: 30px !important;
+  padding: 0 !important;
+}
+
+.viz-carousel-picker &gt; summary {
+  padding-inline: 12px !important;
+}
+
+.viz-carousel-controls .viz-carousel-caret {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  margin: 0;
+  color: inherit;
+  transform: rotate(180deg);
+}
+
+.viz-carousel-controls &gt; button &gt; svg,
+.viz-carousel-controls .viz-carousel-caret,
+.viz-carousel-count {
+  opacity: 0.5;
+}
+
+.viz-carousel-controls &gt; button::before,
+.viz-carousel-picker &gt; summary::before {
+  position: absolute;
+  z-index: -1;
+  inset: 3px;
+  border-radius: 12px;
+  content: &quot;&quot;;
+  pointer-events: none;
+}
+
+.viz-carousel-controls &gt; button:hover::before,
+.viz-carousel-picker &gt; summary:hover::before {
+  background: var(--viz-carousel-hover);
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-controls [data-lucide],
+.viz-carousel-controls .lucide {
+  flex-shrink: 0;
+}
+
+.viz-carousel-picker {
+  min-width: 0;
+}
+
+.viz-carousel-picker &gt; summary {
+  min-width: 0;
+  list-style: none;
+}
+
+.viz-carousel-picker &gt; summary::-webkit-details-marker {
+  display: none;
+}
+
+.viz-carousel-count {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.viz-carousel-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viz-carousel-options {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 4px);
+  left: 0;
+  display: flex;
+  max-height: 240px;
+  flex-direction: column;
+  gap: 2px;
+  overflow: auto;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: 0 4px 12px light-dark(rgb(0 0 0 / 6%), rgb(0 0 0 / 25%));
+}
+
+.viz-carousel-options &gt; button {
+  border-radius: max(0px, calc(var(--radius-lg) - 5px)) !important;
+  width: 100% !important;
+  min-height: 28px;
+  justify-content: flex-start !important;
+  padding: 4px 8px !important;
+  font-size: var(--font-size-small) !important;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.viz-carousel-options &gt; [aria-current=&quot;true&quot;],
+.viz-carousel-options &gt; button:hover {
+  background: var(--viz-carousel-hover) !important;
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: calc(4px + var(--control-spacing, 12px) / 2);
+  border-color: var(--input);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--popover) 96%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4285714286;
+}
+.form-control:is(
+  [type=&quot;file&quot;],
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;],
+  [type=&quot;color&quot;]
+) {
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  line-height: 18px;
+}
+.form-control:is(
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;]
+) {
+  padding-inline: var(--control-spacing, 12px);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+  padding: 0;
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+  min-height: calc(10px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  margin-inline-end: var(--control-spacing, 12px);
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  resize: vertical;
+  min-height: 96px;
+  padding: 8px 10px;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: none;
+}
+.form-control:disabled {
+  color: var(--muted-foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  opacity: 1;
+}
+.form-control[aria-invalid=&quot;true&quot;] {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--red) 20%, transparent);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  margin: 0;
+  /* The secondary icon role is 14px at compact density and 16px at web density. */
+  --icon-size: calc(10px + var(--control-spacing, 12px) / 2);
+  /* Settings dropdowns retain a 12px inset and a 4px text-to-chevron gap. */
+  padding: 0 calc(16px + var(--icon-size)) 0 12px;
+  outline: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    ),
+    linear-gradient(
+      135deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    );
+  background-position:
+    calc(100% - 12px - var(--icon-size) / 2) 50%,
+    calc(100% - 12px - var(--icon-size) * 0.18) 50%;
+  background-repeat: no-repeat;
+  background-size: calc(var(--icon-size) * 0.32) calc(var(--icon-size) * 0.32);
+  cursor: var(--cursor-interaction, default);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.form-select :is(option, optgroup) {
+  color: var(--popover-foreground);
+  background-color: var(--popover);
+}
+
+.form-select :is(option, optgroup):disabled {
+  color: var(--muted-foreground);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.form-select:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+.form-select:disabled {
+  opacity: 0.4;
+}
+
+.form-check {
+  display: flex;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  corner-shape: round;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  width: calc(10px + var(--control-spacing, 12px) / 2);
+  height: calc(10px + var(--control-spacing, 12px) / 2);
+  border-color: var(--border-strong, var(--input));
+  border-radius: calc(var(--radius-sm) / 2);
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:is(:checked, :indeterminate) {
+  border-color: var(--border-strong, var(--input));
+  background-color: color-mix(in srgb, var(--popover) 96%, transparent);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+  background-color: var(--foreground);
+}
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:indeterminate::before {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 65%;
+  height: 6.65%;
+  margin: auto;
+  border-radius: var(--radius-full);
+  background: var(--foreground);
+  mask: none;
+  content: &quot;&quot;;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  border-radius: var(--radius-full);
+  width: 16px;
+  height: 16px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px var(--input);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 0;
+  background: radial-gradient(
+    circle,
+    var(--primary-foreground) 0 3px,
+    var(--foreground) 3px
+  );
+  box-shadow: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:focus-visible {
+  border-color: var(--ring);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;radio&quot;]:disabled,
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;radio&quot;]:disabled
+  + .form-check-label {
+  opacity: 0.5;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+  border-color: #fff;
+  background: #fff;
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--blue);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+  outline: none;
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  accent-color: var(--primary);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  outline: none;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: transparent;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  margin-top: -9px;
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Outline the native track and thumb, preserving the larger input hit area. */
+.form-range:focus-visible::-webkit-slider-runnable-track {
+  outline: 2px auto Highlight;
+  outline-color: -webkit-focus-ring-color;
+}
+
+.form-range::-moz-range-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+.form-range:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--blue);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.viz-carousel-controls :is(button, summary):focus-visible {
+  outline: 2px solid var(--ring) !important;
+  outline-offset: 2px !important;
+}
+
+/* Web recipes are the default, including on renderers without inline style queries. */
+@supports (border-radius: if(style(--corner-shape: round): 1px; else: 2px)) {
+  /* Match the host's proportional text-sm scale at every text preference. */
+  .tooltip,
+  .viz-badge,
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    font-size: if(
+      style(--corner-shape: round): round(
+          nearest,
+          calc(var(--font-size-base) * 14 / 16),
+          1px
+        );
+        else: round(nearest, calc(var(--font-size-base) * 13 / 14), 1px)
+    );
+  }
+
+  .btn,
+  .nav-link,
+  .form-select {
+    border-radius: if(
+      style(--corner-shape: round): var(--radius-full); else: var(--radius-lg)
+    );
+  }
+
+  .form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+    border-radius: if(
+      style(--corner-shape: round): calc(var(--radius-sm) / 2);
+        else: calc(var(--radius-lg) * 0.4)
+    );
+  }
+
+  .tooltip {
+    font-weight: if(
+      style(--corner-shape: round): 600; else: var(--font-weight-normal)
+    );
+  }
+}
+
+@media (pointer: coarse) {
+  .viz-carousel:has(&gt; .viz-carousel-controls) {
+    min-height: calc(76px + var(--viz-carousel-picker-height, 0px));
+    padding-bottom: 76px;
+  }
+
+  .btn,
+  .nav-link,
+  .viz-carousel-controls button,
+  .viz-carousel-picker &gt; summary,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+  .form-control:is(
+    [type=&quot;file&quot;],
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;week&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;color&quot;]
+  ) {
+    height: 44px;
+    min-height: 44px;
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;style&gt;html,body{background:#000!important}:root{--bg:#000;--page-bg:#000}&lt;/style&gt;&lt;style&gt;
+body #sphere-explorer aside{background:#101212!important;border:1px solid #333737!important;border-radius:6px!important;text-align:left!important;padding:clamp(15px,2vw,24px)!important;font-variant-numeric:tabular-nums;color:#eeeee9}
+#sphere-explorer aside :is(h3,h4,p,.stat,.hero,.tag,.value,details){text-align:left!important}
+#sphere-explorer aside h3{font-size:22px;margin:8px 0 18px;line-height:1.35}
+#sphere-explorer aside .leadnum{font:500 68px/1.05 system-ui;letter-spacing:-.065em;margin-top:26px;color:#c4ddeb}
+#sphere-explorer aside .leadnum small{font-size:16px;letter-spacing:0;margin-left:5px}
+#sphere-explorer aside .overview{margin:22px 0 18px}
+#sphere-explorer aside .overview div{display:flex;justify-content:space-between;border-top:1px solid #393c3c;padding:12px 0;font-size:14px}
+#sphere-explorer aside dd{margin:0}
+#sphere-explorer aside .intro{font-size:13px;color:#acb2b2;line-height:1.65}
+#sphere-explorer aside .stat,#sphere-explorer aside .hero{background:transparent!important;border:0!important;padding:6px 0!important}
+#sphere-explorer aside .stats-grid{border-block:1px solid #393c3c;padding:10px 0;margin-bottom:12px}
+#sphere-explorer aside .badge-row span{background:transparent;border:0;padding:0 6px 0 0}
+#sphere-explorer aside .connection{background:transparent!important;border:0!important;border-bottom:1px solid #353838!important;border-radius:0!important;padding:11px 0!important}
+#sphere-explorer aside .connection:after,#sphere-explorer aside .connection:before{display:none}
+#sphere-explorer aside button:hover,#sphere-explorer aside button:focus-visible{color:#bfdeed!important;background:#252b2d!important}
+#sphere-explorer aside .panel-top{margin-bottom:12px}
+&lt;/style&gt;&lt;style id=&quot;black-panel&quot;&gt;
+body #sphere-explorer aside[aria-label]{background:#000!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+body #sphere-explorer aside .leadnum{color:#f5f3ef;font-weight:450}
+body #sphere-explorer aside .overview div,body #sphere-explorer aside .stats-grid{border-color:#262626}
+body #sphere-explorer aside .connections{margin:8px 0 12px 5px;padding-left:14px;border-left:0}
+body #sphere-explorer aside .connections button.connection{position:relative;padding:10px 8px!important;border:0!important;border-radius:6px!important;box-shadow:none}
+body #sphere-explorer aside .connections button.connection::before{content:none;display:none;position:absolute;top:50%;left:-13px;width:9px;height:1px;background:#363636}
+body #sphere-explorer aside button,body #sphere-explorer aside .badge-row span{background:transparent;border-color:#333;color:#ccc}
+body #sphere-explorer aside button:not(:disabled):hover,body #sphere-explorer aside button:focus-visible{background:#191919!important;color:#fff!important}
+body #sphere-explorer aside button:focus-visible{outline:1px solid #bbb;outline-offset:2px}
+&lt;/style&gt;&lt;style id=&quot;panel-text-alignment&quot;&gt;
+body #sphere-explorer aside[aria-label],
+body #sphere-explorer aside[aria-label] :is(h3,h4,p,.stat,.value,.muted,.hero,.number,.tag,.scope,summary,.intro,button){text-align:center!important}
+body #sphere-explorer aside .panel-top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+body #sphere-explorer aside .panel-top .tag{grid-column:2}
+body #sphere-explorer aside .panel-top button{grid-column:3;justify-self:end}
+body #sphere-explorer aside .stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+body #sphere-explorer aside .badge-row{justify-content:center}
+body #sphere-explorer aside .overview div,body #sphere-explorer aside .connections .connection{display:grid;grid-template-columns:minmax(0,1fr) minmax(3em,.4fr);align-items:center;text-align:center}
+body #sphere-explorer aside .connections .connection :is(span,strong){text-align:center;min-width:0}
+&lt;/style&gt;&lt;style id=&quot;panel-type-and-disclosure&quot;&gt;
+body #sphere-explorer aside[aria-label] .panel-top{grid-template-columns:minmax(0,1fr) auto}
+body #sphere-explorer aside[aria-label] .panel-top .tag{grid-column:1;justify-self:start;text-align:left!important}
+body #sphere-explorer aside[aria-label] .panel-top button{grid-column:2}
+body #sphere-explorer aside[aria-label] details&gt;summary{cursor:pointer;border-radius:5px;transition:color 100ms,background-color 100ms,text-shadow 100ms}
+body #sphere-explorer aside[aria-label] details&gt;summary:is(:hover,:focus-visible),
+body #sphere-explorer aside[aria-label] details[open]&gt;summary{color:#fff!important;background:#191919!important;text-shadow:0 0 8px #ffffff55}
+body #sphere-explorer aside[aria-label] details&gt;summary:focus-visible{outline:1px solid #bbb;outline-offset:2px}
+&lt;/style&gt;&lt;style&gt;#sphere-explorer aside .endpoint-name.type-0{color:var(--sx-a)}#sphere-explorer aside .endpoint-name.type-1{color:var(--sx-b)}#sphere-explorer aside .endpoint-name.type-2{color:var(--sx-c)}#sphere-explorer .sr-kind{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}&lt;/style&gt;&lt;style&gt;#sphere-explorer aside .connection .list-label{font-weight:600}#sphere-explorer aside .connection .list-label.type-0{color:var(--sx-a)}#sphere-explorer aside .connection .list-label.type-1{color:var(--sx-b)}#sphere-explorer aside .connection .list-label.type-2{color:var(--sx-c)}&lt;/style&gt;&lt;style&gt;#sphere-explorer aside .panel-top .tag[class*=&quot;type-&quot;]{font-weight:700}#sphere-explorer aside .panel-top .tag.type-0{color:var(--sx-a)!important}#sphere-explorer aside .panel-top .tag.type-1{color:var(--sx-b)!important}#sphere-explorer aside .panel-top .tag.type-2{color:var(--sx-c)!important}&lt;/style&gt;&lt;style&gt;body #sphere-explorer aside h3 .endpoint-name,body #sphere-explorer aside .stats-grid .stat &gt; .muted{font-weight:700!important}&lt;/style&gt;&lt;style&gt;body #sphere-explorer aside h4.connection-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(3em,.4fr);margin:16px 0 0 5px;padding:0 8px 0 22px;text-align:center;align-items:center}body #sphere-explorer aside .connection-columns span{position:relative;font:inherit;line-height:1.3}body #sphere-explorer aside .connection-columns span+span::before{content:&quot;&quot;;position:absolute;left:-37.5%;top:50%;height:.85em;border-left:1px solid #777;transform:translateY(-50%)}&lt;/style&gt;&lt;style&gt;body #sphere-explorer aside .endpoints{display:grid;grid-template-columns:1fr;gap:0}body #sphere-explorer aside .endpoints button[data-node]{width:100%;min-height:42px;padding:8px;background:transparent;border:0;box-shadow:none;text-align:center}body #sphere-explorer aside .endpoints button .endpoint-name{font-size:12px;font-weight:600;line-height:1.4}&lt;/style&gt;&lt;style&gt;body #sphere-explorer aside[aria-label] .endpoints{background:#000!important;border:1px solid #383838!important;border-radius:4px;box-shadow:none!important}body #sphere-explorer aside[aria-label] .endpoints button[data-node]{background:transparent!important;border:0!important;box-shadow:none!important}body #sphere-explorer aside[aria-label] .endpoints button[data-node]:is(:hover,:focus-visible) .endpoint-name{text-decoration:underline;text-underline-offset:3px}&lt;/style&gt;&lt;style&gt;#sphere-explorer aside .edge-types{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 0;color:#999}#sphere-explorer aside .edge-types .endpoint-name{font-size:13px;font-weight:600}&lt;/style&gt;&lt;style&gt;
+body #sphere-explorer aside[aria-label] h4.connection-columns,
+body #sphere-explorer aside[aria-label] .connections .connection{
+ box-sizing:border-box;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:0;align-items:center;text-align:center;padding-inline:0!important
+}
+body #sphere-explorer aside[aria-label] h4.connection-columns{margin-inline:0}
+body #sphere-explorer aside[aria-label] .connections{margin-inline:0;padding-inline:0}
+body #sphere-explorer aside[aria-label] .connection-columns span+span::before{left:0}
+body #sphere-explorer aside[aria-label] details&gt;summary{text-align:center!important}
+&lt;/style&gt;&lt;style&gt;body #sphere-explorer aside[aria-label] .endpoints button[data-node]+button[data-node]{border-top:1px solid #383838!important;border-radius:0}&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;codex-visualization-widget-state&quot;&gt;__CODEX_VISUALIZATION_WIDGET_STATE__&lt;/script&gt;
+&lt;script&gt;(() =&gt; {
+  const root = document.documentElement;
+  const mediaQuery = globalThis.matchMedia(&quot;(prefers-color-scheme: dark)&quot;);
+  const apply = Reflect.apply;
+  const isArray = Array.isArray;
+  const hasOwn = Object.hasOwn;
+  const parentWindow = globalThis.parent;
+  const stringify = JSON.stringify;
+  const parse = JSON.parse;
+  const encode = TextEncoder.prototype.encode.bind(new TextEncoder());
+  const initialStateElement = document.getElementById(
+    &quot;codex-visualization-widget-state&quot;,
+  );
+  const initialGlobals = parse(initialStateElement?.textContent ?? &quot;{}&quot;);
+  initialStateElement?.remove();
+  /** @type {Record&lt;string, unknown&gt; | null} */
+  let state = initialGlobals.widgetState ?? null;
+  const statePersistence = initialGlobals.statePersistence ?? &quot;none&quot;;
+  let nextStateRequestId = 0;
+  /** @type {Map&lt;number, { resolve: () =&gt; void; reject: (error: Error) =&gt; void; timeout: ReturnType&lt;typeof globalThis.setTimeout&gt;; serializedState: string }&gt;} */
+  const pendingStateWrites = new Map();
+  const persistenceError = () =&gt;
+    Object.assign(
+      new Error(&quot;The host could not persist the widget state update&quot;),
+      {
+        code: -32000,
+        data: { code: &quot;widget_state_persistence_failed&quot;, retryable: false },
+      },
+    );
+  /**
+   * @param {object} prototype
+   * @param {string} property
+   */
+  const getPrototypeGetter = (prototype, property) =&gt; {
+    // oxlint-disable-next-line typescript/unbound-method -- invoked through captured Reflect.apply
+    const getter = Object.getOwnPropertyDescriptor(prototype, property)?.get;
+    if (getter == null) {
+      throw new Error(`Missing ${property} getter`);
+    }
+    return getter;
+  };
+  const getMessageData = getPrototypeGetter(MessageEvent.prototype, &quot;data&quot;);
+  const getMessagePorts = getPrototypeGetter(MessageEvent.prototype, &quot;ports&quot;);
+  const getMessageSource = getPrototypeGetter(MessageEvent.prototype, &quot;source&quot;);
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const addHostMessageListener = MessagePort.prototype.addEventListener;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const postHostMessage = MessagePort.prototype.postMessage;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const startHostPort = MessagePort.prototype.start;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const stopMessagePropagation = Event.prototype.stopImmediatePropagation;
+  /** @type {MessagePort | null} */
+  let hostPort = null;
+  const postToHost = (type, payload) =&gt; {
+    if (hostPort != null) {
+      apply(postHostMessage, hostPort, [{ type, ...payload }]);
+    }
+  };
+  const openExternal = ({ href }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;open-external&quot;, { href });
+    }
+  };
+  const sendFollowUpMessage = ({ context, prompt, title }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;follow-up&quot;, { context, prompt, title });
+    }
+    return Promise.resolve();
+  };
+  /**
+   * @param {Record&lt;string, unknown&gt; | ((previous: Record&lt;string, unknown&gt; | null) =&gt; Record&lt;string, unknown&gt;)} next
+   * @returns {Promise&lt;void&gt;}
+   */
+  const setWidgetState = async (next) =&gt; {
+    const nextState = typeof next === &quot;function&quot; ? next(state) : next;
+    if (
+      nextState == null ||
+      typeof nextState !== &quot;object&quot; ||
+      isArray(nextState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const inputState = stringify(
+      nextState,
+      (_key, /** @type {unknown} */ value) =&gt; {
+        if (
+          typeof value === &quot;undefined&quot; ||
+          typeof value === &quot;function&quot; ||
+          typeof value === &quot;symbol&quot; ||
+          (typeof value === &quot;number&quot; &amp;&amp; !Number.isFinite(value))
+        ) {
+          throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+        }
+        return value;
+      },
+    );
+    const parsedState = parse(inputState);
+    if (
+      parsedState == null ||
+      typeof parsedState !== &quot;object&quot; ||
+      isArray(parsedState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const storedState = {
+      modelContent: null,
+      privateContent: null,
+      ...parsedState,
+    };
+    const serializedState = stringify(storedState);
+    if (encode(serializedState).length &gt; 16 * 1024) {
+      throw new TypeError(
+        &quot;Widget state must be a JSON object of at most 16 KiB&quot;,
+      );
+    }
+    if (
+      hasOwn(storedState, &quot;imageIds&quot;) &amp;&amp;
+      (!isArray(storedState.imageIds) ||
+        storedState.imageIds.some(
+          (/** @type {unknown} */ id) =&gt; typeof id !== &quot;string&quot;,
+        ))
+    ) {
+      throw new TypeError(&quot;Widget state imageIds must be an array of strings&quot;);
+    }
+    if (storedState.imageIds?.length &gt; 0) {
+      throw Object.assign(
+        new TypeError(&quot;Visualization state does not support image attachments&quot;),
+        { code: -32602, data: { code: &quot;images_unsupported&quot; } },
+      );
+    }
+    state = storedState;
+    globalThis.openai.widgetState = state;
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: { widgetState: state } },
+      }),
+    );
+    if (statePersistence === &quot;none&quot;) {
+      throw persistenceError();
+    }
+    const id = ++nextStateRequestId;
+    return new Promise((resolve, reject) =&gt; {
+      const timeout = globalThis.setTimeout(() =&gt; {
+        pendingStateWrites.delete(id);
+        reject(persistenceError());
+      }, 30_000);
+      pendingStateWrites.set(id, { resolve, reject, timeout, serializedState });
+      postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+    });
+  };
+  const syncTheme = () =&gt; {
+    const theme = mediaQuery.matches ? &quot;dark&quot; : &quot;light&quot;;
+    root.dataset.theme = theme;
+    globalThis.openai = {
+      ...globalThis.openai,
+      openExternal,
+      sendFollowUpMessage,
+      setWidgetState,
+      theme,
+      visualizationStyleVariables: {},
+      visualizationTheme: theme,
+      widgetState: state,
+      statePersistence,
+      stateModelContext: &quot;none&quot;,
+    };
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: globalThis.openai },
+      }),
+    );
+  };
+  const sendHeight = () =&gt; {
+    postToHost(&quot;height&quot;, {
+      height: Math.ceil(
+        Math.max(
+          document.body.scrollHeight,
+          document.body.getBoundingClientRect().height,
+        ),
+      ),
+    });
+  };
+
+  globalThis.addEventListener(
+    &quot;message&quot;,
+    (event) =&gt; {
+      const data = apply(getMessageData, event, []);
+      const ports = apply(getMessagePorts, event, []);
+      const source = apply(getMessageSource, event, []);
+      if (
+        hostPort != null ||
+        source !== parentWindow ||
+        typeof data !== &quot;object&quot; ||
+        data?.type !== &quot;codex-visualization-initialize&quot; ||
+        !isArray(ports) ||
+        ports.length !== 1
+      ) {
+        return;
+      }
+      apply(stopMessagePropagation, event, []);
+      const nextHostPort = ports[0];
+      try {
+        apply(addHostMessageListener, nextHostPort, [
+          &quot;message&quot;,
+          (event) =&gt; {
+            const data = apply(getMessageData, event, []);
+            if (typeof data === &quot;object&quot; &amp;&amp; data?.type === &quot;measure&quot;) {
+              sendHeight();
+            } else if (
+              typeof data === &quot;object&quot; &amp;&amp;
+              data?.type === &quot;widget-state-result&quot;
+            ) {
+              /** @type {unknown} */
+              const id = data.id;
+              if (typeof id !== &quot;number&quot;) {
+                return;
+              }
+              const pending = pendingStateWrites.get(id);
+              if (pending != null) {
+                pendingStateWrites.delete(id);
+                globalThis.clearTimeout(pending.timeout);
+                if (data.ok === true) {
+                  pending.resolve();
+                } else {
+                  pending.reject(persistenceError());
+                }
+              }
+            }
+          },
+        ]);
+        apply(startHostPort, nextHostPort, []);
+      } catch {
+        return;
+      }
+      hostPort = nextHostPort;
+      for (const [id, { serializedState }] of pendingStateWrites) {
+        postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+      }
+      sendHeight();
+    },
+    { capture: true },
+  );
+  document.currentScript?.remove();
+  mediaQuery.addEventListener(&quot;change&quot;, syncTheme);
+  globalThis.addEventListener(&quot;click&quot;, (event) =&gt; {
+    if (event.defaultPrevented) {
+      return;
+    }
+    let element = null;
+    if (event.target instanceof globalThis.Element) {
+      element = event.target;
+    } else if (event.target instanceof globalThis.Node) {
+      element = event.target.parentElement;
+    }
+    const link = element?.closest(&quot;a[href]&quot;);
+    const href = link?.getAttribute(&quot;href&quot;);
+    if (href == null) {
+      return;
+    }
+    if (href.startsWith(&quot;#&quot;)) {
+      let id;
+      try {
+        id = decodeURIComponent(href.slice(1));
+      } catch {
+        return;
+      }
+      const target = id.length === 0 ? root : document.getElementById(id);
+      if (
+        target == null ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      event.preventDefault();
+      postToHost(&quot;scroll-to&quot;, {
+        top: target.getBoundingClientRect().top + globalThis.scrollY,
+      });
+      return;
+    }
+    event.preventDefault();
+    openExternal({ href });
+  });
+  new ResizeObserver(sendHeight).observe(document.body);
+  syncTheme();
+})();
+&lt;/script&gt;
+&lt;div id=&quot;sphere-explorer&quot;&gt;
+&lt;style&gt;
+#sphere-explorer{--sx-bg:light-dark(#f3f6fa,#101923);--sx-panel:light-dark(#fff,#192532);--sx-ink:light-dark(#203247,#e2ecf5);--sx-muted:light-dark(#596c81,#9cb0c4);--sx-line:light-dark(#dce4ee,#304255);--sx-a:light-dark(#7655b5,#c2a4ff);--sx-b:light-dark(#087f84,#5bd1cd);--sx-c:light-dark(#2b6dc6,#82b6ff);--sx-glow:light-dark(#e8f0fc,#23394d);background:var(--sx-bg);color:var(--sx-ink);border:1px solid var(--sx-line);border-radius:15px;font:14px/1.5 system-ui,sans-serif;overflow:hidden;color-scheme:light dark}
+#sphere-explorer *{box-sizing:border-box}#sphere-explorer header{padding:22px 24px 18px;background:var(--sx-panel);border-bottom:1px solid var(--sx-line)}#sphere-explorer .eyebrow{font-size:11px;letter-spacing:2px;color:var(--sx-muted)}#sphere-explorer h2{font-size:23px;font-weight:600;margin:5px 0}#sphere-explorer .muted{color:var(--sx-muted);font-size:12px}#sphere-explorer .toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:14px 20px}#sphere-explorer button,#sphere-explorer select{font:inherit;color:var(--sx-ink);background:var(--sx-panel);border:1px solid var(--sx-line);border-radius:7px;padding:7px 10px;max-width:100%}#sphere-explorer button{cursor:pointer}#sphere-explorer button:hover{background:var(--sx-glow)}#sphere-explorer button:focus-visible,#sphere-explorer select:focus-visible{outline:3px solid var(--sx-c);outline-offset:2px}#sphere-explorer .picker{flex:1;min-width:180px;max-width:340px}#sphere-explorer .workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0;border-top:1px solid var(--sx-line)}#sphere-explorer .scene{position:relative;min-width:0;background:radial-gradient(ellipse at center,var(--sx-glow),var(--sx-bg) 70%)}#sphere-explorer canvas{width:100%;height:540px;display:block;touch-action:none;cursor:grab}#sphere-explorer canvas:active{cursor:grabbing}#sphere-explorer .legend{display:flex;gap:15px;flex-wrap:wrap;padding:14px 20px 0;font-size:12px}#sphere-explorer .legend span{display:flex;align-items:center;gap:6px}#sphere-explorer .dot{display:inline-block;width:9px;height:9px;border-radius:50%}#sphere-explorer .hint{padding:0 20px 15px;color:var(--sx-muted);font-size:12px}#sphere-explorer .hover{position:absolute;left:20px;bottom:43px;max-width:calc(100% - 40px);padding:7px 11px;background:var(--sx-panel);border:1px solid var(--sx-line);border-radius:7px;pointer-events:none;font-size:12px;overflow-wrap:anywhere;z-index:3}#sphere-explorer aside{background:var(--sx-panel);border-left:1px solid var(--sx-line);padding:20px;min-width:0}#sphere-explorer .panel-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}#sphere-explorer .tag{font-size:11px;letter-spacing:1px;color:var(--sx-muted)}#sphere-explorer h3{font-size:19px;font-weight:600;margin:8px 0 12px;overflow-wrap:anywhere}#sphere-explorer h4{font-size:13px;font-weight:600;margin:20px 0 10px}#sphere-explorer .hero{background:var(--sx-bg);padding:15px;border-radius:9px;margin:14px 0}#sphere-explorer .number{font-size:31px;font-weight:500;font-variant-numeric:tabular-nums;margin-top:3px}#sphere-explorer .row{display:flex;align-items:start;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--sx-line);font-size:12px}#sphere-explorer .row span:first-child{color:var(--sx-muted)}#sphere-explorer .row span:last-child{text-align:right;overflow-wrap:anywhere}#sphere-explorer .connections{display:grid;gap:6px}#sphere-explorer .connection{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;font-size:12px;width:100%}#sphere-explorer .connection span{overflow-wrap:anywhere}#sphere-explorer .connection strong{font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}#sphere-explorer .endpoints{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}#sphere-explorer .endpoints button{font-size:12px}#sphere-explorer .pager{display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:12px}#sphere-explorer .pager button:disabled{opacity:.35;cursor:default}#sphere-explorer footer{padding:12px 20px;border-top:1px solid var(--sx-line);font-size:11px;color:var(--sx-muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}#sphere-explorer .intro{margin:18px 0;color:var(--sx-muted);font-size:13px}#sphere-explorer .mini-key{display:flex;gap:6px;align-items:center;margin-top:12px;font-size:12px;color:var(--sx-muted)}#sphere-explorer .mini-key i{width:20px;height:2px;background:var(--sx-b)}@media(max-width:720px){#sphere-explorer .workspace{grid-template-columns:1fr}#sphere-explorer aside{border-left:0;border-top:1px solid var(--sx-line)}#sphere-explorer canvas{height:430px}#sphere-explorer header{padding:20px}#sphere-explorer .toolbar{padding:12px}#sphere-explorer h2{font-size:21px}#sphere-explorer .picker{max-width:none}}
+&lt;/style&gt;
+&lt;style&gt;
+#sphere-explorer .workspace{grid-template-columns:minmax(0,1fr) 330px}#sphere-explorer header{padding-top:25px;padding-bottom:22px}#sphere-explorer h2{letter-spacing:-.7px;font-size:27px}#sphere-explorer .pill{display:inline-block;padding:3px 8px;border-radius:5px;background:var(--sx-glow);font-size:11px;margin-left:8px}#sphere-explorer canvas{height:590px}#sphere-explorer .orientation{position:absolute;left:14px;top:82px;height:470px;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;z-index:2}#sphere-explorer .orientation span{font-size:11px;letter-spacing:.2px;padding:4px 7px;background:var(--sx-panel);border-radius:4px;color:var(--sx-muted);border-left:2px solid var(--sx-line)}#sphere-explorer .orientation span:nth-child(1){border-left-color:var(--sx-a)}#sphere-explorer .orientation span:nth-child(2){border-left-color:var(--sx-b)}#sphere-explorer .orientation span:nth-child(3){border-left-color:var(--sx-c)}#sphere-explorer .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px 0}#sphere-explorer .stat{background:var(--sx-bg);padding:12px;border-radius:8px;min-width:0}#sphere-explorer .stat .value{font-size:22px;font-weight:500;font-variant-numeric:tabular-nums;margin:5px 0;overflow-wrap:anywhere}#sphere-explorer .compare{margin:14px 0 20px}#sphere-explorer .compare-label{display:flex;justify-content:space-between;font-size:12px;margin:10px 0 5px;gap:8px}#sphere-explorer .track{height:7px;background:var(--sx-bg);border-radius:3px;overflow:hidden}#sphere-explorer .track span{display:block;height:100%;background:var(--sx-b);border-radius:3px}#sphere-explorer .scope{font-size:11px;color:var(--sx-muted);margin:10px 0}#sphere-explorer .section-title{margin:20px 0 9px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600}#sphere-explorer aside{padding:22px}#sphere-explorer .search-input{font:inherit;border:1px solid var(--sx-line);border-radius:7px;background:var(--sx-panel);color:var(--sx-ink);padding:8px 10px;min-width:0;width:150px}#sphere-explorer .picker{max-width:245px}#sphere-explorer .connection{position:relative;overflow:hidden;padding:10px}#sphere-explorer .connection:before{content:'';position:absolute;left:0;bottom:0;height:2px;width:var(--share,0%);background:var(--sx-b);opacity:.5}#sphere-explorer .intro{margin:14px 0}#sphere-explorer .hero .number{font-size:36px}#sphere-explorer .badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}#sphere-explorer .badge-row span{font-size:11px;color:var(--sx-muted);padding:4px 7px;border:1px solid var(--sx-line);border-radius:5px}@media(max-width:720px){#sphere-explorer .workspace{grid-template-columns:1fr}#sphere-explorer canvas{height:470px}#sphere-explorer .orientation{left:7px;top:65px;height:380px}#sphere-explorer .orientation span{font-size:11px;padding:3px 5px}#sphere-explorer .search-input{width:100%}#sphere-explorer .picker{max-width:none}}
+&lt;/style&gt;
+&lt;style&gt;
+#sphere-explorer{--sx-bg:#060f1c;--sx-panel:#0c1b2b;--sx-ink:#e7f5ff;--sx-muted:#a8c5da;--sx-line:#28455b;--sx-a:#ff735f;--sx-b:#88bde3;--sx-c:#c9b49d;--sx-glow:#132d41;color-scheme:dark;border-color:#335b73;border-radius:12px;box-shadow:0 0 30px #001d2b55}
+#sphere-explorer header{position:relative;background:linear-gradient(115deg,#102a3c,#0a1626 75%);border-bottom:1px solid #33718a;padding:26px 25px 24px}
+#sphere-explorer header:after{content:'';position:absolute;left:25px;bottom:0;width:140px;height:2px;background:linear-gradient(90deg,#45ead1,#65b4ff,#c59aff)}
+#sphere-explorer .eyebrow{color:#92d7ea;font-size:11px;letter-spacing:3px}#sphere-explorer h2{font-size:29px;letter-spacing:1px;color:#f0faff;text-shadow:0 0 18px #5ac6ff33}#sphere-explorer h2 .title-sub{font-size:19px;letter-spacing:-.3px;font-weight:400;color:#c2e0ee;margin-left:12px;display:inline-block}
+#sphere-explorer .toolbar{background:#081422}#sphere-explorer button,#sphere-explorer select,#sphere-explorer .search-input{background:#0e2233;border-color:#36566d;border-radius:4px}#sphere-explorer button:hover{border-color:#6bd6e9;background:#17384b}#sphere-explorer [data-action=reset]{border-color:#4e94a6}#sphere-explorer input::placeholder{color:#a0b7c8}
+#sphere-explorer .scene{background:radial-gradient(ellipse at 50% 45%,#14334699,transparent 65%),linear-gradient(#17324433 1px,transparent 1px),linear-gradient(90deg,#17324433 1px,transparent 1px),#060f1c;background-size:auto,32px 32px,32px 32px,auto}
+#sphere-explorer .legend{padding-top:18px}#sphere-explorer .legend .dot{box-shadow:0 0 8px currentColor}#sphere-explorer .orientation span{background:#0d2131ed;padding:6px 9px;border-radius:2px;box-shadow:0 0 12px #06101a;font-size:12px}#sphere-explorer .orientation span:nth-child(1){color:var(--sx-a)}#sphere-explorer .orientation span:nth-child(2){color:var(--sx-b)}#sphere-explorer .orientation span:nth-child(3){color:var(--sx-c)}
+#sphere-explorer aside{background:linear-gradient(160deg,#112637,#091623 80%);border-left-color:#33536a}#sphere-explorer .panel-top{padding-bottom:13px;border-bottom:1px solid #2c4d62}#sphere-explorer .tag{letter-spacing:1px;color:#9cc7da}#sphere-explorer .hero{border-radius:5px;background:linear-gradient(125deg,#132e41,#071321);border-left:2px solid #45ead1;padding:18px}#sphere-explorer .number{color:#f1fcff;text-shadow:0 0 18px #72cdff33}#sphere-explorer .stat{background:#081522;border-radius:5px;border-top:1px solid #34576e}#sphere-explorer .value{color:#ecfaff}#sphere-explorer .track{background:#1b3040}#sphere-explorer .connection{background:#0b2030;border-color:#2d4d63}#sphere-explorer .connection:before{background:var(--sx-b)}#sphere-explorer .badge-row span{background:#0b1d2d;border-color:#3b5970}#sphere-explorer .endpoints button{line-height:1.65;text-align:left}#sphere-explorer .endpoint-name{display:block;font-size:18px;line-height:1.7;font-weight:500;overflow-wrap:anywhere}#sphere-explorer .endpoint-name .kind{font-size:12px;font-weight:400;margin-right:7px}#sphere-explorer .type-0 .kind{color:var(--sx-a)}#sphere-explorer .type-1 .kind{color:var(--sx-b)}#sphere-explorer .type-2 .kind{color:var(--sx-c)}#sphere-explorer .link-arrow{color:#82a5bd;font-size:16px;margin:2px 0}#sphere-explorer .hover{background:#091b2df5;border-color:#50768f}#sphere-explorer footer{background:#071321;border-color:#2a495f}#sphere-explorer details summary{color:#b9e6f6}
+@media(max-width:720px){#sphere-explorer h2{font-size:26px}#sphere-explorer h2 .title-sub{font-size:17px;margin-left:6px}#sphere-explorer .orientation span{font-size:11px;padding:4px 6px}}
+#sphere-explorer .scene{display:flex;align-items:center;justify-content:center}#sphere-explorer .scene-stage{width:100%;position:relative;min-width:0}#sphere-explorer .legend{justify-content:center;padding:18px 12px 0}#sphere-explorer .hint{text-align:center}#sphere-explorer h2{font-size:24px;line-height:1.5;letter-spacing:-.4px;max-width:900px;word-break:keep-all;overflow-wrap:anywhere}#sphere-explorer footer{justify-content:center}@media(max-width:720px){#sphere-explorer h2{font-size:20px;line-height:1.55}#sphere-explorer .scene{display:block}}
+&lt;/style&gt;
+&lt;style&gt;
+#sphere-explorer { --sx-bg:#000; --sx-panel:#080808; --sx-ink:#eeeae3; --sx-muted:#a9afb6; --sx-line:#292d32; --sx-glow:#15181b; border:0; border-radius:0; box-shadow:none; background:var(--sx-bg); }
+#sphere-explorer header { background:var(--sx-bg); text-align:center; border:0; padding:32px 24px 24px; }
+#sphere-explorer header:after { display:none; }
+#sphere-explorer h2 { margin:0 auto 12px; max-width:900px; font-size:24px; line-height:1.6; letter-spacing:-.025em; color:var(--sx-ink); text-shadow:none; }
+#sphere-explorer .toolbar { background:var(--sx-bg); justify-content:center; padding:12px 20px 24px; }
+#sphere-explorer .workspace { grid-template-columns:minmax(0,1fr) 250px; border-top:1px solid var(--sx-line); }
+#sphere-explorer .scene, #sphere-explorer .scene-stage { background:var(--sx-bg); background-image:none; }
+#sphere-explorer aside { background:var(--sx-bg); border-left:1px solid var(--sx-line); padding:28px 20px; }
+#sphere-explorer aside h3 { font-size:18px; line-height:1.6; margin-top:0; }
+#sphere-explorer .stats-grid { gap:0 16px; margin:24px 0; }
+#sphere-explorer .stat { background:transparent; border:0; border-bottom:1px solid var(--sx-line); padding:14px 0; border-radius:0; }
+#sphere-explorer .stat .value { font-size:25px; }
+#sphere-explorer .intro { font-size:12px; line-height:1.9; margin-top:28px; }
+#sphere-explorer button, #sphere-explorer select { background:var(--sx-panel); border-color:var(--sx-line); border-radius:2px; }
+#sphere-explorer .orientation span { background:transparent; box-shadow:none; padding:3px 7px; font-size:11px; }
+#sphere-explorer .legend { justify-content:center; }
+#sphere-explorer .legend .dot { box-shadow:none; }
+#sphere-explorer .hero { background:transparent; border:0; border-block:1px solid var(--sx-line); border-radius:0; padding:16px 0; }
+@media(max-width:720px){#sphere-explorer .workspace{grid-template-columns:1fr}#sphere-explorer aside{border-left:0;border-top:1px solid var(--sx-line)}#sphere-explorer h2{font-size:21px}#sphere-explorer .stats-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}#sphere-explorer .stat .value{font-size:21px}}
+&lt;/style&gt;&lt;style&gt;
+#sphere-explorer { --sx-bg:#000!important; --sx-panel:#080808!important; --sx-line:#292d32!important; }
+#sphere-explorer, #sphere-explorer header, #sphere-explorer .toolbar, #sphere-explorer .scene, #sphere-explorer aside { background:#000!important; }
+#sphere-explorer .compare { display:none; }
+&lt;/style&gt;&lt;style&gt;
+/* Neutral control surfaces against the black article background. */
+#sphere-explorer { --sx-panel:#111!important; --sx-line:#303030!important; --sx-glow:#1d1d1d!important; --sx-muted:#a9afb6!important; }
+#sphere-explorer button, #sphere-explorer select,
+#sphere-explorer .connection, #sphere-explorer .stat,
+#sphere-explorer .hero, #sphere-explorer .hover,
+#sphere-explorer .badge-row span, #sphere-explorer .pill {
+ background:#111!important; border-color:#303030!important; box-shadow:none!important;
+}
+#sphere-explorer button:hover, #sphere-explorer .connection:hover {
+ background:#202020!important; border-color:#666!important;
+}
+#sphere-explorer .connection:before { background:#777!important; opacity:.5; }
+#sphere-explorer .tag, #sphere-explorer .scope,
+#sphere-explorer .muted, #sphere-explorer details summary { color:#a9afb6!important; }
+#sphere-explorer .panel-top, #sphere-explorer .row,
+#sphere-explorer .stats-grid, #sphere-explorer .stat { border-color:#303030!important; }
+&lt;/style&gt;&lt;style&gt;
+#sphere-explorer .workspace { grid-template-rows: minmax(max-content,var(--panel-height,auto)); }
+#sphere-explorer aside { min-height: 0; overflow: visible; }
+#sphere-explorer .pager { position: sticky; bottom: 0; background: #000; padding-block: 6px; }
+@media (max-width:720px) {
+  #sphere-explorer .workspace { grid-template-rows: auto var(--panel-height,auto); }
+}
+&lt;/style&gt;&lt;style&gt;
+#sphere-explorer .scene { flex-direction:column; justify-content:flex-start; }
+@media (min-width:721px) {
+  #sphere-explorer .workspace { position:relative; overflow:clip; }
+  #sphere-explorer .scene .network-caption { position:relative; }
+  #sphere-explorer .scene .network-caption::after {
+    content:&quot;&quot;; position:absolute; left:100%; top:0; width:1px;
+    height:200vh;
+    background:#000; z-index:2; pointer-events:none;
+  }
+}
+
+#sphere-explorer .scene .network-caption {
+  align-self:stretch;
+  margin:0;
+  border-top:1px solid #242424;
+  padding:12px clamp(16px,3vw,36px);
+  color:var(--sx-muted);
+  font-size:12px;
+  line-height:1.7;
+}
+&lt;/style&gt;&lt;style&gt;
+#sphere-explorer aside {text-align:center}
+#sphere-explorer aside .stat,
+#sphere-explorer aside .hero,
+#sphere-explorer aside .value,
+#sphere-explorer aside .number,
+#sphere-explorer aside .tag,
+#sphere-explorer aside .scope,
+#sphere-explorer aside summary {text-align:center}
+@keyframes rotationHintGlow{0%,100%{text-shadow:0 0 0 transparent}50%{color:#e0f2ff;text-shadow:0 0 7px #8fc9f099}}@media(prefers-reduced-motion:no-preference){.hint{animation:rotationHintGlow 1.4s ease-in-out infinite}}#sphere-explorer .workspace,#sphere-explorer .scene,#sphere-explorer .scene canvas,#sphere-explorer aside,#sphere-explorer .scene .network-caption,#sphere-explorer footer{border-color:var(--sx-bg)!important}&lt;/style&gt;&lt;header&gt;&lt;h2&gt;어떤 마약을, 누가, 어디서 광고하나?&lt;/h2&gt;&lt;div class=&quot;muted&quot; style=&quot;font-size:13px;font-weight:400;margin-top:4px&quot;&gt;텔레그램 아이디 40개를 쫓다&lt;/div&gt;&lt;/header&gt;
+&lt;div class=&quot;toolbar&quot;&gt;&lt;select autocomplete=&quot;off&quot; id=&quot;sx-pick&quot; class=&quot;picker&quot; aria-label=&quot;대상 선택&quot;&gt;&lt;option value=&quot;&quot;&gt;전체 관계망&lt;/option&gt;&lt;/select&gt;&lt;button type=&quot;button&quot; data-action=&quot;reset&quot;&gt;전체 보기&lt;/button&gt;&lt;button type=&quot;button&quot; data-action=&quot;plus&quot; aria-label=&quot;확대&quot;&gt;＋&lt;/button&gt;&lt;button type=&quot;button&quot; data-action=&quot;minus&quot; aria-label=&quot;축소&quot;&gt;−&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;workspace&quot;&gt;&lt;section class=&quot;scene&quot;&gt;&lt;div class=&quot;rotation-guide&quot; style=&quot;text-align:center;padding:10px 12px 6px;font-size:14px;line-height:1.5;color:#ccc&quot;&gt;드래그하여 회전 · 원 또는 선을 눌러 상세 보기&lt;/div&gt;&lt;div class=&quot;scene-stage&quot;&gt;&lt;div class=&quot;orientation&quot; aria-hidden=&quot;true&quot;&gt;&lt;span&gt;마약&lt;/span&gt;&lt;span&gt;아이디&lt;/span&gt;&lt;span&gt;사이트·검색결과&lt;/span&gt;&lt;/div&gt;&lt;canvas aria-label=&quot;회전 가능한 3차원 관계망. 대상 선택 메뉴와 상세 연결 목록으로도 탐색할 수 있습니다.&quot;&gt;&lt;/canvas&gt;&lt;div class=&quot;hover&quot; hidden&gt;&lt;/div&gt;&lt;/div&gt;&lt;p class=&quot;network-caption&quot; style=&quot;text-align:center&quot; title=&quot;원은 분석 대상, 선은 두 대상 사이에서 확인된 고유 제목 집계를 나타냅니다. 연결 수치는 실제 거래량이나 이용자 간 이동량을 뜻하지 않습니다. 이름 일부는 익명 처리했습니다.&quot;&gt;원은 분석 대상, 선은 두 대상에서 함께 확인된 고유 제목 수입니다.&lt;/p&gt;&lt;/section&gt;&lt;aside aria-label=&quot;선택한 대상의 상세 팝업&quot; aria-live=&quot;polite&quot;&gt;&lt;/aside&gt;&lt;/div&gt;
+
+&lt;script type=&quot;application/json&quot; id=&quot;sx-data&quot;&gt;{&quot;nodes&quot;: [{&quot;id&quot;: 0, &quot;label&quot;: &quot;GHB&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;GHB&quot;, &quot;게시글&quot;: 277, &quot;고유제목&quot;: 277, &quot;조회수합&quot;: 2091, &quot;조회수중앙값&quot;: 5, &quot;글당조회수&quot;: 7.5}}, {&quot;id&quot;: 1, &quot;label&quot;: &quot;LSD&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;LSD&quot;, &quot;게시글&quot;: 1188, &quot;고유제목&quot;: 1134, &quot;조회수합&quot;: 15976, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 13.4}}, {&quot;id&quot;: 2, &quot;label&quot;: &quot;대마초&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;대마초&quot;, &quot;게시글&quot;: 14238, &quot;고유제목&quot;: 7912, &quot;조회수합&quot;: 111994, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 7.9}}, {&quot;id&quot;: 3, &quot;label&quot;: &quot;기타&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;기타&quot;, &quot;게시글&quot;: 946, &quot;고유제목&quot;: 831, &quot;조회수합&quot;: 3644, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 3.9}}, {&quot;id&quot;: 4, &quot;label&quot;: &quot;암페타민&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;암페타민&quot;, &quot;게시글&quot;: 491, &quot;고유제목&quot;: 469, &quot;조회수합&quot;: 718, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 1.5}}, {&quot;id&quot;: 5, &quot;label&quot;: &quot;액상대마&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;액상대마&quot;, &quot;게시글&quot;: 7136, &quot;고유제목&quot;: 3632, &quot;조회수합&quot;: 48237, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 6.8}}, {&quot;id&quot;: 6, &quot;label&quot;: &quot;엑스터시&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;엑스터시&quot;, &quot;게시글&quot;: 4057, &quot;고유제목&quot;: 3235, &quot;조회수합&quot;: 54293, &quot;조회수중앙값&quot;: 2, &quot;글당조회수&quot;: 13.4}}, {&quot;id&quot;: 7, &quot;label&quot;: &quot;이소부틸 나이트라이트&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;이소부틸 나이트라이트&quot;, &quot;게시글&quot;: 48, &quot;고유제목&quot;: 33, &quot;조회수합&quot;: 348, &quot;조회수중앙값&quot;: 3.5, &quot;글당조회수&quot;: 7.2}}, {&quot;id&quot;: 8, &quot;label&quot;: &quot;졸피뎀&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;졸피뎀&quot;, &quot;게시글&quot;: 41, &quot;고유제목&quot;: 41, &quot;조회수합&quot;: 780, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 19}}, {&quot;id&quot;: 9, &quot;label&quot;: &quot;케타민&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;케타민&quot;, &quot;게시글&quot;: 9940, &quot;고유제목&quot;: 5991, &quot;조회수합&quot;: 30043, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 3}}, {&quot;id&quot;: 10, &quot;label&quot;: &quot;코카인&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;코카인&quot;, &quot;게시글&quot;: 160, &quot;고유제목&quot;: 153, &quot;조회수합&quot;: 243, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 1.5}}, {&quot;id&quot;: 11, &quot;label&quot;: &quot;펜타닐&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;펜타닐&quot;, &quot;게시글&quot;: 1, &quot;고유제목&quot;: 1, &quot;조회수합&quot;: 44, &quot;조회수중앙값&quot;: 44, &quot;글당조회수&quot;: 44}}, {&quot;id&quot;: 12, &quot;label&quot;: &quot;프로포폴&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;프로포폴&quot;, &quot;게시글&quot;: 4, &quot;고유제목&quot;: 4, &quot;조회수합&quot;: 30, &quot;조회수중앙값&quot;: 6, &quot;글당조회수&quot;: 7.5}}, {&quot;id&quot;: 13, &quot;label&quot;: &quot;필로폰&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;필로폰&quot;, &quot;게시글&quot;: 15980, &quot;고유제목&quot;: 9413, &quot;조회수합&quot;: 83085, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 5.2}}, {&quot;id&quot;: 14, &quot;label&quot;: &quot;합성대마&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;합성대마&quot;, &quot;게시글&quot;: 436, &quot;고유제목&quot;: 373, &quot;조회수합&quot;: 624, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 1.4}}, {&quot;id&quot;: 15, &quot;label&quot;: &quot;합성액상대마&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;합성액상대마&quot;, &quot;게시글&quot;: 3179, &quot;고유제목&quot;: 2404, &quot;조회수합&quot;: 71216, &quot;조회수중앙값&quot;: 2, &quot;글당조회수&quot;: 22.4}}, {&quot;id&quot;: 16, &quot;label&quot;: &quot;헤로인&quot;, &quot;group&quot;: 0, &quot;stats&quot;: {&quot;마약&quot;: &quot;헤로인&quot;, &quot;게시글&quot;: 5, &quot;고유제목&quot;: 5, &quot;조회수합&quot;: 7, &quot;조회수중앙값&quot;: 1, &quot;글당조회수&quot;: 1.4}}, {&quot;id&quot;: 17, &quot;label&quot;: &quot;@pa***55&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@pa***55&quot;, &quot;원시&quot;: 8204, &quot;고유&quot;: 3814, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;대마초, 케타민&quot;}}, {&quot;id&quot;: 18, &quot;label&quot;: &quot;@nu***04&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@nu***04&quot;, &quot;원시&quot;: 9098, &quot;고유&quot;: 2750, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;대마초, 케타민&quot;}}, {&quot;id&quot;: 19, &quot;label&quot;: &quot;@so***92&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@so***92&quot;, &quot;원시&quot;: 4695, &quot;고유&quot;: 1719, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 액상대마&quot;}}, {&quot;id&quot;: 20, &quot;label&quot;: &quot;@ma***04&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ma***04&quot;, &quot;원시&quot;: 4622, &quot;고유&quot;: 1701, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;액상대마, 필로폰&quot;}}, {&quot;id&quot;: 21, &quot;label&quot;: &quot;@ap***46&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ap***46&quot;, &quot;원시&quot;: 1584, &quot;고유&quot;: 1546, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 22, &quot;label&quot;: &quot;@ob***65&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ob***65&quot;, &quot;원시&quot;: 1387, &quot;고유&quot;: 1271, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;대마초, 케타민&quot;}}, {&quot;id&quot;: 23, &quot;label&quot;: &quot;@co***r9&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@co***r9&quot;, &quot;원시&quot;: 1075, &quot;고유&quot;: 1073, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 24, &quot;label&quot;: &quot;@ba***04&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ba***04&quot;, &quot;원시&quot;: 811, &quot;고유&quot;: 793, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 액상대마&quot;}}, {&quot;id&quot;: 25, &quot;label&quot;: &quot;@ki***ro&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ki***ro&quot;, &quot;원시&quot;: 789, &quot;고유&quot;: 772, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 1, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 26, &quot;label&quot;: &quot;@sa***92&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@sa***92&quot;, &quot;원시&quot;: 773, &quot;고유&quot;: 763, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 1, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 27, &quot;label&quot;: &quot;@cr***89&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@cr***89&quot;, &quot;원시&quot;: 759, &quot;고유&quot;: 748, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 2, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 28, &quot;label&quot;: &quot;@kw***k7&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@kw***k7&quot;, &quot;원시&quot;: 759, &quot;고유&quot;: 743, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 1, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 29, &quot;label&quot;: &quot;@un***14&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@un***14&quot;, &quot;원시&quot;: 743, &quot;고유&quot;: 728, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 1, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 30, &quot;label&quot;: &quot;@ki***89&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ki***89&quot;, &quot;원시&quot;: 733, &quot;고유&quot;: 716, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 31, &quot;label&quot;: &quot;@ch***77&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ch***77&quot;, &quot;원시&quot;: 728, &quot;고유&quot;: 707, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 2, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 32, &quot;label&quot;: &quot;@lu***82&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@lu***82&quot;, &quot;원시&quot;: 704, &quot;고유&quot;: 685, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 33, &quot;label&quot;: &quot;@vv***vv&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@vv***vv&quot;, &quot;원시&quot;: 1586, &quot;고유&quot;: 294, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;대마초, 엑스터시&quot;}}, {&quot;id&quot;: 34, &quot;label&quot;: &quot;@po***86&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@po***86&quot;, &quot;원시&quot;: 265, &quot;고유&quot;: 258, &quot;게시판사이트수&quot;: 2, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;대마초, LSD&quot;}}, {&quot;id&quot;: 35, &quot;label&quot;: &quot;@br***00&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@br***00&quot;, &quot;원시&quot;: 248, &quot;고유&quot;: 244, &quot;게시판사이트수&quot;: 2, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;대마초, LSD&quot;}}, {&quot;id&quot;: 36, &quot;label&quot;: &quot;@kr***a8&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@kr***a8&quot;, &quot;원시&quot;: 213, &quot;고유&quot;: 213, &quot;게시판사이트수&quot;: 2, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 졸피뎀&quot;}}, {&quot;id&quot;: 37, &quot;label&quot;: &quot;@so***92 · 2&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@so***92 · 2&quot;, &quot;원시&quot;: 195, &quot;고유&quot;: 195, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 38, &quot;label&quot;: &quot;@js***92&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@js***92&quot;, &quot;원시&quot;: 184, &quot;고유&quot;: 184, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 39, &quot;label&quot;: &quot;@d_***44&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@d_***44&quot;, &quot;원시&quot;: 187, &quot;고유&quot;: 156, &quot;게시판사이트수&quot;: 1, &quot;SERP건수&quot;: 3, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;엑스터시, 필로폰&quot;}}, {&quot;id&quot;: 40, &quot;label&quot;: &quot;@mz***pp&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@mz***pp&quot;, &quot;원시&quot;: 194, &quot;고유&quot;: 154, &quot;게시판사이트수&quot;: 1, &quot;SERP건수&quot;: 2, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 41, &quot;label&quot;: &quot;@su***in&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@su***in&quot;, &quot;원시&quot;: 168, &quot;고유&quot;: 127, &quot;게시판사이트수&quot;: 1, &quot;SERP건수&quot;: 1, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 케타민&quot;}}, {&quot;id&quot;: 42, &quot;label&quot;: &quot;@sp***kr&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@sp***kr&quot;, &quot;원시&quot;: 111, &quot;고유&quot;: 111, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 대마초&quot;}}, {&quot;id&quot;: 43, &quot;label&quot;: &quot;@ma***g7&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ma***g7&quot;, &quot;원시&quot;: 109, &quot;고유&quot;: 87, &quot;게시판사이트수&quot;: 1, &quot;SERP건수&quot;: 1, &quot;양쪽등장&quot;: true, &quot;주요마약&quot;: &quot;필로폰, 엑스터시&quot;}}, {&quot;id&quot;: 44, &quot;label&quot;: &quot;@ma***14&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ma***14&quot;, &quot;원시&quot;: 100, &quot;고유&quot;: 78, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;케타민, 필로폰&quot;}}, {&quot;id&quot;: 45, &quot;label&quot;: &quot;@ta***66&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ta***66&quot;, &quot;원시&quot;: 68, &quot;고유&quot;: 68, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 엑스터시&quot;}}, {&quot;id&quot;: 46, &quot;label&quot;: &quot;@me***68&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@me***68&quot;, &quot;원시&quot;: 46, &quot;고유&quot;: 46, &quot;게시판사이트수&quot;: 1, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;GHB&quot;}}, {&quot;id&quot;: 47, &quot;label&quot;: &quot;@un***39&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@un***39&quot;, &quot;원시&quot;: 36, &quot;고유&quot;: 36, &quot;게시판사이트수&quot;: 2, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰&quot;}}, {&quot;id&quot;: 48, &quot;label&quot;: &quot;@co***82&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@co***82&quot;, &quot;원시&quot;: 33, &quot;고유&quot;: 33, &quot;게시판사이트수&quot;: 0, &quot;SERP건수&quot;: 33, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 엑스터시&quot;}}, {&quot;id&quot;: 49, &quot;label&quot;: &quot;@pi***79&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@pi***79&quot;, &quot;원시&quot;: 100, &quot;고유&quot;: 25, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 엑스터시&quot;}}, {&quot;id&quot;: 50, &quot;label&quot;: &quot;@bu***22&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@bu***22&quot;, &quot;원시&quot;: 14, &quot;고유&quot;: 14, &quot;게시판사이트수&quot;: 2, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;엑스터시, 필로폰&quot;}}, {&quot;id&quot;: 51, &quot;label&quot;: &quot;@ro***69&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ro***69&quot;, &quot;원시&quot;: 13, &quot;고유&quot;: 13, &quot;게시판사이트수&quot;: 4, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰&quot;}}, {&quot;id&quot;: 52, &quot;label&quot;: &quot;@el***4a&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@el***4a&quot;, &quot;원시&quot;: 12, &quot;고유&quot;: 12, &quot;게시판사이트수&quot;: 1, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;필로폰, 암페타민&quot;}}, {&quot;id&quot;: 53, &quot;label&quot;: &quot;@pa***81&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@pa***81&quot;, &quot;원시&quot;: 9, &quot;고유&quot;: 9, &quot;게시판사이트수&quot;: 2, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: null}}, {&quot;id&quot;: 54, &quot;label&quot;: &quot;@po***an&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@po***an&quot;, &quot;원시&quot;: 9, &quot;고유&quot;: 9, &quot;게시판사이트수&quot;: 1, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;케타민, 필로폰&quot;}}, {&quot;id&quot;: 55, &quot;label&quot;: &quot;@na***oo&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@na***oo&quot;, &quot;원시&quot;: 268, &quot;고유&quot;: 8, &quot;게시판사이트수&quot;: 3, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;대마초&quot;}}, {&quot;id&quot;: 56, &quot;label&quot;: &quot;@ps***86&quot;, &quot;group&quot;: 1, &quot;stats&quot;: {&quot;아이디&quot;: &quot;@ps***86&quot;, &quot;원시&quot;: 8, &quot;고유&quot;: 8, &quot;게시판사이트수&quot;: 2, &quot;SERP건수&quot;: 0, &quot;양쪽등장&quot;: false, &quot;주요마약&quot;: &quot;프로포폴, 합성액상대마&quot;}}, {&quot;id&quot;: 57, &quot;label&quot;: &quot;ec***온보딩&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;ec***온보딩&quot;, &quot;원시&quot;: 466, &quot;고유&quot;: 368, &quot;원시%&quot;: 1, &quot;도배배수&quot;: 1.3, &quot;사이트_전체글&quot;: 380245, &quot;사이트내_마약%&quot;: 0.1, &quot;누적원시%&quot;: 96.3}}, {&quot;id&quot;: 58, &quot;label&quot;: &quot;w***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;w***&quot;, &quot;원시&quot;: 6887, &quot;고유&quot;: 4008, &quot;원시%&quot;: 14.7, &quot;도배배수&quot;: 1.7, &quot;사이트_전체글&quot;: 93407, &quot;사이트내_마약%&quot;: 7.4, &quot;누적원시%&quot;: 85.7}}, {&quot;id&quot;: 59, &quot;label&quot;: &quot;더지***어스&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;더지***어스&quot;, &quot;원시&quot;: 15858, &quot;고유&quot;: 10978, &quot;원시%&quot;: 33.9, &quot;도배배수&quot;: 1.4, &quot;사이트_전체글&quot;: 425704, &quot;사이트내_마약%&quot;: 3.7, &quot;누적원시%&quot;: 71}}, {&quot;id&quot;: 60, &quot;label&quot;: &quot;아***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;아***&quot;, &quot;원시&quot;: 17352, &quot;고유&quot;: 11446, &quot;원시%&quot;: 37.1, &quot;도배배수&quot;: 1.5, &quot;사이트_전체글&quot;: 199280, &quot;사이트내_마약%&quot;: 8.7, &quot;누적원시%&quot;: 37.1}}, {&quot;id&quot;: 61, &quot;label&quot;: &quot;생각***라테스&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;생각***라테스&quot;, &quot;원시&quot;: 11, &quot;고유&quot;: 11, &quot;원시%&quot;: 0, &quot;도배배수&quot;: 1, &quot;사이트_전체글&quot;: 11, &quot;사이트내_마약%&quot;: 100, &quot;누적원시%&quot;: 99.9}}, {&quot;id&quot;: 62, &quot;label&quot;: &quot;에코***이피&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;에코***이피&quot;, &quot;원시&quot;: 24, &quot;고유&quot;: 21, &quot;원시%&quot;: 0.1, &quot;도배배수&quot;: 1.1, &quot;사이트_전체글&quot;: 815, &quot;사이트내_마약%&quot;: 2.9, &quot;누적원시%&quot;: 99.9}}, {&quot;id&quot;: 63, &quot;label&quot;: &quot;SERP:da***wa&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;플랫폼&quot;: &quot;SERP:da***wa&quot;, &quot;건수&quot;: 20, &quot;마약분류&quot;: 20, &quot;아이디검출&quot;: 8}}, {&quot;id&quot;: 64, &quot;label&quot;: &quot;SERP:jo***na&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;플랫폼&quot;: &quot;SERP:jo***na&quot;, &quot;건수&quot;: 7, &quot;마약분류&quot;: 7, &quot;아이디검출&quot;: 7}}, {&quot;id&quot;: 65, &quot;label&quot;: &quot;SERP:1***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;플랫폼&quot;: &quot;SERP:1***&quot;, &quot;건수&quot;: 23, &quot;마약분류&quot;: 23, &quot;아이디검출&quot;: 21}}, {&quot;id&quot;: 66, &quot;label&quot;: &quot;SERP:co***ha&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;플랫폼&quot;: &quot;SERP:co***ha&quot;, &quot;건수&quot;: 9, &quot;마약분류&quot;: 9, &quot;아이디검출&quot;: 8}}, {&quot;id&quot;: 67, &quot;label&quot;: &quot;SERP:ka***ng&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;플랫폼&quot;: &quot;SERP:ka***ng&quot;, &quot;건수&quot;: 53, &quot;마약분류&quot;: 53, &quot;아이디검출&quot;: 42}}, {&quot;id&quot;: 68, &quot;label&quot;: &quot;SERP:gm***et&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;플랫폼&quot;: &quot;SERP:gm***et&quot;, &quot;건수&quot;: 5, &quot;마약분류&quot;: 5, &quot;아이디검출&quot;: 5}}, {&quot;id&quot;: 69, &quot;label&quot;: &quot;SERP:co***ng&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;플랫폼&quot;: &quot;SERP:co***ng&quot;, &quot;건수&quot;: 5, &quot;마약분류&quot;: 5, &quot;아이디검출&quot;: 5}}, {&quot;id&quot;: 70, &quot;label&quot;: &quot;더***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;더***&quot;, &quot;원시&quot;: 377, &quot;고유&quot;: 376, &quot;원시%&quot;: 0.8, &quot;도배배수&quot;: 1, &quot;사이트_전체글&quot;: 1422, &quot;사이트내_마약%&quot;: 26.5, &quot;누적원시%&quot;: 98.1}}, {&quot;id&quot;: 71, &quot;label&quot;: &quot;라이***맥스&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;라이***맥스&quot;, &quot;원시&quot;: 1516, &quot;고유&quot;: 224, &quot;원시%&quot;: 3.2, &quot;도배배수&quot;: 6.8, &quot;사이트_전체글&quot;: 4468, &quot;사이트내_마약%&quot;: 33.9, &quot;누적원시%&quot;: 95.3}}, {&quot;id&quot;: 72, &quot;label&quot;: &quot;세인***프랑&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;세인***프랑&quot;, &quot;원시&quot;: 76, &quot;고유&quot;: 75, &quot;원시%&quot;: 0.2, &quot;도배배수&quot;: 1, &quot;사이트_전체글&quot;: 3019, &quot;사이트내_마약%&quot;: 2.5, &quot;누적원시%&quot;: 99.6}}, {&quot;id&quot;: 73, &quot;label&quot;: &quot;코스***출장뷔&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;코스***출장뷔&quot;, &quot;원시&quot;: 200, &quot;고유&quot;: 200, &quot;원시%&quot;: 0.4, &quot;도배배수&quot;: 1, &quot;사이트_전체글&quot;: 439, &quot;사이트내_마약%&quot;: 45.6, &quot;누적원시%&quot;: 99}}, {&quot;id&quot;: 74, &quot;label&quot;: &quot;동***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;동***&quot;, &quot;원시&quot;: 88, &quot;고유&quot;: 88, &quot;원시%&quot;: 0.2, &quot;도배배수&quot;: 1, &quot;사이트_전체글&quot;: 3531, &quot;사이트내_마약%&quot;: 2.5, &quot;누적원시%&quot;: 99.2}}, {&quot;id&quot;: 75, &quot;label&quot;: &quot;다***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;다***&quot;, &quot;원시&quot;: 2974, &quot;고유&quot;: 2474, &quot;원시%&quot;: 6.4, &quot;도배배수&quot;: 1.2, &quot;사이트_전체글&quot;: 19433, &quot;사이트내_마약%&quot;: 15.3, &quot;누적원시%&quot;: 92.1}}, {&quot;id&quot;: 76, &quot;label&quot;: &quot;김***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;김***&quot;, &quot;원시&quot;: 244, &quot;고유&quot;: 87, &quot;원시%&quot;: 0.5, &quot;도배배수&quot;: 2.8, &quot;사이트_전체글&quot;: 1923, &quot;사이트내_마약%&quot;: 12.7, &quot;누적원시%&quot;: 98.6}}, {&quot;id&quot;: 77, &quot;label&quot;: &quot;철물***마왕&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;철물***마왕&quot;, &quot;원시&quot;: 31, &quot;고유&quot;: 19, &quot;원시%&quot;: 0.1, &quot;도배배수&quot;: 1.6, &quot;사이트_전체글&quot;: 7716, &quot;사이트내_마약%&quot;: 0.4, &quot;누적원시%&quot;: 99.8}}, {&quot;id&quot;: 78, &quot;label&quot;: &quot;kn***ure&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;kn***ure&quot;, &quot;원시&quot;: 3, &quot;고유&quot;: 3, &quot;원시%&quot;: 0, &quot;도배배수&quot;: 1, &quot;사이트_전체글&quot;: 30861, &quot;사이트내_마약%&quot;: 0, &quot;누적원시%&quot;: 99.9}}, {&quot;id&quot;: 79, &quot;label&quot;: &quot;타***&quot;, &quot;group&quot;: 2, &quot;stats&quot;: {&quot;site&quot;: &quot;타***&quot;, &quot;원시&quot;: 7, &quot;고유&quot;: 7, &quot;원시%&quot;: 0, &quot;도배배수&quot;: 1, &quot;사이트_전체글&quot;: 12756, &quot;사이트내_마약%&quot;: 0.1, &quot;누적원시%&quot;: 99.9}}], &quot;edges&quot;: [{&quot;id&quot;: 0, &quot;a&quot;: 0, &quot;b&quot;: 50, &quot;value&quot;: 2}, {&quot;id&quot;: 1, &quot;a&quot;: 0, &quot;b&quot;: 36, &quot;value&quot;: 15}, {&quot;id&quot;: 2, &quot;a&quot;: 0, &quot;b&quot;: 46, &quot;value&quot;: 46}, {&quot;id&quot;: 3, &quot;a&quot;: 0, &quot;b&quot;: 34, &quot;value&quot;: 5}, {&quot;id&quot;: 4, &quot;a&quot;: 1, &quot;b&quot;: 21, &quot;value&quot;: 160}, {&quot;id&quot;: 5, &quot;a&quot;: 1, &quot;b&quot;: 24, &quot;value&quot;: 76}, {&quot;id&quot;: 6, &quot;a&quot;: 1, &quot;b&quot;: 35, &quot;value&quot;: 37}, {&quot;id&quot;: 7, &quot;a&quot;: 1, &quot;b&quot;: 50, &quot;value&quot;: 1}, {&quot;id&quot;: 8, &quot;a&quot;: 1, &quot;b&quot;: 31, &quot;value&quot;: 44}, {&quot;id&quot;: 9, &quot;a&quot;: 1, &quot;b&quot;: 48, &quot;value&quot;: 1}, {&quot;id&quot;: 10, &quot;a&quot;: 1, &quot;b&quot;: 23, &quot;value&quot;: 55}, {&quot;id&quot;: 11, &quot;a&quot;: 1, &quot;b&quot;: 27, &quot;value&quot;: 72}, {&quot;id&quot;: 12, &quot;a&quot;: 1, &quot;b&quot;: 39, &quot;value&quot;: 6}, {&quot;id&quot;: 13, &quot;a&quot;: 1, &quot;b&quot;: 38, &quot;value&quot;: 36}, {&quot;id&quot;: 14, &quot;a&quot;: 1, &quot;b&quot;: 25, &quot;value&quot;: 81}, {&quot;id&quot;: 15, &quot;a&quot;: 1, &quot;b&quot;: 30, &quot;value&quot;: 12}, {&quot;id&quot;: 16, &quot;a&quot;: 1, &quot;b&quot;: 36, &quot;value&quot;: 7}, {&quot;id&quot;: 17, &quot;a&quot;: 1, &quot;b&quot;: 28, &quot;value&quot;: 47}, {&quot;id&quot;: 18, &quot;a&quot;: 1, &quot;b&quot;: 32, &quot;value&quot;: 54}, {&quot;id&quot;: 19, &quot;a&quot;: 1, &quot;b&quot;: 20, &quot;value&quot;: 40}, {&quot;id&quot;: 20, &quot;a&quot;: 1, &quot;b&quot;: 44, &quot;value&quot;: 6}, {&quot;id&quot;: 21, &quot;a&quot;: 1, &quot;b&quot;: 43, &quot;value&quot;: 1}, {&quot;id&quot;: 22, &quot;a&quot;: 1, &quot;b&quot;: 40, &quot;value&quot;: 6}, {&quot;id&quot;: 23, &quot;a&quot;: 1, &quot;b&quot;: 49, &quot;value&quot;: 3}, {&quot;id&quot;: 24, &quot;a&quot;: 1, &quot;b&quot;: 34, &quot;value&quot;: 36}, {&quot;id&quot;: 25, &quot;a&quot;: 1, &quot;b&quot;: 56, &quot;value&quot;: 1}, {&quot;id&quot;: 26, &quot;a&quot;: 1, &quot;b&quot;: 26, &quot;value&quot;: 31}, {&quot;id&quot;: 27, &quot;a&quot;: 1, &quot;b&quot;: 37, &quot;value&quot;: 40}, {&quot;id&quot;: 28, &quot;a&quot;: 1, &quot;b&quot;: 19, &quot;value&quot;: 39}, {&quot;id&quot;: 29, &quot;a&quot;: 1, &quot;b&quot;: 42, &quot;value&quot;: 13}, {&quot;id&quot;: 30, &quot;a&quot;: 1, &quot;b&quot;: 41, &quot;value&quot;: 1}, {&quot;id&quot;: 31, &quot;a&quot;: 1, &quot;b&quot;: 45, &quot;value&quot;: 8}, {&quot;id&quot;: 32, &quot;a&quot;: 1, &quot;b&quot;: 29, &quot;value&quot;: 92}, {&quot;id&quot;: 33, &quot;a&quot;: 1, &quot;b&quot;: 33, &quot;value&quot;: 37}, {&quot;id&quot;: 34, &quot;a&quot;: 2, &quot;b&quot;: 21, &quot;value&quot;: 568}, {&quot;id&quot;: 35, &quot;a&quot;: 2, &quot;b&quot;: 24, &quot;value&quot;: 205}, {&quot;id&quot;: 36, &quot;a&quot;: 2, &quot;b&quot;: 35, &quot;value&quot;: 244}, {&quot;id&quot;: 37, &quot;a&quot;: 2, &quot;b&quot;: 50, &quot;value&quot;: 3}, {&quot;id&quot;: 38, &quot;a&quot;: 2, &quot;b&quot;: 31, &quot;value&quot;: 206}, {&quot;id&quot;: 39, &quot;a&quot;: 2, &quot;b&quot;: 48, &quot;value&quot;: 1}, {&quot;id&quot;: 40, &quot;a&quot;: 2, &quot;b&quot;: 23, &quot;value&quot;: 191}, {&quot;id&quot;: 41, &quot;a&quot;: 2, &quot;b&quot;: 27, &quot;value&quot;: 260}, {&quot;id&quot;: 42, &quot;a&quot;: 2, &quot;b&quot;: 39, &quot;value&quot;: 20}, {&quot;id&quot;: 43, &quot;a&quot;: 2, &quot;b&quot;: 38, &quot;value&quot;: 85}, {&quot;id&quot;: 44, &quot;a&quot;: 2, &quot;b&quot;: 25, &quot;value&quot;: 219}, {&quot;id&quot;: 45, &quot;a&quot;: 2, &quot;b&quot;: 30, &quot;value&quot;: 222}, {&quot;id&quot;: 46, &quot;a&quot;: 2, &quot;b&quot;: 36, &quot;value&quot;: 29}, {&quot;id&quot;: 47, &quot;a&quot;: 2, &quot;b&quot;: 28, &quot;value&quot;: 243}, {&quot;id&quot;: 48, &quot;a&quot;: 2, &quot;b&quot;: 32, &quot;value&quot;: 219}, {&quot;id&quot;: 49, &quot;a&quot;: 2, &quot;b&quot;: 20, &quot;value&quot;: 66}, {&quot;id&quot;: 50, &quot;a&quot;: 2, &quot;b&quot;: 44, &quot;value&quot;: 5}, {&quot;id&quot;: 51, &quot;a&quot;: 2, &quot;b&quot;: 43, &quot;value&quot;: 11}, {&quot;id&quot;: 52, &quot;a&quot;: 2, &quot;b&quot;: 40, &quot;value&quot;: 22}, {&quot;id&quot;: 53, &quot;a&quot;: 2, &quot;b&quot;: 55, &quot;value&quot;: 8}, {&quot;id&quot;: 54, &quot;a&quot;: 2, &quot;b&quot;: 18, &quot;value&quot;: 980}, {&quot;id&quot;: 55, &quot;a&quot;: 2, &quot;b&quot;: 22, &quot;value&quot;: 727}, {&quot;id&quot;: 56, &quot;a&quot;: 2, &quot;b&quot;: 17, &quot;value&quot;: 1520}, {&quot;id&quot;: 57, &quot;a&quot;: 2, &quot;b&quot;: 49, &quot;value&quot;: 3}, {&quot;id&quot;: 58, &quot;a&quot;: 2, &quot;b&quot;: 54, &quot;value&quot;: 3}, {&quot;id&quot;: 59, &quot;a&quot;: 2, &quot;b&quot;: 34, &quot;value&quot;: 254}, {&quot;id&quot;: 60, &quot;a&quot;: 2, &quot;b&quot;: 56, &quot;value&quot;: 1}, {&quot;id&quot;: 61, &quot;a&quot;: 2, &quot;b&quot;: 26, &quot;value&quot;: 261}, {&quot;id&quot;: 62, &quot;a&quot;: 2, &quot;b&quot;: 37, &quot;value&quot;: 79}, {&quot;id&quot;: 63, &quot;a&quot;: 2, &quot;b&quot;: 19, &quot;value&quot;: 75}, {&quot;id&quot;: 64, &quot;a&quot;: 2, &quot;b&quot;: 42, &quot;value&quot;: 50}, {&quot;id&quot;: 65, &quot;a&quot;: 2, &quot;b&quot;: 41, &quot;value&quot;: 18}, {&quot;id&quot;: 66, &quot;a&quot;: 2, &quot;b&quot;: 45, &quot;value&quot;: 28}, {&quot;id&quot;: 67, &quot;a&quot;: 2, &quot;b&quot;: 29, &quot;value&quot;: 273}, {&quot;id&quot;: 68, &quot;a&quot;: 2, &quot;b&quot;: 33, &quot;value&quot;: 127}, {&quot;id&quot;: 69, &quot;a&quot;: 3, &quot;b&quot;: 21, &quot;value&quot;: 55}, {&quot;id&quot;: 70, &quot;a&quot;: 3, &quot;b&quot;: 24, &quot;value&quot;: 27}, {&quot;id&quot;: 71, &quot;a&quot;: 3, &quot;b&quot;: 50, &quot;value&quot;: 1}, {&quot;id&quot;: 72, &quot;a&quot;: 3, &quot;b&quot;: 31, &quot;value&quot;: 19}, {&quot;id&quot;: 73, &quot;a&quot;: 3, &quot;b&quot;: 23, &quot;value&quot;: 49}, {&quot;id&quot;: 74, &quot;a&quot;: 3, &quot;b&quot;: 27, &quot;value&quot;: 29}, {&quot;id&quot;: 75, &quot;a&quot;: 3, &quot;b&quot;: 39, &quot;value&quot;: 16}, {&quot;id&quot;: 76, &quot;a&quot;: 3, &quot;b&quot;: 38, &quot;value&quot;: 1}, {&quot;id&quot;: 77, &quot;a&quot;: 3, &quot;b&quot;: 25, &quot;value&quot;: 39}, {&quot;id&quot;: 78, &quot;a&quot;: 3, &quot;b&quot;: 30, &quot;value&quot;: 10}, {&quot;id&quot;: 79, &quot;a&quot;: 3, &quot;b&quot;: 36, &quot;value&quot;: 12}, {&quot;id&quot;: 80, &quot;a&quot;: 3, &quot;b&quot;: 28, &quot;value&quot;: 13}, {&quot;id&quot;: 81, &quot;a&quot;: 3, &quot;b&quot;: 32, &quot;value&quot;: 33}, {&quot;id&quot;: 82, &quot;a&quot;: 3, &quot;b&quot;: 44, &quot;value&quot;: 5}, {&quot;id&quot;: 83, &quot;a&quot;: 3, &quot;b&quot;: 43, &quot;value&quot;: 6}, {&quot;id&quot;: 84, &quot;a&quot;: 3, &quot;b&quot;: 40, &quot;value&quot;: 8}, {&quot;id&quot;: 85, &quot;a&quot;: 3, &quot;b&quot;: 22, &quot;value&quot;: 53}, {&quot;id&quot;: 86, &quot;a&quot;: 3, &quot;b&quot;: 53, &quot;value&quot;: 9}, {&quot;id&quot;: 87, &quot;a&quot;: 3, &quot;b&quot;: 34, &quot;value&quot;: 1}, {&quot;id&quot;: 88, &quot;a&quot;: 3, &quot;b&quot;: 26, &quot;value&quot;: 26}, {&quot;id&quot;: 89, &quot;a&quot;: 3, &quot;b&quot;: 41, &quot;value&quot;: 9}, {&quot;id&quot;: 90, &quot;a&quot;: 3, &quot;b&quot;: 29, &quot;value&quot;: 17}, {&quot;id&quot;: 91, &quot;a&quot;: 4, &quot;b&quot;: 21, &quot;value&quot;: 36}, {&quot;id&quot;: 92, &quot;a&quot;: 4, &quot;b&quot;: 24, &quot;value&quot;: 24}, {&quot;id&quot;: 93, &quot;a&quot;: 4, &quot;b&quot;: 31, &quot;value&quot;: 28}, {&quot;id&quot;: 94, &quot;a&quot;: 4, &quot;b&quot;: 23, &quot;value&quot;: 49}, {&quot;id&quot;: 95, &quot;a&quot;: 4, &quot;b&quot;: 27, &quot;value&quot;: 32}, {&quot;id&quot;: 96, &quot;a&quot;: 4, &quot;b&quot;: 39, &quot;value&quot;: 6}, {&quot;id&quot;: 97, &quot;a&quot;: 4, &quot;b&quot;: 52, &quot;value&quot;: 3}, {&quot;id&quot;: 98, &quot;a&quot;: 4, &quot;b&quot;: 25, &quot;value&quot;: 32}, {&quot;id&quot;: 99, &quot;a&quot;: 4, &quot;b&quot;: 30, &quot;value&quot;: 38}, {&quot;id&quot;: 100, &quot;a&quot;: 4, &quot;b&quot;: 28, &quot;value&quot;: 28}, {&quot;id&quot;: 101, &quot;a&quot;: 4, &quot;b&quot;: 32, &quot;value&quot;: 26}, {&quot;id&quot;: 102, &quot;a&quot;: 4, &quot;b&quot;: 44, &quot;value&quot;: 2}, {&quot;id&quot;: 103, &quot;a&quot;: 4, &quot;b&quot;: 43, &quot;value&quot;: 2}, {&quot;id&quot;: 104, &quot;a&quot;: 4, &quot;b&quot;: 40, &quot;value&quot;: 10}, {&quot;id&quot;: 105, &quot;a&quot;: 4, &quot;b&quot;: 54, &quot;value&quot;: 2}, {&quot;id&quot;: 106, &quot;a&quot;: 4, &quot;b&quot;: 26, &quot;value&quot;: 21}, {&quot;id&quot;: 107, &quot;a&quot;: 4, &quot;b&quot;: 41, &quot;value&quot;: 5}, {&quot;id&quot;: 108, &quot;a&quot;: 4, &quot;b&quot;: 29, &quot;value&quot;: 29}, {&quot;id&quot;: 109, &quot;a&quot;: 5, &quot;b&quot;: 21, &quot;value&quot;: 321}, {&quot;id&quot;: 110, &quot;a&quot;: 5, &quot;b&quot;: 24, &quot;value&quot;: 211}, {&quot;id&quot;: 111, &quot;a&quot;: 5, &quot;b&quot;: 35, &quot;value&quot;: 28}, {&quot;id&quot;: 112, &quot;a&quot;: 5, &quot;b&quot;: 31, &quot;value&quot;: 85}, {&quot;id&quot;: 113, &quot;a&quot;: 5, &quot;b&quot;: 48, &quot;value&quot;: 1}, {&quot;id&quot;: 114, &quot;a&quot;: 5, &quot;b&quot;: 23, &quot;value&quot;: 61}, {&quot;id&quot;: 115, &quot;a&quot;: 5, &quot;b&quot;: 27, &quot;value&quot;: 115}, {&quot;id&quot;: 116, &quot;a&quot;: 5, &quot;b&quot;: 39, &quot;value&quot;: 18}, {&quot;id&quot;: 117, &quot;a&quot;: 5, &quot;b&quot;: 38, &quot;value&quot;: 38}, {&quot;id&quot;: 118, &quot;a&quot;: 5, &quot;b&quot;: 25, &quot;value&quot;: 177}, {&quot;id&quot;: 119, &quot;a&quot;: 5, &quot;b&quot;: 30, &quot;value&quot;: 125}, {&quot;id&quot;: 120, &quot;a&quot;: 5, &quot;b&quot;: 36, &quot;value&quot;: 22}, {&quot;id&quot;: 121, &quot;a&quot;: 5, &quot;b&quot;: 28, &quot;value&quot;: 113}, {&quot;id&quot;: 122, &quot;a&quot;: 5, &quot;b&quot;: 32, &quot;value&quot;: 75}, {&quot;id&quot;: 123, &quot;a&quot;: 5, &quot;b&quot;: 20, &quot;value&quot;: 740}, {&quot;id&quot;: 124, &quot;a&quot;: 5, &quot;b&quot;: 44, &quot;value&quot;: 5}, {&quot;id&quot;: 125, &quot;a&quot;: 5, &quot;b&quot;: 43, &quot;value&quot;: 6}, {&quot;id&quot;: 126, &quot;a&quot;: 5, &quot;b&quot;: 40, &quot;value&quot;: 11}, {&quot;id&quot;: 127, &quot;a&quot;: 5, &quot;b&quot;: 22, &quot;value&quot;: 299}, {&quot;id&quot;: 128, &quot;a&quot;: 5, &quot;b&quot;: 49, &quot;value&quot;: 4}, {&quot;id&quot;: 129, &quot;a&quot;: 5, &quot;b&quot;: 54, &quot;value&quot;: 2}, {&quot;id&quot;: 130, &quot;a&quot;: 5, &quot;b&quot;: 34, &quot;value&quot;: 25}, {&quot;id&quot;: 131, &quot;a&quot;: 5, &quot;b&quot;: 56, &quot;value&quot;: 1}, {&quot;id&quot;: 132, &quot;a&quot;: 5, &quot;b&quot;: 26, &quot;value&quot;: 195}, {&quot;id&quot;: 133, &quot;a&quot;: 5, &quot;b&quot;: 37, &quot;value&quot;: 58}, {&quot;id&quot;: 134, &quot;a&quot;: 5, &quot;b&quot;: 19, &quot;value&quot;: 472}, {&quot;id&quot;: 135, &quot;a&quot;: 5, &quot;b&quot;: 42, &quot;value&quot;: 28}, {&quot;id&quot;: 136, &quot;a&quot;: 5, &quot;b&quot;: 41, &quot;value&quot;: 12}, {&quot;id&quot;: 137, &quot;a&quot;: 5, &quot;b&quot;: 45, &quot;value&quot;: 8}, {&quot;id&quot;: 138, &quot;a&quot;: 5, &quot;b&quot;: 29, &quot;value&quot;: 108}, {&quot;id&quot;: 139, &quot;a&quot;: 5, &quot;b&quot;: 33, &quot;value&quot;: 62}, {&quot;id&quot;: 140, &quot;a&quot;: 6, &quot;b&quot;: 21, &quot;value&quot;: 426}, {&quot;id&quot;: 141, &quot;a&quot;: 6, &quot;b&quot;: 24, &quot;value&quot;: 189}, {&quot;id&quot;: 142, &quot;a&quot;: 6, &quot;b&quot;: 50, &quot;value&quot;: 3}, {&quot;id&quot;: 143, &quot;a&quot;: 6, &quot;b&quot;: 31, &quot;value&quot;: 200}, {&quot;id&quot;: 144, &quot;a&quot;: 6, &quot;b&quot;: 48, &quot;value&quot;: 17}, {&quot;id&quot;: 145, &quot;a&quot;: 6, &quot;b&quot;: 23, &quot;value&quot;: 189}, {&quot;id&quot;: 146, &quot;a&quot;: 6, &quot;b&quot;: 27, &quot;value&quot;: 155}, {&quot;id&quot;: 147, &quot;a&quot;: 6, &quot;b&quot;: 39, &quot;value&quot;: 28}, {&quot;id&quot;: 148, &quot;a&quot;: 6, &quot;b&quot;: 38, &quot;value&quot;: 67}, {&quot;id&quot;: 149, &quot;a&quot;: 6, &quot;b&quot;: 25, &quot;value&quot;: 129}, {&quot;id&quot;: 150, &quot;a&quot;: 6, &quot;b&quot;: 30, &quot;value&quot;: 163}, {&quot;id&quot;: 151, &quot;a&quot;: 6, &quot;b&quot;: 36, &quot;value&quot;: 14}, {&quot;id&quot;: 152, &quot;a&quot;: 6, &quot;b&quot;: 28, &quot;value&quot;: 184}, {&quot;id&quot;: 153, &quot;a&quot;: 6, &quot;b&quot;: 32, &quot;value&quot;: 146}, {&quot;id&quot;: 154, &quot;a&quot;: 6, &quot;b&quot;: 20, &quot;value&quot;: 31}, {&quot;id&quot;: 155, &quot;a&quot;: 6, &quot;b&quot;: 44, &quot;value&quot;: 17}, {&quot;id&quot;: 156, &quot;a&quot;: 6, &quot;b&quot;: 43, &quot;value&quot;: 17}, {&quot;id&quot;: 157, &quot;a&quot;: 6, &quot;b&quot;: 40, &quot;value&quot;: 21}, {&quot;id&quot;: 158, &quot;a&quot;: 6, &quot;b&quot;: 22, &quot;value&quot;: 295}, {&quot;id&quot;: 159, &quot;a&quot;: 6, &quot;b&quot;: 49, &quot;value&quot;: 4}, {&quot;id&quot;: 160, &quot;a&quot;: 6, &quot;b&quot;: 54, &quot;value&quot;: 1}, {&quot;id&quot;: 161, &quot;a&quot;: 6, &quot;b&quot;: 34, &quot;value&quot;: 16}, {&quot;id&quot;: 162, &quot;a&quot;: 6, &quot;b&quot;: 56, &quot;value&quot;: 1}, {&quot;id&quot;: 163, &quot;a&quot;: 6, &quot;b&quot;: 26, &quot;value&quot;: 168}, {&quot;id&quot;: 164, &quot;a&quot;: 6, &quot;b&quot;: 37, &quot;value&quot;: 44}, {&quot;id&quot;: 165, &quot;a&quot;: 6, &quot;b&quot;: 19, &quot;value&quot;: 30}, {&quot;id&quot;: 166, &quot;a&quot;: 6, &quot;b&quot;: 42, &quot;value&quot;: 29}, {&quot;id&quot;: 167, &quot;a&quot;: 6, &quot;b&quot;: 41, &quot;value&quot;: 14}, {&quot;id&quot;: 168, &quot;a&quot;: 6, &quot;b&quot;: 45, &quot;value&quot;: 30}, {&quot;id&quot;: 169, &quot;a&quot;: 6, &quot;b&quot;: 29, &quot;value&quot;: 146}, {&quot;id&quot;: 170, &quot;a&quot;: 6, &quot;b&quot;: 33, &quot;value&quot;: 63}, {&quot;id&quot;: 171, &quot;a&quot;: 7, &quot;b&quot;: 50, &quot;value&quot;: 1}, {&quot;id&quot;: 172, &quot;a&quot;: 7, &quot;b&quot;: 36, &quot;value&quot;: 16}, {&quot;id&quot;: 173, &quot;a&quot;: 7, &quot;b&quot;: 56, &quot;value&quot;: 1}, {&quot;id&quot;: 174, &quot;a&quot;: 8, &quot;b&quot;: 50, &quot;value&quot;: 3}, {&quot;id&quot;: 175, &quot;a&quot;: 8, &quot;b&quot;: 36, &quot;value&quot;: 33}, {&quot;id&quot;: 176, &quot;a&quot;: 9, &quot;b&quot;: 21, &quot;value&quot;: 516}, {&quot;id&quot;: 177, &quot;a&quot;: 9, &quot;b&quot;: 24, &quot;value&quot;: 193}, {&quot;id&quot;: 178, &quot;a&quot;: 9, &quot;b&quot;: 50, &quot;value&quot;: 1}, {&quot;id&quot;: 179, &quot;a&quot;: 9, &quot;b&quot;: 31, &quot;value&quot;: 154}, {&quot;id&quot;: 180, &quot;a&quot;: 9, &quot;b&quot;: 48, &quot;value&quot;: 4}, {&quot;id&quot;: 181, &quot;a&quot;: 9, &quot;b&quot;: 23, &quot;value&quot;: 125}, {&quot;id&quot;: 182, &quot;a&quot;: 9, &quot;b&quot;: 27, &quot;value&quot;: 226}, {&quot;id&quot;: 183, &quot;a&quot;: 9, &quot;b&quot;: 39, &quot;value&quot;: 16}, {&quot;id&quot;: 184, &quot;a&quot;: 9, &quot;b&quot;: 38, &quot;value&quot;: 29}, {&quot;id&quot;: 185, &quot;a&quot;: 9, &quot;b&quot;: 25, &quot;value&quot;: 152}, {&quot;id&quot;: 186, &quot;a&quot;: 9, &quot;b&quot;: 30, &quot;value&quot;: 182}, {&quot;id&quot;: 187, &quot;a&quot;: 9, &quot;b&quot;: 36, &quot;value&quot;: 18}, {&quot;id&quot;: 188, &quot;a&quot;: 9, &quot;b&quot;: 28, &quot;value&quot;: 208}, {&quot;id&quot;: 189, &quot;a&quot;: 9, &quot;b&quot;: 32, &quot;value&quot;: 180}, {&quot;id&quot;: 190, &quot;a&quot;: 9, &quot;b&quot;: 20, &quot;value&quot;: 33}, {&quot;id&quot;: 191, &quot;a&quot;: 9, &quot;b&quot;: 44, &quot;value&quot;: 12}, {&quot;id&quot;: 192, &quot;a&quot;: 9, &quot;b&quot;: 43, &quot;value&quot;: 13}, {&quot;id&quot;: 193, &quot;a&quot;: 9, &quot;b&quot;: 40, &quot;value&quot;: 19}, {&quot;id&quot;: 194, &quot;a&quot;: 9, &quot;b&quot;: 18, &quot;value&quot;: 934}, {&quot;id&quot;: 195, &quot;a&quot;: 9, &quot;b&quot;: 22, &quot;value&quot;: 545}, {&quot;id&quot;: 196, &quot;a&quot;: 9, &quot;b&quot;: 17, &quot;value&quot;: 1498}, {&quot;id&quot;: 197, &quot;a&quot;: 9, &quot;b&quot;: 49, &quot;value&quot;: 3}, {&quot;id&quot;: 198, &quot;a&quot;: 9, &quot;b&quot;: 54, &quot;value&quot;: 4}, {&quot;id&quot;: 199, &quot;a&quot;: 9, &quot;b&quot;: 34, &quot;value&quot;: 11}, {&quot;id&quot;: 200, &quot;a&quot;: 9, &quot;b&quot;: 56, &quot;value&quot;: 1}, {&quot;id&quot;: 201, &quot;a&quot;: 9, &quot;b&quot;: 26, &quot;value&quot;: 204}, {&quot;id&quot;: 202, &quot;a&quot;: 9, &quot;b&quot;: 37, &quot;value&quot;: 40}, {&quot;id&quot;: 203, &quot;a&quot;: 9, &quot;b&quot;: 19, &quot;value&quot;: 30}, {&quot;id&quot;: 204, &quot;a&quot;: 9, &quot;b&quot;: 42, &quot;value&quot;: 25}, {&quot;id&quot;: 205, &quot;a&quot;: 9, &quot;b&quot;: 41, &quot;value&quot;: 20}, {&quot;id&quot;: 206, &quot;a&quot;: 9, &quot;b&quot;: 45, &quot;value&quot;: 14}, {&quot;id&quot;: 207, &quot;a&quot;: 9, &quot;b&quot;: 29, &quot;value&quot;: 146}, {&quot;id&quot;: 208, &quot;a&quot;: 9, &quot;b&quot;: 33, &quot;value&quot;: 72}, {&quot;id&quot;: 209, &quot;a&quot;: 10, &quot;b&quot;: 21, &quot;value&quot;: 10}, {&quot;id&quot;: 210, &quot;a&quot;: 10, &quot;b&quot;: 24, &quot;value&quot;: 3}, {&quot;id&quot;: 211, &quot;a&quot;: 10, &quot;b&quot;: 31, &quot;value&quot;: 7}, {&quot;id&quot;: 212, &quot;a&quot;: 10, &quot;b&quot;: 27, &quot;value&quot;: 2}, {&quot;id&quot;: 213, &quot;a&quot;: 10, &quot;b&quot;: 25, &quot;value&quot;: 1}, {&quot;id&quot;: 214, &quot;a&quot;: 10, &quot;b&quot;: 30, &quot;value&quot;: 5}, {&quot;id&quot;: 215, &quot;a&quot;: 10, &quot;b&quot;: 36, &quot;value&quot;: 7}, {&quot;id&quot;: 216, &quot;a&quot;: 10, &quot;b&quot;: 28, &quot;value&quot;: 7}, {&quot;id&quot;: 217, &quot;a&quot;: 10, &quot;b&quot;: 32, &quot;value&quot;: 11}, {&quot;id&quot;: 218, &quot;a&quot;: 10, &quot;b&quot;: 20, &quot;value&quot;: 38}, {&quot;id&quot;: 219, &quot;a&quot;: 10, &quot;b&quot;: 44, &quot;value&quot;: 3}, {&quot;id&quot;: 220, &quot;a&quot;: 10, &quot;b&quot;: 43, &quot;value&quot;: 1}, {&quot;id&quot;: 221, &quot;a&quot;: 10, &quot;b&quot;: 34, &quot;value&quot;: 9}, {&quot;id&quot;: 222, &quot;a&quot;: 10, &quot;b&quot;: 56, &quot;value&quot;: 1}, {&quot;id&quot;: 223, &quot;a&quot;: 10, &quot;b&quot;: 26, &quot;value&quot;: 1}, {&quot;id&quot;: 224, &quot;a&quot;: 10, &quot;b&quot;: 19, &quot;value&quot;: 33}, {&quot;id&quot;: 225, &quot;a&quot;: 10, &quot;b&quot;: 29, &quot;value&quot;: 11}, {&quot;id&quot;: 226, &quot;a&quot;: 11, &quot;b&quot;: 50, &quot;value&quot;: 1}, {&quot;id&quot;: 227, &quot;a&quot;: 12, &quot;b&quot;: 50, &quot;value&quot;: 1}, {&quot;id&quot;: 228, &quot;a&quot;: 12, &quot;b&quot;: 56, &quot;value&quot;: 3}, {&quot;id&quot;: 229, &quot;a&quot;: 13, &quot;b&quot;: 21, &quot;value&quot;: 712}, {&quot;id&quot;: 230, &quot;a&quot;: 13, &quot;b&quot;: 24, &quot;value&quot;: 355}, {&quot;id&quot;: 231, &quot;a&quot;: 13, &quot;b&quot;: 50, &quot;value&quot;: 3}, {&quot;id&quot;: 232, &quot;a&quot;: 13, &quot;b&quot;: 31, &quot;value&quot;: 369}, {&quot;id&quot;: 233, &quot;a&quot;: 13, &quot;b&quot;: 48, &quot;value&quot;: 17}, {&quot;id&quot;: 234, &quot;a&quot;: 13, &quot;b&quot;: 23, &quot;value&quot;: 229}, {&quot;id&quot;: 235, &quot;a&quot;: 13, &quot;b&quot;: 27, &quot;value&quot;: 385}, {&quot;id&quot;: 236, &quot;a&quot;: 13, &quot;b&quot;: 39, &quot;value&quot;: 25}, {&quot;id&quot;: 237, &quot;a&quot;: 13, &quot;b&quot;: 52, &quot;value&quot;: 12}, {&quot;id&quot;: 238, &quot;a&quot;: 13, &quot;b&quot;: 38, &quot;value&quot;: 114}, {&quot;id&quot;: 239, &quot;a&quot;: 13, &quot;b&quot;: 25, &quot;value&quot;: 439}, {&quot;id&quot;: 240, &quot;a&quot;: 13, &quot;b&quot;: 30, &quot;value&quot;: 384}, {&quot;id&quot;: 241, &quot;a&quot;: 13, &quot;b&quot;: 36, &quot;value&quot;: 34}, {&quot;id&quot;: 242, &quot;a&quot;: 13, &quot;b&quot;: 28, &quot;value&quot;: 350}, {&quot;id&quot;: 243, &quot;a&quot;: 13, &quot;b&quot;: 32, &quot;value&quot;: 337}, {&quot;id&quot;: 244, &quot;a&quot;: 13, &quot;b&quot;: 20, &quot;value&quot;: 718}, {&quot;id&quot;: 245, &quot;a&quot;: 13, &quot;b&quot;: 44, &quot;value&quot;: 14}, {&quot;id&quot;: 246, &quot;a&quot;: 13, &quot;b&quot;: 43, &quot;value&quot;: 19}, {&quot;id&quot;: 247, &quot;a&quot;: 13, &quot;b&quot;: 40, &quot;value&quot;: 36}, {&quot;id&quot;: 248, &quot;a&quot;: 13, &quot;b&quot;: 18, &quot;value&quot;: 836}, {&quot;id&quot;: 249, &quot;a&quot;: 13, &quot;b&quot;: 22, &quot;value&quot;: 311}, {&quot;id&quot;: 250, &quot;a&quot;: 13, &quot;b&quot;: 17, &quot;value&quot;: 796}, {&quot;id&quot;: 251, &quot;a&quot;: 13, &quot;b&quot;: 49, &quot;value&quot;: 4}, {&quot;id&quot;: 252, &quot;a&quot;: 13, &quot;b&quot;: 54, &quot;value&quot;: 3}, {&quot;id&quot;: 253, &quot;a&quot;: 13, &quot;b&quot;: 34, &quot;value&quot;: 8}, {&quot;id&quot;: 254, &quot;a&quot;: 13, &quot;b&quot;: 51, &quot;value&quot;: 13}, {&quot;id&quot;: 255, &quot;a&quot;: 13, &quot;b&quot;: 26, &quot;value&quot;: 327}, {&quot;id&quot;: 256, &quot;a&quot;: 13, &quot;b&quot;: 37, &quot;value&quot;: 125}, {&quot;id&quot;: 257, &quot;a&quot;: 13, &quot;b&quot;: 19, &quot;value&quot;: 1007}, {&quot;id&quot;: 258, &quot;a&quot;: 13, &quot;b&quot;: 42, &quot;value&quot;: 72}, {&quot;id&quot;: 259, &quot;a&quot;: 13, &quot;b&quot;: 41, &quot;value&quot;: 29}, {&quot;id&quot;: 260, &quot;a&quot;: 13, &quot;b&quot;: 45, &quot;value&quot;: 47}, {&quot;id&quot;: 261, &quot;a&quot;: 13, &quot;b&quot;: 47, &quot;value&quot;: 36}, {&quot;id&quot;: 262, &quot;a&quot;: 13, &quot;b&quot;: 29, &quot;value&quot;: 361}, {&quot;id&quot;: 263, &quot;a&quot;: 13, &quot;b&quot;: 33, &quot;value&quot;: 188}, {&quot;id&quot;: 264, &quot;a&quot;: 14, &quot;b&quot;: 23, &quot;value&quot;: 62}, {&quot;id&quot;: 265, &quot;a&quot;: 14, &quot;b&quot;: 39, &quot;value&quot;: 22}, {&quot;id&quot;: 266, &quot;a&quot;: 14, &quot;b&quot;: 44, &quot;value&quot;: 8}, {&quot;id&quot;: 267, &quot;a&quot;: 14, &quot;b&quot;: 43, &quot;value&quot;: 9}, {&quot;id&quot;: 268, &quot;a&quot;: 14, &quot;b&quot;: 40, &quot;value&quot;: 20}, {&quot;id&quot;: 269, &quot;a&quot;: 14, &quot;b&quot;: 41, &quot;value&quot;: 15}, {&quot;id&quot;: 270, &quot;a&quot;: 15, &quot;b&quot;: 21, &quot;value&quot;: 295}, {&quot;id&quot;: 271, &quot;a&quot;: 15, &quot;b&quot;: 24, &quot;value&quot;: 186}, {&quot;id&quot;: 272, &quot;a&quot;: 15, &quot;b&quot;: 50, &quot;value&quot;: 1}, {&quot;id&quot;: 273, &quot;a&quot;: 15, &quot;b&quot;: 31, &quot;value&quot;: 131}, {&quot;id&quot;: 274, &quot;a&quot;: 15, &quot;b&quot;: 48, &quot;value&quot;: 8}, {&quot;id&quot;: 275, &quot;a&quot;: 15, &quot;b&quot;: 23, &quot;value&quot;: 63}, {&quot;id&quot;: 276, &quot;a&quot;: 15, &quot;b&quot;: 27, &quot;value&quot;: 136}, {&quot;id&quot;: 277, &quot;a&quot;: 15, &quot;b&quot;: 39, &quot;value&quot;: 8}, {&quot;id&quot;: 278, &quot;a&quot;: 15, &quot;b&quot;: 38, &quot;value&quot;: 20}, {&quot;id&quot;: 279, &quot;a&quot;: 15, &quot;b&quot;: 25, &quot;value&quot;: 138}, {&quot;id&quot;: 280, &quot;a&quot;: 15, &quot;b&quot;: 30, &quot;value&quot;: 143}, {&quot;id&quot;: 281, &quot;a&quot;: 15, &quot;b&quot;: 36, &quot;value&quot;: 10}, {&quot;id&quot;: 282, &quot;a&quot;: 15, &quot;b&quot;: 28, &quot;value&quot;: 158}, {&quot;id&quot;: 283, &quot;a&quot;: 15, &quot;b&quot;: 32, &quot;value&quot;: 133}, {&quot;id&quot;: 284, &quot;a&quot;: 15, &quot;b&quot;: 20, &quot;value&quot;: 35}, {&quot;id&quot;: 285, &quot;a&quot;: 15, &quot;b&quot;: 44, &quot;value&quot;: 1}, {&quot;id&quot;: 286, &quot;a&quot;: 15, &quot;b&quot;: 43, &quot;value&quot;: 2}, {&quot;id&quot;: 287, &quot;a&quot;: 15, &quot;b&quot;: 40, &quot;value&quot;: 6}, {&quot;id&quot;: 288, &quot;a&quot;: 15, &quot;b&quot;: 22, &quot;value&quot;: 290}, {&quot;id&quot;: 289, &quot;a&quot;: 15, &quot;b&quot;: 49, &quot;value&quot;: 4}, {&quot;id&quot;: 290, &quot;a&quot;: 15, &quot;b&quot;: 54, &quot;value&quot;: 1}, {&quot;id&quot;: 291, &quot;a&quot;: 15, &quot;b&quot;: 34, &quot;value&quot;: 10}, {&quot;id&quot;: 292, &quot;a&quot;: 15, &quot;b&quot;: 56, &quot;value&quot;: 2}, {&quot;id&quot;: 293, &quot;a&quot;: 15, &quot;b&quot;: 26, &quot;value&quot;: 142}, {&quot;id&quot;: 294, &quot;a&quot;: 15, &quot;b&quot;: 37, &quot;value&quot;: 43}, {&quot;id&quot;: 295, &quot;a&quot;: 15, &quot;b&quot;: 19, &quot;value&quot;: 33}, {&quot;id&quot;: 296, &quot;a&quot;: 15, &quot;b&quot;: 42, &quot;value&quot;: 20}, {&quot;id&quot;: 297, &quot;a&quot;: 15, &quot;b&quot;: 41, &quot;value&quot;: 6}, {&quot;id&quot;: 298, &quot;a&quot;: 15, &quot;b&quot;: 45, &quot;value&quot;: 8}, {&quot;id&quot;: 299, &quot;a&quot;: 15, &quot;b&quot;: 29, &quot;value&quot;: 126}, {&quot;id&quot;: 300, &quot;a&quot;: 15, &quot;b&quot;: 33, &quot;value&quot;: 59}, {&quot;id&quot;: 301, &quot;a&quot;: 16, &quot;b&quot;: 34, &quot;value&quot;: 5}, {&quot;id&quot;: 302, &quot;a&quot;: 21, &quot;b&quot;: 57, &quot;value&quot;: 1}, {&quot;id&quot;: 303, &quot;a&quot;: 21, &quot;b&quot;: 58, &quot;value&quot;: 149}, {&quot;id&quot;: 304, &quot;a&quot;: 21, &quot;b&quot;: 59, &quot;value&quot;: 707}, {&quot;id&quot;: 305, &quot;a&quot;: 21, &quot;b&quot;: 60, &quot;value&quot;: 713}, {&quot;id&quot;: 306, &quot;a&quot;: 24, &quot;b&quot;: 57, &quot;value&quot;: 1}, {&quot;id&quot;: 307, &quot;a&quot;: 24, &quot;b&quot;: 58, &quot;value&quot;: 75}, {&quot;id&quot;: 308, &quot;a&quot;: 24, &quot;b&quot;: 59, &quot;value&quot;: 350}, {&quot;id&quot;: 309, &quot;a&quot;: 24, &quot;b&quot;: 60, &quot;value&quot;: 374}, {&quot;id&quot;: 310, &quot;a&quot;: 35, &quot;b&quot;: 57, &quot;value&quot;: 63}, {&quot;id&quot;: 311, &quot;a&quot;: 35, &quot;b&quot;: 59, &quot;value&quot;: 181}, {&quot;id&quot;: 312, &quot;a&quot;: 50, &quot;b&quot;: 61, &quot;value&quot;: 6}, {&quot;id&quot;: 313, &quot;a&quot;: 50, &quot;b&quot;: 62, &quot;value&quot;: 8}, {&quot;id&quot;: 314, &quot;a&quot;: 31, &quot;b&quot;: 63, &quot;value&quot;: 1}, {&quot;id&quot;: 315, &quot;a&quot;: 31, &quot;b&quot;: 64, &quot;value&quot;: 1}, {&quot;id&quot;: 316, &quot;a&quot;: 31, &quot;b&quot;: 58, &quot;value&quot;: 75}, {&quot;id&quot;: 317, &quot;a&quot;: 31, &quot;b&quot;: 59, &quot;value&quot;: 319}, {&quot;id&quot;: 318, &quot;a&quot;: 31, &quot;b&quot;: 60, &quot;value&quot;: 327}, {&quot;id&quot;: 319, &quot;a&quot;: 48, &quot;b&quot;: 65, &quot;value&quot;: 17}, {&quot;id&quot;: 320, &quot;a&quot;: 48, &quot;b&quot;: 66, &quot;value&quot;: 1}, {&quot;id&quot;: 321, &quot;a&quot;: 48, &quot;b&quot;: 67, &quot;value&quot;: 15}, {&quot;id&quot;: 322, &quot;a&quot;: 23, &quot;b&quot;: 58, &quot;value&quot;: 71}, {&quot;id&quot;: 323, &quot;a&quot;: 23, &quot;b&quot;: 59, &quot;value&quot;: 477}, {&quot;id&quot;: 324, &quot;a&quot;: 23, &quot;b&quot;: 60, &quot;value&quot;: 526}, {&quot;id&quot;: 325, &quot;a&quot;: 27, &quot;b&quot;: 66, &quot;value&quot;: 1}, {&quot;id&quot;: 326, &quot;a&quot;: 27, &quot;b&quot;: 68, &quot;value&quot;: 1}, {&quot;id&quot;: 327, &quot;a&quot;: 27, &quot;b&quot;: 58, &quot;value&quot;: 63}, {&quot;id&quot;: 328, &quot;a&quot;: 27, &quot;b&quot;: 59, &quot;value&quot;: 356}, {&quot;id&quot;: 329, &quot;a&quot;: 27, &quot;b&quot;: 60, &quot;value&quot;: 333}, {&quot;id&quot;: 330, &quot;a&quot;: 39, &quot;b&quot;: 66, &quot;value&quot;: 1}, {&quot;id&quot;: 331, &quot;a&quot;: 39, &quot;b&quot;: 69, &quot;value&quot;: 2}, {&quot;id&quot;: 332, &quot;a&quot;: 39, &quot;b&quot;: 60, &quot;value&quot;: 153}, {&quot;id&quot;: 333, &quot;a&quot;: 52, &quot;b&quot;: 59, &quot;value&quot;: 12}, {&quot;id&quot;: 334, &quot;a&quot;: 38, &quot;b&quot;: 70, &quot;value&quot;: 98}, {&quot;id&quot;: 335, &quot;a&quot;: 38, &quot;b&quot;: 71, &quot;value&quot;: 15}, {&quot;id&quot;: 336, &quot;a&quot;: 38, &quot;b&quot;: 72, &quot;value&quot;: 23}, {&quot;id&quot;: 337, &quot;a&quot;: 38, &quot;b&quot;: 73, &quot;value&quot;: 48}, {&quot;id&quot;: 338, &quot;a&quot;: 25, &quot;b&quot;: 68, &quot;value&quot;: 1}, {&quot;id&quot;: 339, &quot;a&quot;: 25, &quot;b&quot;: 58, &quot;value&quot;: 63}, {&quot;id&quot;: 340, &quot;a&quot;: 25, &quot;b&quot;: 59, &quot;value&quot;: 354}, {&quot;id&quot;: 341, &quot;a&quot;: 25, &quot;b&quot;: 60, &quot;value&quot;: 363}, {&quot;id&quot;: 342, &quot;a&quot;: 30, &quot;b&quot;: 58, &quot;value&quot;: 53}, {&quot;id&quot;: 343, &quot;a&quot;: 30, &quot;b&quot;: 59, &quot;value&quot;: 349}, {&quot;id&quot;: 344, &quot;a&quot;: 30, &quot;b&quot;: 60, &quot;value&quot;: 323}, {&quot;id&quot;: 345, &quot;a&quot;: 36, &quot;b&quot;: 59, &quot;value&quot;: 137}, {&quot;id&quot;: 346, &quot;a&quot;: 36, &quot;b&quot;: 74, &quot;value&quot;: 76}, {&quot;id&quot;: 347, &quot;a&quot;: 28, &quot;b&quot;: 64, &quot;value&quot;: 1}, {&quot;id&quot;: 348, &quot;a&quot;: 28, &quot;b&quot;: 57, &quot;value&quot;: 1}, {&quot;id&quot;: 349, &quot;a&quot;: 28, &quot;b&quot;: 58, &quot;value&quot;: 58}, {&quot;id&quot;: 350, &quot;a&quot;: 28, &quot;b&quot;: 59, &quot;value&quot;: 352}, {&quot;id&quot;: 351, &quot;a&quot;: 28, &quot;b&quot;: 60, &quot;value&quot;: 337}, {&quot;id&quot;: 352, &quot;a&quot;: 32, &quot;b&quot;: 57, &quot;value&quot;: 1}, {&quot;id&quot;: 353, &quot;a&quot;: 32, &quot;b&quot;: 58, &quot;value&quot;: 51}, {&quot;id&quot;: 354, &quot;a&quot;: 32, &quot;b&quot;: 59, &quot;value&quot;: 303}, {&quot;id&quot;: 355, &quot;a&quot;: 32, &quot;b&quot;: 60, &quot;value&quot;: 342}, {&quot;id&quot;: 356, &quot;a&quot;: 20, &quot;b&quot;: 58, &quot;value&quot;: 464}, {&quot;id&quot;: 357, &quot;a&quot;: 20, &quot;b&quot;: 75, &quot;value&quot;: 611}, {&quot;id&quot;: 358, &quot;a&quot;: 20, &quot;b&quot;: 59, &quot;value&quot;: 601}, {&quot;id&quot;: 359, &quot;a&quot;: 20, &quot;b&quot;: 60, &quot;value&quot;: 610}, {&quot;id&quot;: 360, &quot;a&quot;: 44, &quot;b&quot;: 76, &quot;value&quot;: 21}, {&quot;id&quot;: 361, &quot;a&quot;: 44, &quot;b&quot;: 60, &quot;value&quot;: 63}, {&quot;id&quot;: 362, &quot;a&quot;: 44, &quot;b&quot;: 77, &quot;value&quot;: 2}, {&quot;id&quot;: 363, &quot;a&quot;: 43, &quot;b&quot;: 63, &quot;value&quot;: 1}, {&quot;id&quot;: 364, &quot;a&quot;: 43, &quot;b&quot;: 60, &quot;value&quot;: 86}, {&quot;id&quot;: 365, &quot;a&quot;: 46, &quot;b&quot;: 60, &quot;value&quot;: 46}, {&quot;id&quot;: 366, &quot;a&quot;: 40, &quot;b&quot;: 66, &quot;value&quot;: 2}, {&quot;id&quot;: 367, &quot;a&quot;: 40, &quot;b&quot;: 60, &quot;value&quot;: 152}, {&quot;id&quot;: 368, &quot;a&quot;: 55, &quot;b&quot;: 76, &quot;value&quot;: 4}, {&quot;id&quot;: 369, &quot;a&quot;: 55, &quot;b&quot;: 60, &quot;value&quot;: 4}, {&quot;id&quot;: 370, &quot;a&quot;: 55, &quot;b&quot;: 77, &quot;value&quot;: 7}, {&quot;id&quot;: 371, &quot;a&quot;: 18, &quot;b&quot;: 58, &quot;value&quot;: 730}, {&quot;id&quot;: 372, &quot;a&quot;: 18, &quot;b&quot;: 75, &quot;value&quot;: 569}, {&quot;id&quot;: 373, &quot;a&quot;: 18, &quot;b&quot;: 59, &quot;value&quot;: 1307}, {&quot;id&quot;: 374, &quot;a&quot;: 18, &quot;b&quot;: 60, &quot;value&quot;: 1405}, {&quot;id&quot;: 375, &quot;a&quot;: 22, &quot;b&quot;: 57, &quot;value&quot;: 1}, {&quot;id&quot;: 376, &quot;a&quot;: 22, &quot;b&quot;: 58, &quot;value&quot;: 122}, {&quot;id&quot;: 377, &quot;a&quot;: 22, &quot;b&quot;: 59, &quot;value&quot;: 599}, {&quot;id&quot;: 378, &quot;a&quot;: 22, &quot;b&quot;: 60, &quot;value&quot;: 618}, {&quot;id&quot;: 379, &quot;a&quot;: 17, &quot;b&quot;: 58, &quot;value&quot;: 1133}, {&quot;id&quot;: 380, &quot;a&quot;: 17, &quot;b&quot;: 75, &quot;value&quot;: 631}, {&quot;id&quot;: 381, &quot;a&quot;: 17, &quot;b&quot;: 59, &quot;value&quot;: 1911}, {&quot;id&quot;: 382, &quot;a&quot;: 17, &quot;b&quot;: 60, &quot;value&quot;: 1891}, {&quot;id&quot;: 383, &quot;a&quot;: 53, &quot;b&quot;: 59, &quot;value&quot;: 4}, {&quot;id&quot;: 384, &quot;a&quot;: 53, &quot;b&quot;: 60, &quot;value&quot;: 5}, {&quot;id&quot;: 385, &quot;a&quot;: 49, &quot;b&quot;: 76, &quot;value&quot;: 13}, {&quot;id&quot;: 386, &quot;a&quot;: 49, &quot;b&quot;: 60, &quot;value&quot;: 25}, {&quot;id&quot;: 387, &quot;a&quot;: 49, &quot;b&quot;: 77, &quot;value&quot;: 3}, {&quot;id&quot;: 388, &quot;a&quot;: 54, &quot;b&quot;: 59, &quot;value&quot;: 9}, {&quot;id&quot;: 389, &quot;a&quot;: 34, &quot;b&quot;: 57, &quot;value&quot;: 64}, {&quot;id&quot;: 390, &quot;a&quot;: 34, &quot;b&quot;: 59, &quot;value&quot;: 195}, {&quot;id&quot;: 391, &quot;a&quot;: 56, &quot;b&quot;: 61, &quot;value&quot;: 2}, {&quot;id&quot;: 392, &quot;a&quot;: 56, &quot;b&quot;: 62, &quot;value&quot;: 6}, {&quot;id&quot;: 393, &quot;a&quot;: 51, &quot;b&quot;: 78, &quot;value&quot;: 3}, {&quot;id&quot;: 394, &quot;a&quot;: 51, &quot;b&quot;: 59, &quot;value&quot;: 8}, {&quot;id&quot;: 395, &quot;a&quot;: 51, &quot;b&quot;: 60, &quot;value&quot;: 1}, {&quot;id&quot;: 396, &quot;a&quot;: 51, &quot;b&quot;: 79, &quot;value&quot;: 1}, {&quot;id&quot;: 397, &quot;a&quot;: 26, &quot;b&quot;: 68, &quot;value&quot;: 1}, {&quot;id&quot;: 398, &quot;a&quot;: 26, &quot;b&quot;: 58, &quot;value&quot;: 67}, {&quot;id&quot;: 399, &quot;a&quot;: 26, &quot;b&quot;: 59, &quot;value&quot;: 317}, {&quot;id&quot;: 400, &quot;a&quot;: 26, &quot;b&quot;: 60, &quot;value&quot;: 384}, {&quot;id&quot;: 401, &quot;a&quot;: 37, &quot;b&quot;: 70, &quot;value&quot;: 72}, {&quot;id&quot;: 402, &quot;a&quot;: 37, &quot;b&quot;: 71, &quot;value&quot;: 67}, {&quot;id&quot;: 403, &quot;a&quot;: 37, &quot;b&quot;: 72, &quot;value&quot;: 17}, {&quot;id&quot;: 404, &quot;a&quot;: 37, &quot;b&quot;: 73, &quot;value&quot;: 39}, {&quot;id&quot;: 405, &quot;a&quot;: 19, &quot;b&quot;: 58, &quot;value&quot;: 470}, {&quot;id&quot;: 406, &quot;a&quot;: 19, &quot;b&quot;: 75, &quot;value&quot;: 608}, {&quot;id&quot;: 407, &quot;a&quot;: 19, &quot;b&quot;: 59, &quot;value&quot;: 618}, {&quot;id&quot;: 408, &quot;a&quot;: 19, &quot;b&quot;: 60, &quot;value&quot;: 624}, {&quot;id&quot;: 409, &quot;a&quot;: 42, &quot;b&quot;: 70, &quot;value&quot;: 50}, {&quot;id&quot;: 410, &quot;a&quot;: 42, &quot;b&quot;: 71, &quot;value&quot;: 45}, {&quot;id&quot;: 411, &quot;a&quot;: 42, &quot;b&quot;: 73, &quot;value&quot;: 16}, {&quot;id&quot;: 412, &quot;a&quot;: 41, &quot;b&quot;: 66, &quot;value&quot;: 1}, {&quot;id&quot;: 413, &quot;a&quot;: 41, &quot;b&quot;: 60, &quot;value&quot;: 126}, {&quot;id&quot;: 414, &quot;a&quot;: 45, &quot;b&quot;: 70, &quot;value&quot;: 30}, {&quot;id&quot;: 415, &quot;a&quot;: 45, &quot;b&quot;: 71, &quot;value&quot;: 20}, {&quot;id&quot;: 416, &quot;a&quot;: 45, &quot;b&quot;: 73, &quot;value&quot;: 18}, {&quot;id&quot;: 417, &quot;a&quot;: 47, &quot;b&quot;: 57, &quot;value&quot;: 26}, {&quot;id&quot;: 418, &quot;a&quot;: 47, &quot;b&quot;: 59, &quot;value&quot;: 10}, {&quot;id&quot;: 419, &quot;a&quot;: 29, &quot;b&quot;: 64, &quot;value&quot;: 1}, {&quot;id&quot;: 420, &quot;a&quot;: 29, &quot;b&quot;: 57, &quot;value&quot;: 1}, {&quot;id&quot;: 421, &quot;a&quot;: 29, &quot;b&quot;: 58, &quot;value&quot;: 72}, {&quot;id&quot;: 422, &quot;a&quot;: 29, &quot;b&quot;: 59, &quot;value&quot;: 317}, {&quot;id&quot;: 423, &quot;a&quot;: 29, &quot;b&quot;: 60, &quot;value&quot;: 344}, {&quot;id&quot;: 424, &quot;a&quot;: 33, &quot;b&quot;: 70, &quot;value&quot;: 108}, {&quot;id&quot;: 425, &quot;a&quot;: 33, &quot;b&quot;: 71, &quot;value&quot;: 77}, {&quot;id&quot;: 426, &quot;a&quot;: 33, &quot;b&quot;: 72, &quot;value&quot;: 30}, {&quot;id&quot;: 427, &quot;a&quot;: 33, &quot;b&quot;: 73, &quot;value&quot;: 79}]}&lt;/script&gt;
+&lt;script&gt;
+(()=&gt;{
+const root=document.getElementById('sphere-explorer'),data=JSON.parse(root.querySelector('#sx-data').textContent),nodes=data.nodes,edges=data.edges,canvas=root.querySelector('canvas'),ctx=canvas.getContext('2d'),aside=root.querySelector('aside'),picker=root.querySelector('select'),hover=root.querySelector('.hover');
+const kind=n=&gt;n.group===0?'마약':n.group===1?'아이디':n.label.startsWith('SERP:')?'SERP':'사이트';const display=n=&gt;kind(n)+': '+n.label.replace(/^SERP:/,'');const endpoint=n=&gt;`&lt;span class=&quot;endpoint-name type-${n.group}&quot;&gt;&lt;span class=&quot;sr-kind&quot;&gt;${kind(n)} &lt;/span&gt;${escape(n.label.replace(/^SERP:/,&quot;&quot;))}&lt;/span&gt;`;const names=['마약','연락용 아이디','사이트·검색결과'];let yaw=.2,pitch=-.12,zoom=1,selection=null,page=0,projected=[],width=600,height=540,drag=null,hovered=null;let palette={};const fmt=n=&gt;typeof n==='number'?n.toLocaleString('ko-KR'):String(n??'—');const escape=s=&gt;String(s??'').replace(/[&amp;&lt;&gt;&quot;']/g,c=&gt;({'&amp;':'&amp;amp;','&lt;':'&amp;lt;','&gt;':'&amp;gt;','&quot;':'&amp;quot;',&quot;'&quot;:'&amp;#39;'}[c]));
+function color(token){const x=document.createElement('span');x.style.color=`var(${token})`;root.append(x);const value=getComputedStyle(x).color;x.remove();return value}function colors(){palette={groups:Array.from(root.querySelectorAll('.orientation span'),label=&gt;getComputedStyle(label).borderLeftColor),text:color('--sx-ink'),muted:color('--sx-muted'),line:color('--sx-line'),panel:color('--sx-panel')}}
+[0,1,2].forEach(g=&gt;{const group=nodes.filter(n=&gt;n.group===g),opt=document.createElement('optgroup');opt.label=names[g];group.forEach((n,i)=&gt;{const y=g===0?.48+.38*(i+.5)/group.length:g===1?-.34+.68*(i+.5)/group.length:-.48-.38*(i+.5)/group.length;const a=i*2.399963+g*.7;const r=Math.sqrt(1-y*y);n.pos=[r*Math.cos(a),y,r*Math.sin(a)];const o=document.createElement('option');o.value=n.id;o.textContent=display(n);opt.append(o)});picker.append(opt)});
+function project(p){const [x,y,z]=p;const a=x*Math.cos(yaw)+z*Math.sin(yaw),b=-x*Math.sin(yaw)+z*Math.cos(yaw);const c=y*Math.cos(pitch)-b*Math.sin(pitch),d=y*Math.sin(pitch)+b*Math.cos(pitch);const scale=3.8/(3.8-d);const r=Math.min(width*.38,height*.38)*zoom;return{x:width/2+a*r*scale,y:height/2-c*r*scale,z:d,scale}}
+function activeEdge(e){return !selection||(selection.kind==='edge'?e.id===selection.id:e.a===selection.id||e.b===selection.id)}
+function draw(){ctx.clearRect(0,0,width,height);projected=nodes.map(n=&gt;({...project(n.pos),id:n.id}));ctx.lineWidth=.6;ctx.strokeStyle=palette.line;ctx.globalAlpha=.55;for(let lat of [-.65,0,.65]){ctx.beginPath();for(let i=0;i&lt;=90;i++){let a=i/90*Math.PI*2,r=Math.sqrt(1-lat*lat),p=project([r*Math.cos(a),lat,r*Math.sin(a)]);i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y)}ctx.stroke()}ctx.globalAlpha=.65;ctx.strokeStyle=palette.groups[1];ctx.lineWidth=1;ctx.beginPath();for(let i=0;i&lt;=100;i++){let a=i/100*Math.PI*2,p=project([Math.cos(a),0,Math.sin(a)]);i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y)}ctx.stroke();ctx.strokeStyle=palette.line;ctx.globalAlpha=.5;for(let a of [0,Math.PI/3,Math.PI*2/3]){ctx.beginPath();for(let i=0;i&lt;=90;i++){let t=i/90*Math.PI*2,p=project([Math.cos(t)*Math.cos(a),Math.sin(t),Math.cos(t)*Math.sin(a)]);i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y)}ctx.stroke()}
+const shown=new Set();if(selection){if(selection.kind==='node'){shown.add(selection.id);edges.filter(activeEdge).forEach(e=&gt;{shown.add(e.a);shown.add(e.b)})}else{let e=edges[selection.id];shown.add(e.a);shown.add(e.b)}}
+const ordered=edges.slice().sort((a,b)=&gt;Number(activeEdge(a))-Number(activeEdge(b)));ordered.forEach(e=&gt;{const a=projected[e.a],b=projected[e.b],on=activeEdge(e),hot=hovered?.kind==='edge'&amp;&amp;hovered.id===e.id;ctx.globalAlpha=hot?1:selection?(on?.85:.025):.10+(a.z+b.z+2)*.035;ctx.strokeStyle=hot?palette.text:palette.groups[nodes[e.a].group];ctx.lineWidth=hot?3:selection&amp;&amp;on?1+Math.min(2,Math.log1p(e.value)/4):.65;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()});
+let labels=new Set();if(selection){if(selection.kind==='node'){labels.add(selection.id);edges.filter(activeEdge).sort((a,b)=&gt;b.value-a.value).slice(0,6).forEach(e=&gt;{labels.add(e.a);labels.add(e.b)})}else shown.forEach(i=&gt;labels.add(i))}else nodes.filter(n=&gt;n.group!==1).filter(n=&gt;projected[n.id].z&gt;.35).slice(0,7).forEach(n=&gt;labels.add(n.id));if(hovered?.kind==='node')labels.add(hovered.id);
+projected.slice().sort((a,b)=&gt;a.z-b.z).forEach(p=&gt;{const n=nodes[p.id],on=!selection||shown.has(p.id),selected=selection?.kind==='node'&amp;&amp;selection.id===p.id;ctx.globalAlpha=on?.6+.4*(p.z+1)/2:.17;ctx.fillStyle=palette.groups[n.group];const radius=(n.group===1?4.1:6)*p.scale;if(selected){ctx.globalAlpha=.17;ctx.beginPath();ctx.arc(p.x,p.y,radius+9,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1}ctx.shadowColor=palette.groups[n.group];ctx.shadowBlur=on?9:0;ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;if(labels.has(p.id)){ctx.globalAlpha=on?1:.5;ctx.font='12px system-ui';let text=n.label.replace(/^SERP:\s*/i,'');const max=Math.min(205,width*.48);while(ctx.measureText(text).width&gt;max&amp;&amp;text.length&gt;3)text=text.slice(0,-2)+'…';const tw=ctx.measureText(text).width;let tx=Math.min(width-tw-9,Math.max(9,p.x+radius+6)),ty=Math.min(height-12,Math.max(18,p.y-8));ctx.fillStyle=palette.panel;ctx.fillRect(tx-3,ty-12,tw+6,17);ctx.fillStyle=palette.text;ctx.fillText(text,tx,ty)}});ctx.globalAlpha=1}
+function persist(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{selection:selection?selection.kind==='node'?nodes[selection.id].label:`${nodes[edges[selection.id].a].label} ↔ ${nodes[edges[selection.id].b].label}`:null},privateContent:{selection,yaw,pitch,zoom}}).catch(()=&gt;{})}
+function select(kind,id,save=true){selection=kind?{kind,id}:null;page=0;hovered=null;hover.hidden=true;picker.value=kind==='node'?String(id):'';renderPanel();draw();if(save)persist()}
+function row(k,v){return `&lt;div class=&quot;row&quot;&gt;&lt;span&gt;${escape(k)}&lt;/span&gt;&lt;span&gt;${escape(fmt(v))}&lt;/span&gt;&lt;/div&gt;`}
+function nodeStats(n){if(!n.stats)return '&lt;div class=&quot;muted&quot;&gt;대상 전체 집계는 별도 연결이 필요합니다.&lt;/div&gt;';const s=n.stats;let keys=n.group===0?['게시글','고유제목','조회수합','조회수중앙값','글당조회수']:n.group===1?['원시','고유','게시판사이트수','SERP건수','주요마약']:n.label.startsWith('SERP:')?['건수','마약분류','아이디검출']:['원시','고유','도배배수','사이트_전체글','사이트내_마약%'];const labels={'원시':'원시 건수','고유':'고유 제목 수','게시판사이트수':'등장 게시판 수','SERP건수':'SERP 건수','주요마약':'주요 마약','도배배수':'원시 / 고유 배수','사이트_전체글':'사이트 전체 글','사이트내_마약%':'사이트 내 마약 분류 비중 (%)','아이디검출':'아이디 검출 건수'};return keys.filter(k=&gt;s[k]!==undefined).map(k=&gt;row(labels[k]||k,s[k])).join('')}
+function nodeSummary(n){const s=n.stats||{},raw=s['원시']??s['게시글'],unique=s['고유']??s['고유제목'];const tile=(label,value,unit='')=&gt;`&lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;muted&quot;&gt;${label}&lt;/div&gt;&lt;div class=&quot;value&quot;&gt;${fmt(value)}&lt;span class=&quot;muted&quot;&gt; ${unit}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;`;let html='';if(raw!=null&amp;&amp;unique!=null){html=`&lt;div class=&quot;stats-grid&quot;&gt;${tile('원시 게시 건수',raw,'건')}${tile('고유 제목 수',unique,'건')}&lt;/div&gt;&lt;div class=&quot;compare&quot;&gt;&lt;div class=&quot;compare-label&quot;&gt;&lt;span&gt;원시 게시&lt;/span&gt;&lt;span&gt;${fmt(raw)}&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;track&quot;&gt;&lt;span style=&quot;width:100%;opacity:.4&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;compare-label&quot;&gt;&lt;span&gt;고유 제목&lt;/span&gt;&lt;span&gt;${fmt(unique)}&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;track&quot;&gt;&lt;span style=&quot;width:${Math.min(100,100*unique/raw)}%&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;`;}else if(s['건수']!=null){html=`&lt;div class=&quot;stats-grid&quot;&gt;${tile('검색결과',s['건수'],'건')}${tile('아이디 검출',s['아이디검출'],'건')}&lt;/div&gt;`}return html}
+function renderPanel(target=aside){if(!selection){target.innerHTML=`&lt;small&gt;관계망 요약&lt;/small&gt;&lt;div class=&quot;leadnum&quot;&gt;${nodes.filter(n=&gt;n.group===1).length}&lt;small&gt;개&lt;/small&gt;&lt;/div&gt;&lt;h3&gt;텔레그램 아이디&lt;/h3&gt;&lt;dl class=&quot;overview&quot;&gt;&lt;div&gt;&lt;dt&gt;마약 종류&lt;/dt&gt;&lt;dd&gt;${nodes.filter(n=&gt;n.group===0).length}종&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;사이트·검색결과&lt;/dt&gt;&lt;dd&gt;${nodes.filter(n=&gt;n.group===2).length}개&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;연결&lt;/dt&gt;&lt;dd&gt;${edges.length}개&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;&lt;p class=&quot;intro&quot;&gt;원이나 선을 선택해 연결 정보를 살펴보세요.&lt;/p&gt;`;return}let content='&lt;div class=&quot;panel-top&quot;&gt;&lt;span class=&quot;tag '+(selection.kind==='node'?'type-'+nodes[selection.id].group:'')+'&quot;&gt;'+(selection.kind==='edge'?'무엇과 연결됐나?':['마약','아이디','사이트·검색결과'][nodes[selection.id].group])+'&lt;/span&gt;&lt;button type=&quot;button&quot; data-close aria-label=&quot;팝업 닫기&quot;&gt;닫기&lt;/button&gt;&lt;/div&gt;';
+if(selection.kind==='edge'){const e=edges[selection.id],a=nodes[e.a],b=nodes[e.b];content+=`&lt;h3&gt;${endpoint(a)}&lt;div class=&quot;link-arrow&quot;&gt;↕&lt;/div&gt;${endpoint(b)}&lt;/h3&gt;&lt;div class=&quot;hero&quot;&gt;&lt;div class=&quot;muted&quot;&gt;몇 번 연결됐나?&lt;/div&gt;&lt;div class=&quot;number&quot;&gt;${fmt(e.value)}&lt;span class=&quot;muted&quot;&gt; 건&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;edge-types&quot;&gt;&lt;span class=&quot;endpoint-name type-${a.group}&quot;&gt;${['마약','아이디','사이트·검색결과'][a.group]}&lt;/span&gt; &lt;span&gt;↔&lt;/span&gt; &lt;span class=&quot;endpoint-name type-${b.group}&quot;&gt;${['마약','아이디','사이트·검색결과'][b.group]}&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;endpoints&quot;&gt;&lt;button type=&quot;button&quot; data-node=&quot;${a.id}&quot;&gt;${endpoint(a)}&lt;span class=&quot;sr-kind&quot;&gt; 상세 보기&lt;/span&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; data-node=&quot;${b.id}&quot;&gt;${endpoint(b)}&lt;span class=&quot;sr-kind&quot;&gt; 상세 보기&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;muted&quot;&gt;두 대상 사이의 집계입니다. 다른 단계와 합산하거나 실제 이동량으로 해석하지 않습니다.&lt;/div&gt;`;
+}else{const n=nodes[selection.id],related=edges.filter(activeEdge).sort((a,b)=&gt;b.value-a.value);content+=`&lt;h3&gt;${endpoint(n)}&lt;/h3&gt;${nodeSummary(n)}&lt;details&gt;&lt;summary&gt;세부 지표&lt;/summary&gt;${nodeStats(n)}&lt;p class=&quot;scope&quot;&gt;지표는 대상 전체, 연결 목록은 그래프에 포함된 범위입니다.&lt;/p&gt;&lt;/details&gt;&lt;h4 class=&quot;connection-columns&quot;&gt;&lt;span&gt;직접연결&lt;/span&gt;&lt;span&gt;제목 수&lt;/span&gt;&lt;/h4&gt;&lt;div class=&quot;connections&quot;&gt;`+related.slice(page*4,page*4+4).map(e=&gt;{let other=nodes[e.a===n.id?e.b:e.a];return `&lt;button type=&quot;button&quot; class=&quot;connection&quot; style=&quot;--share:${100*e.value/Math.max(...related.map(x=&gt;x.value))}%&quot; data-edge=&quot;${e.id}&quot;&gt;&lt;span class=&quot;list-label type-${other.group}&quot;&gt;&lt;span class=&quot;sr-kind&quot;&gt;${kind(other)} &lt;/span&gt;${escape(other.label.replace(/^SERP:/,&quot;&quot;))}&lt;/span&gt;&lt;strong&gt;${fmt(e.value)}&lt;/strong&gt;&lt;/button&gt;`}).join('')+`&lt;/div&gt;&lt;div class=&quot;pager&quot;&gt;&lt;button type=&quot;button&quot; data-page=&quot;-1&quot; ${page===0?'disabled':''}&gt;이전&lt;/button&gt;&lt;span&gt;${page+1} / ${Math.max(1,Math.ceil(related.length/4))}&lt;/span&gt;&lt;button type=&quot;button&quot; data-page=&quot;1&quot; ${(page+1)*4&gt;=related.length?'disabled':''}&gt;다음&lt;/button&gt;&lt;/div&gt;`}target.innerHTML=content}
+aside.addEventListener('click',e=&gt;{const b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-node'))select('node',+b.dataset.node);else if(b.hasAttribute('data-edge'))select('edge',+b.dataset.edge);else if(b.hasAttribute('data-close'))select(null);else if(b.dataset.page){page+=+b.dataset.page;renderPanel()}});picker.onchange=()=&gt;picker.value===''?select(null):select('node',+picker.value);
+function distance(p,a,b){let dx=b.x-a.x,dy=b.y-a.y,l=dx*dx+dy*dy,t=l?Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/l)):0;return Math.hypot(p.x-a.x-t*dx,p.y-a.y-t*dy)}function hit(x,y){let best=null,d=14;projected.slice().sort((a,b)=&gt;b.z-a.z).forEach(p=&gt;{const q=Math.hypot(p.x-x,p.y-y);if(q&lt;d){d=q;best={kind:'node',id:p.id}}});if(best)return best;d=6;edges.filter(e=&gt;!selection||activeEdge(e)).forEach(e=&gt;{let q=distance({x,y},projected[e.a],projected[e.b]);if(q&lt;d){d=q;best={kind:'edge',id:e.id}}});return best}
+canvas.onpointerdown=e=&gt;{const r=canvas.getBoundingClientRect();drag={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,moved:false};canvas.setPointerCapture(e.pointerId);hover.hidden=true};canvas.onpointermove=e=&gt;{if(drag){let dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY)&gt;5)drag.moved=true;if(drag.moved){yaw+=dx*.007;pitch=Math.max(-.48,Math.min(.48,pitch+dy*.005));hovered=null;draw()}drag.x=e.clientX;drag.y=e.clientY;return}const r=canvas.getBoundingClientRect();hovered=hit(e.clientX-r.left,e.clientY-r.top);hover.hidden=!hovered;if(hovered){hover.textContent=hovered.kind==='node'?display(nodes[hovered.id]):(()=&gt;{let q=edges[hovered.id];return `${display(nodes[q.a])} ↔ ${display(nodes[q.b])} · ${fmt(q.value)}건`})();}draw()};canvas.onpointerup=e=&gt;{if(!drag)return;const moved=drag.moved;drag=null;if(!moved){const r=canvas.getBoundingClientRect(),h=hit(e.clientX-r.left,e.clientY-r.top);if(h)select(h.kind,h.id);else select(null)}else persist()};canvas.onpointercancel=()=&gt;drag=null;canvas.onpointerleave=()=&gt;{if(!drag){hovered=null;hover.hidden=true;draw()}};
+root.querySelectorAll('[data-action]').forEach(b=&gt;b.onclick=()=&gt;{const a=b.dataset.action;if(a==='reset'){picker.querySelectorAll('option').forEach(o=&gt;o.hidden=false);yaw=.2;pitch=-.12;zoom=1;select(null)}else{if(a==='left')yaw-=.25;if(a==='right')yaw+=.25;if(a==='plus')zoom=Math.min(1.22,zoom+.1);if(a==='minus')zoom=Math.max(.65,zoom-.1);draw();persist()}});root.addEventListener('keydown',e=&gt;{if(e.key==='Escape')select(null)});
+function resize(){width=canvas.clientWidth;height=canvas.clientHeight;const ratio=window.devicePixelRatio||1;canvas.width=width*ratio;canvas.height=height*ratio;ctx.setTransform(ratio,0,0,ratio,0,0);colors();draw()}new ResizeObserver(resize).observe(canvas);matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=&gt;{colors();draw()});function measurePanels(){
+  const probe=aside.cloneNode(false);
+  probe.removeAttribute('aria-live');
+  probe.setAttribute('aria-hidden','true');
+  probe.style.cssText='position:absolute;visibility:hidden;pointer-events:none;height:auto;box-sizing:border-box;width:'+aside.getBoundingClientRect().width+'px';
+  aside.parentNode.append(probe);
+  const savedSelection=selection, savedPage=page;
+  let tallest=0;
+  function measure(){
+    renderPanel(probe);
+    const details=probe.querySelector('details');
+    if(details) details.open=true;
+    tallest=Math.max(tallest,probe.getBoundingClientRect().height);
+  }
+  try {
+    selection=null;measure();
+    for(const node of nodes){
+      selection={kind:'node',id:node.id};
+      const pages=Math.max(1,Math.ceil(edges.filter(activeEdge).length/4));
+      for(page=0;page&lt;pages;page++) measure();
+    }
+    for(const edge of edges){selection={kind:'edge',id:edge.id};measure();}
+  } finally { selection=savedSelection;page=savedPage;probe.remove(); }
+  root.style.setProperty('--panel-height',Math.ceil(tallest)+'px');
+}
+let measuredWidth=-1;
+new ResizeObserver(()=&gt;{
+  const width=aside.getBoundingClientRect().width;
+  if(width&gt;0 &amp;&amp; width!==measuredWidth){measuredWidth=width;measurePanels();}
+}).observe(aside);
+document.fonts.addEventListener('loadingdone',measurePanels);
+colors();resize();select(null,null,false);
+})();
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (event) =&gt; {
+    for (const target of event.composedPath()) {
+      if (target?.nodeType === Node.ELEMENT_NODE) {
+        const trigger = target.closest(&quot;[data-tooltip]&quot;);
+        if (trigger) return trigger;
+      }
+    }
+    return null;
+  };
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handlers = {
+    pointerover: handlePointerOpen,
+    pointerdown: handlePointer,
+    pointercancel: handlePointer,
+    click: handleTouchClick,
+    pointerout: handleLeave,
+    focusin: handleFocusIn,
+    focusout: handleLeave,
+    keydown: handleKeyDown,
+    contextmenu: handleContextMenu,
+  };
+  const roots = new Map();
+  const handledEvents = new WeakSet();
+  const handleEvent = (event) =&gt; {
+    if (handledEvents.has(event)) return;
+    handledEvents.add(event);
+    handlers[event.type](event);
+  };
+  const discoverRoots = (node) =&gt; {
+    if (node.shadowRoot) listen(node.shadowRoot);
+    for (const element of node.querySelectorAll(&quot;*&quot;)) {
+      if (element.shadowRoot) listen(element.shadowRoot);
+    }
+  };
+  const listen = (root) =&gt; {
+    if (roots.has(root)) return;
+    for (const type of Object.keys(handlers)) root.addEventListener(type, handleEvent);
+    const observer = new window.MutationObserver((records) =&gt; {
+      for (const { addedNodes } of records) {
+        for (const node of addedNodes) {
+          if (node.nodeType === Node.ELEMENT_NODE) discoverRoots(node);
+        }
+      }
+      for (const [root, cleanup] of roots) {
+        if (root.host &amp;&amp; !root.host.isConnected) {
+          cleanup();
+          roots.delete(root);
+        }
+      }
+      if (activeTrigger &amp;&amp; !activeTrigger.isConnected) closeTooltip(false);
+    });
+    observer.observe(root, { childList: true, subtree: true });
+    roots.set(root, () =&gt; {
+      observer.disconnect();
+      for (const type of Object.keys(handlers)) root.removeEventListener(type, handleEvent);
+    });
+    discoverRoots(root);
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    for (const cleanup of roots.values()) cleanup();
+    roots.clear();
+    tooltip = null;
+  };
+
+  // Events between children of one shadow root never reach the document.
+  listen(document);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = '.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]';
+  const disabled = ':disabled,[aria-disabled=&quot;true&quot;]';
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest('[role=&quot;tablist&quot;]').querySelectorAll('[role=&quot;tab&quot;]')) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest('[role=&quot;tablist&quot;]').querySelectorAll('[role=&quot;tab&quot;]'),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll('.nav[role=&quot;tablist&quot;]')) {
+    const selected =
+      list.querySelector('[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]') ??
+      list.querySelector('[role=&quot;tab&quot;].active') ??
+      list.querySelector('[role=&quot;tab&quot;]');
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-carousel&quot;&gt;
+  (() =&gt; {
+    for (const root of document.querySelectorAll(&quot;.viz-carousel&quot;)) {
+      const panels = Array.from(
+        root.querySelectorAll(&quot;:scope &gt; [data-variant]&quot;),
+      );
+      if (panels.length === 0) {
+        continue;
+      }
+      root.setAttribute(&quot;role&quot;, &quot;group&quot;);
+      panels.forEach((panel, index) =&gt; {
+        panel.hidden = index !== 0;
+        panel.setAttribute(&quot;role&quot;, &quot;group&quot;);
+        if (!panel.hasAttribute(&quot;aria-label&quot;)) {
+          panel.setAttribute(&quot;aria-label&quot;, panel.dataset.variant);
+        }
+      });
+      root.dataset.activeVariant = panels[0].dataset.variant;
+      if (panels.length === 1) {
+        continue;
+      }
+
+      const controls = document.createElement(&quot;div&quot;);
+      controls.className = &quot;viz-carousel-controls&quot;;
+      // Portable copy of the settings dropdown's legacy glyph; no 14px icon-package preset matches it.
+      // https://github.com/openai/openai/blob/master/codex/codex-apps/webview/src/icons/chevron.svg
+      controls.innerHTML = `
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-previous cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;details class=&quot;viz-carousel-picker&quot;&gt;
+        &lt;summary class=&quot;cursor-interaction&quot;&gt;
+          &lt;span class=&quot;viz-carousel-count tabular-nums&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;viz-carousel-name&quot;&gt;&lt;/span&gt;
+          &lt;svg class=&quot;viz-carousel-caret&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 20 21&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
+            &lt;path d=&quot;M15.2793 7.71101C15.539 7.45131 15.961 7.45131 16.2207 7.71101C16.4804 7.97071 16.4804 8.39272 16.2207 8.65242L10.4707 14.4024C10.211 14.6621 9.78902 14.6621 9.52932 14.4024L3.77932 8.65242L3.69436 8.54792C3.52385 8.28979 3.55205 7.93828 3.77932 7.71101C4.00659 7.48374 4.3581 7.45554 4.61623 7.62605L4.72073 7.71101L10 12.9903L15.2793 7.71101Z&quot; fill=&quot;currentColor&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;0.6&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;viz-carousel-options&quot;&gt;&lt;/div&gt;
+      &lt;/details&gt;
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-next cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;`;
+      const previous = controls.querySelector(&quot;.viz-carousel-previous&quot;);
+      const next = controls.querySelector(&quot;.viz-carousel-next&quot;);
+      const picker = controls.querySelector(&quot;.viz-carousel-picker&quot;);
+      const summary = picker.querySelector(&quot;summary&quot;);
+      const count = controls.querySelector(&quot;.viz-carousel-count&quot;);
+      const name = controls.querySelector(&quot;.viz-carousel-name&quot;);
+      const options = controls.querySelector(&quot;.viz-carousel-options&quot;);
+      const status = document.createElement(&quot;span&quot;);
+      status.className = &quot;sr-only&quot;;
+      status.setAttribute(&quot;role&quot;, &quot;status&quot;);
+      status.setAttribute(&quot;aria-live&quot;, &quot;polite&quot;);
+      status.setAttribute(&quot;aria-atomic&quot;, &quot;true&quot;);
+      previous.setAttribute(
+        &quot;aria-label&quot;,
+        root.dataset.previousLabel ?? &quot;Previous variant&quot;,
+      );
+      next.setAttribute(&quot;aria-label&quot;, root.dataset.nextLabel ?? &quot;Next variant&quot;);
+
+      let active = 0;
+      let mousePointerId = null;
+      let summaryPointerHandled = false;
+      summary.addEventListener(&quot;pointerdown&quot;, (event) =&gt; {
+        summaryPointerHandled =
+          event.pointerType === &quot;mouse&quot; &amp;&amp; event.button === 0 &amp;&amp; !event.ctrlKey;
+        if (!summaryPointerHandled) {
+          return;
+        }
+        event.preventDefault();
+        summary.focus({ preventScroll: true });
+        picker.open = !picker.open;
+        mousePointerId = picker.open ? event.pointerId : null;
+      });
+      summary.addEventListener(&quot;click&quot;, (event) =&gt; {
+        if (summaryPointerHandled &amp;&amp; event.detail &gt; 0) {
+          event.preventDefault();
+        }
+      });
+      const choices = panels.map((panel, index) =&gt; {
+        const choice = document.createElement(&quot;button&quot;);
+        choice.type = &quot;button&quot;;
+        choice.className = &quot;cursor-interaction&quot;;
+        choice.textContent = panel.dataset.variant;
+        choice.addEventListener(&quot;click&quot;, () =&gt; {
+          select(index);
+          summary.focus();
+        });
+        choice.addEventListener(&quot;pointerup&quot;, (event) =&gt; {
+          if (
+            picker.open &amp;&amp;
+            event.pointerType === &quot;mouse&quot; &amp;&amp;
+            event.button === 0 &amp;&amp;
+            event.pointerId === mousePointerId
+          ) {
+            choice.click();
+          }
+        });
+        options.appendChild(choice);
+        return choice;
+      });
+      const select = (index) =&gt; {
+        const changed = active !== index;
+        active = index;
+        panels.forEach((panel, position) =&gt; {
+          panel.hidden = position !== active;
+          choices[position].setAttribute(
+            &quot;aria-current&quot;,
+            String(position === active),
+          );
+        });
+        root.dataset.activeVariant = panels[active].dataset.variant;
+        count.textContent = `${active + 1} / ${panels.length}`;
+        name.textContent = panels[active].dataset.variant;
+        picker.open = false;
+        mousePointerId = null;
+        if (changed) {
+          status.textContent = `${count.textContent}: ${name.textContent}`;
+        }
+      };
+      previous.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + panels.length - 1) % panels.length),
+      );
+      next.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + 1) % panels.length),
+      );
+      picker.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+        if (event.key === &quot;Escape&quot; &amp;&amp; picker.open) {
+          event.preventDefault();
+          picker.open = false;
+          mousePointerId = null;
+          summary.focus();
+          return;
+        }
+        if (event.altKey || event.ctrlKey || event.metaKey) {
+          return;
+        }
+        const index = choices.indexOf(document.activeElement);
+        let nextIndex;
+        if (event.key === &quot;ArrowDown&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + 1) % choices.length;
+        } else if (event.key === &quot;ArrowUp&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + choices.length - 1) % choices.length;
+        } else if (picker.open &amp;&amp; event.key === &quot;Home&quot;) {
+          nextIndex = 0;
+        } else if (picker.open &amp;&amp; event.key === &quot;End&quot;) {
+          nextIndex = choices.length - 1;
+        } else {
+          return;
+        }
+        event.preventDefault();
+        picker.open = true;
+        choices[nextIndex].focus();
+      });
+      picker.addEventListener(&quot;focusout&quot;, (event) =&gt; {
+        if (!picker.contains(event.relatedTarget)) {
+          picker.open = false;
+          mousePointerId = null;
+        }
+      });
+      const dismiss = (event) =&gt; {
+        if (!summary.contains(event.target)) {
+          mousePointerId = null;
+        }
+        if (!picker.contains(event.target)) {
+          picker.open = false;
+        }
+      };
+      const endPointerSelection = () =&gt; {
+        mousePointerId = null;
+      };
+      const sizePicker = () =&gt; {
+        root.style.setProperty(
+          &quot;--viz-carousel-picker-height&quot;,
+          `${picker.open ? options.offsetHeight : 0}px`,
+        );
+      };
+      picker.addEventListener(&quot;toggle&quot;, sizePicker);
+      window.addEventListener(&quot;resize&quot;, sizePicker);
+      document.addEventListener(&quot;pointerdown&quot;, dismiss);
+      document.addEventListener(&quot;pointerup&quot;, endPointerSelection);
+      document.addEventListener(&quot;pointercancel&quot;, endPointerSelection);
+      window.addEventListener(&quot;blur&quot;, endPointerSelection);
+      window.addEventListener(
+        &quot;pagehide&quot;,
+        () =&gt; {
+          document.removeEventListener(&quot;pointerdown&quot;, dismiss);
+          document.removeEventListener(&quot;pointerup&quot;, endPointerSelection);
+          document.removeEventListener(&quot;pointercancel&quot;, endPointerSelection);
+          window.removeEventListener(&quot;blur&quot;, endPointerSelection);
+          window.removeEventListener(&quot;resize&quot;, sizePicker);
+        },
+        { once: true },
+      );
+      root.append(controls, status);
+      select(0);
+    }
+  })();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+
+&lt;style id=&quot;pinsight-article-palette&quot;&gt;
+#sphere-explorer{
+  --sx-bg:#0c1015;
+  --sx-panel:#141a22;
+  --sx-ink:#eeeae3;
+  --sx-muted:#9ca5b0;
+  --sx-line:#ffffff20;
+  --sx-a:#ff735f;
+  --sx-b:#88bde3;
+  --sx-c:#c9b49d;
+  --sx-glow:#202a35;
+  color-scheme:dark;
+  border-color:#354452;
+  box-shadow:0 0 28px #00000040;
+}
+#sphere-explorer header{
+  background:linear-gradient(115deg,#1b2732,#0c1015 75%);
+  border-bottom-color:#354452;
+}
+#sphere-explorer header:after{
+  background:linear-gradient(90deg,#ff735f,#88bde3,#c9b49d);
+}
+#sphere-explorer .eyebrow{color:#88bde3}
+#sphere-explorer h2{
+  color:#eeeae3;
+  text-shadow:0 0 18px #88bde322;
+}
+#sphere-explorer aside{
+  background:linear-gradient(160deg,#17212b,#0c1015 80%);
+  border-left-color:#354452;
+}
+#sphere-explorer .panel-top{border-bottom-color:#ffffff20}
+#sphere-explorer .hero{
+  background:linear-gradient(125deg,#202a35,#101720);
+  border-left-color:#ff735f;
+}
+#sphere-explorer .number{
+  color:#eeeae3;
+  text-shadow:0 0 18px #88bde322;
+}
+#sphere-explorer .stat{
+  background:#101720;
+  border-top-color:#354452;
+}
+#sphere-explorer .track{background:#202a35}
+#sphere-explorer .connection:before{background:#88bde3}
+#sphere-explorer .orientation span:nth-child(1){border-left-color:#ff735f}
+#sphere-explorer .orientation span:nth-child(2){border-left-color:#88bde3}
+#sphere-explorer .orientation span:nth-child(3){border-left-color:#c9b49d}
+#sphere-explorer footer{background:#101720;border-color:#354452}
+#sphere-explorer .hover{background:#141a22f5;border-color:#88bde3}
+&lt;/style&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+" id="codex-visualization" referrerpolicy="no-referrer" sandbox="allow-scripts" title="어떤 마약을, 누가, 어디서 광고하나?"></iframe>
+<script>(() => {
+  const frame = document.getElementById("codex-visualization");
+  if (!(frame instanceof HTMLIFrameElement)) {
+    return;
+  }
+  const isShare = document.documentElement.classList.contains(
+    "visualization-share-root",
+  );
+  let viewportHeight = globalThis.innerHeight;
+  let sizeFingerprint = null;
+  let sizeWriteTimeout;
+  let lastSize = null;
+  let pendingSize = null;
+  const storageKey = `codex:visualization-widget-state-v2:${JSON.stringify([
+    globalThis.location.pathname,
+    globalThis.location.search,
+  ])}`;
+  const sizeStorageKey = `${storageKey}:share-size-v1`;
+  const parseState = (serializedState) => {
+    if (
+      typeof serializedState !== "string" ||
+      new TextEncoder().encode(serializedState).length > 16 * 1024
+    ) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    /** @type {unknown} */
+    const state = JSON.parse(serializedState);
+    if (
+      state == null ||
+      typeof state !== "object" ||
+      Array.isArray(state) ||
+      ("imageIds" in state &&
+        (!Array.isArray(state.imageIds) || state.imageIds.length > 0))
+    ) {
+      throw new TypeError("Widget state must be a JSON object");
+    }
+    const storedState = { modelContent: null, privateContent: null, ...state };
+    const canonicalState = JSON.stringify(
+      storedState,
+      (_key, /** @type {unknown} */ value) => {
+        if (typeof value === "number" && !Number.isFinite(value)) {
+          throw new TypeError("Widget state must contain finite numbers");
+        }
+        return value;
+      },
+    );
+    if (new TextEncoder().encode(canonicalState).length > 16 * 1024) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    return storedState;
+  };
+  let storage = null;
+  let state = null;
+  try {
+    const localStorage = globalThis.localStorage;
+    const probeKey = `${storageKey}:probe`;
+    localStorage.setItem(probeKey, "1");
+    localStorage.removeItem(probeKey);
+    storage = localStorage;
+    const savedState = storage.getItem(storageKey);
+    if (savedState != null) {
+      try {
+        state = parseState(savedState);
+      } catch {
+        // Invalid saved state does not disable future writes.
+      }
+    }
+  } catch {
+    storage = null;
+  }
+  const persistSize = () => {
+    globalThis.clearTimeout(sizeWriteTimeout);
+    if (pendingSize == null) {
+      return;
+    }
+    try {
+      storage?.setItem(sizeStorageKey, pendingSize);
+    } catch {
+      // A denied or full cache must not affect the visualization.
+    }
+    pendingSize = null;
+  };
+  if (isShare) {
+    globalThis.addEventListener("pagehide", persistSize);
+  }
+  const initialGlobals = {
+    widgetState: state,
+    statePersistence: storage == null ? "none" : "local",
+  };
+
+  const channel = new MessageChannel();
+  channel.port1.addEventListener("message", (event) => {
+    const data = event.data;
+    if (typeof data !== "object" || data == null) {
+      return;
+    }
+    if (data.type === "widget-state-write") {
+      if (!Number.isSafeInteger(data.id) || data.id <= 0) {
+        return;
+      }
+      let ok = false;
+      try {
+        if (storage != null) {
+          const state = parseState(data.state);
+          storage.setItem(storageKey, JSON.stringify(state));
+          ok = true;
+        }
+      } catch {
+        // Storage denial, quota limits, and invalid state return a failed receipt.
+      }
+      channel.port1.postMessage({
+        type: "widget-state-result",
+        id: data.id,
+        ok,
+      });
+      return;
+    }
+    if (data.type === "height") {
+      const height = data.height;
+      if (
+        typeof height !== "number" ||
+        !Number.isFinite(height) ||
+        height < 0
+      ) {
+        return;
+      }
+      if (height <= 10_000) {
+        const width = isShare && storage != null ? frame.clientWidth : null;
+        frame.style.height = Math.ceil(height) + "px";
+        parent.postMessage({type: "network-content-height", height: Math.ceil(height)}, "*");
+        if (isShare && storage != null) {
+          const size = JSON.stringify({
+            fingerprint: sizeFingerprint,
+            width,
+            viewportHeight: globalThis.innerHeight,
+            dark: globalThis.matchMedia("(prefers-color-scheme: dark)").matches,
+            scale: globalThis.devicePixelRatio,
+            height: Math.ceil(height),
+          });
+          if (size !== lastSize) {
+            lastSize = size;
+            pendingSize = size;
+            globalThis.clearTimeout(sizeWriteTimeout);
+            sizeWriteTimeout = globalThis.setTimeout(persistSize, 100);
+          }
+        }
+      }
+      if (isShare) {
+        // Keep unusually tall content accessible without accepting an unbounded height.
+        if (height > 10_000 && Number.parseFloat(frame.style.height) === 0) {
+          frame.style.removeProperty("height");
+        }
+        frame.scrolling = height > 10_000 ? "auto" : "no";
+        document.documentElement.classList.add("visualization-share-ready");
+      }
+      return;
+    }
+    if (data.type === "scroll-to") {
+      const top = data.top;
+      if (
+        typeof top === "number" &&
+        Number.isFinite(top) &&
+        top >= 0 &&
+        globalThis.navigator.userActivation?.isActive === true
+      ) {
+        globalThis.scrollTo({
+          top: Math.ceil(
+            globalThis.scrollY + frame.getBoundingClientRect().top + top,
+          ),
+        });
+      }
+      return;
+    }
+    if (data.type === "open-external") {
+      const rawHref = data.href;
+      if (typeof rawHref !== "string") {
+        return;
+      }
+      let href;
+      try {
+        const url = new URL(rawHref, document.baseURI);
+        if (url.protocol !== "https:") {
+          return;
+        }
+        href = url.href;
+      } catch {
+        return;
+      }
+      if (globalThis.navigator.userActivation?.isActive === true) {
+        const anchor = document.createElement("a");
+        anchor.href = href;
+        anchor.rel = "noopener noreferrer";
+        anchor.target = "_blank";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+      }
+      return;
+    }
+    if (data.type === "follow-up") {
+      const prompt = data.prompt;
+      if (
+        typeof prompt !== "string" ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      const title = data.title;
+      globalThis.prompt(typeof title === "string" ? title : prompt, prompt);
+    }
+  });
+  channel.port1.start();
+  const srcdoc = frame.dataset.srcdoc;
+  if (srcdoc == null) {
+    return;
+  }
+  globalThis.addEventListener("resize", () => {
+    const height = Number.parseFloat(frame.style.height);
+    if (!isShare && (!Number.isFinite(height) || height <= viewportHeight)) {
+      frame.style.removeProperty("height");
+    }
+    viewportHeight = globalThis.innerHeight;
+    channel.port1.postMessage({ type: "measure" });
+  });
+  frame.addEventListener(
+    "load",
+    () => {
+      frame.contentWindow?.postMessage(
+        { type: "codex-visualization-initialize" },
+        "*",
+        [channel.port2],
+      );
+    },
+    { once: true },
+  );
+  // Match the trusted bootstrap element, not the same text in an authored title.
+  const frameHtml = srcdoc.replace(
+    '<script type="application/json" id="codex-visualization-widget-state">__CODEX_VISUALIZATION_WIDGET_STATE__<\/script>',
+    () =>
+      '<script type="application/json" id="codex-visualization-widget-state">' +
+      JSON.stringify(initialGlobals).replaceAll("<", "\\u003c") +
+      "<\/script>",
+  );
+  if (isShare && storage != null) {
+    // Fingerprint the rendered document, including restored widget state, without
+    // storing its content. This is a layout cache, not a security identity.
+    let hash = 5381;
+    for (let index = 0; index < frameHtml.length; index += 1) {
+      hash = (hash * 33 + frameHtml.charCodeAt(index)) % 4_294_967_296;
+    }
+    sizeFingerprint = hash.toString(36);
+    try {
+      const size = JSON.parse(storage.getItem(sizeStorageKey) ?? "null");
+      if (
+        size?.fingerprint === sizeFingerprint &&
+        size.width === frame.clientWidth &&
+        size.viewportHeight === globalThis.innerHeight &&
+        size.dark ===
+          globalThis.matchMedia("(prefers-color-scheme: dark)").matches &&
+        size.scale === globalThis.devicePixelRatio &&
+        typeof size.height === "number" &&
+        Number.isFinite(size.height) &&
+        size.height >= 0 &&
+        size.height <= 10_000
+      ) {
+        frame.style.height = size.height + "px";
+      }
+    } catch {
+      // Ignore missing or invalid cache entries and measure the live frame.
+    }
+  }
+  frame.srcdoc = frameHtml;
+  delete frame.dataset.srcdoc;
+})();
+</script>
+</body>
+</html>
