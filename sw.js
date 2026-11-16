@@ -1,4 +1,4 @@
-const CACHE = 'article-mobile-v20261116-4';
+const CACHE = 'article-mobile-v20261116-5';
 const ENTRY = new URL('./index.html', self.registration.scope).href;
 const ROOT = new URL('./', self.registration.scope);
 const SHELL = ['./index.html','./manifest.webmanifest','./assets/icons/icon-192.png','./assets/icons/icon-512.png','./assets/icons/icon.svg'];
