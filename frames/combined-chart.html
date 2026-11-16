@@ -55,47 +55,42 @@
 .selection-info h2 { font-size: 32px; font-weight: 700; }
 @media (max-width:720px) { .selection-info h2 { font-size: 28px; } }
 
-/* Phone: selected slice, keyword, and dial share one vertical axis. */
-.mobile-connector{display:none}
+/* Phone: stacked blocks. No connector, no metric card. */
+.mobile-connector{display:none!important}
 @media(max-width:720px){
-  main{padding:14px 16px 20px}
-  h1{font-size:20px;line-height:1.35;margin:0 0 6px;word-break:keep-all}
-  .chart-hint{font-size:12px;line-height:1.45;margin:0 0 14px;animation:none}
+  main{padding:16px 18px 24px}
+  h1{font-size:21px;line-height:1.4;margin:0 0 8px;word-break:keep-all}
+  .chart-hint{font-size:12px;line-height:1.5;margin:0 0 18px;animation:none}
   .stage{position:relative;min-height:0}
   .stage.expanded{gap:0}
   .stage.expanded .donut-section,.stage.expanded .dial,.stage.expanded .selection-info{display:flex;flex-direction:column;align-items:center}
-  .stage.expanded .mobile-connector{
-    display:block;position:absolute;inset:0;width:100%;height:100%;
-    pointer-events:none;z-index:1;overflow:visible
-  }
-  #chart-link,#chart-link-gap{stroke-width:1.4;stroke-linecap:round}
-  #chart-link-dot{stroke:#000;stroke-width:2}
   .is-phone #dial-pointer,.is-phone #dial-arrow{display:none!important}
+  .stage.expanded .donut{max-width:210px}
+  .center span{font-size:12px}
   .stage.expanded .selection-info{
-    position:relative;z-index:2;max-height:none;overflow:visible;
-    margin-top:2px;margin-bottom:0;width:100%
+    position:relative;max-height:none;overflow:visible;
+    margin:18px 0 0;width:100%
   }
   .selection-info h2{
-    display:inline-block;background:#000;padding:2px 14px 4px;margin:0 0 6px;font-size:26px;letter-spacing:-.03em
+    display:block;background:none;padding:0;margin:0 0 8px;font-size:28px;letter-spacing:-.04em
   }
   .category-definition{
-    background:transparent;text-shadow:none;font-size:12px;line-height:1.45;margin:0 0 12px;color:var(--muted);max-width:20em
+    text-shadow:none;font-size:13px;line-height:1.5;margin:0 0 22px;color:var(--muted);max-width:18em
   }
   .selection-info dl{
-    position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;width:100%;
-    background:#0c0c0c;border:1px solid #ffffff12;border-radius:12px;padding:10px 4px 12px;box-sizing:border-box
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;width:100%;
+    background:none;border:0;border-radius:0;padding:0 0 4px;box-sizing:border-box
   }
-  .selection-info dl>div{flex:none;min-width:0;padding:0 4px}
+  .selection-info dl>div{flex:none;min-width:0;padding:0 6px}
   .selection-info dt{font-size:0;line-height:1;margin:0 0 6px;text-shadow:none}
   .selection-info dt::after{content:attr(data-short);font-size:11px;color:var(--muted);letter-spacing:-.02em;white-space:nowrap}
-  .selection-info dd{font-size:17px;letter-spacing:-.03em;text-shadow:none}
-  .selection-info dd small{font-size:11px}
-  .stage.expanded .donut{max-width:186px}
-  .center span{font-size:11px}
-  .stage.expanded .dial{margin-top:6px;width:100%}
+  .selection-info dd{font-size:18px;letter-spacing:-.03em;text-shadow:none}
+  .selection-info dd small{font-size:12px}
+  .stage.expanded .dial-section{margin-top:8px}
+  .stage.expanded .dial{margin-top:0;width:100%}
   .is-phone .dial-inner-title{display:none}
   .is-phone .ticklabel{font-size:9px}
-  .foot{font-size:11px;line-height:1.55;margin-top:16px}
+  .foot{font-size:11px;line-height:1.55;margin-top:20px}
 }
 h1{font-family:"Batang","BatangChe","AppleMyungjo",serif;font-weight:600}.donut .center span,.dial-inner-title,.dial-inner-title tspan{font-weight:700!important}@keyframes chartHintGlow{0%,100%{text-shadow:0 0 0 transparent}50%{color:#e0f2ff;text-shadow:0 0 7px #8fc9f099}}@media(prefers-reduced-motion:no-preference){.chart-hint{animation:chartHintGlow 1.4s ease-in-out infinite}}</style><style>.category-definition{white-space:pre-line;line-height:1.75;margin:0 0 18px;text-align:center}</style><main><header><h1>불법 범죄 광고는 상상 이상으로 많았다.</h1><p class="chart-hint">원 조각을 눌러 게시글 비중과 평균 조회수를 확인보세요.</p></header><div class="stage" id="chart-stage"><svg aria-hidden="true" class="mobile-connector" hidden><line id="chart-link"></line><line id="chart-link-gap"></line><circle id="chart-link-dot" r="3.5"></circle></svg><section class="dial-section"><div class="dial"><svg aria-label="반원형 평균 조회수 막대그래프" viewbox="0 0 560 520"><g id="grid"></g><text class="dial-inner-title" text-anchor="middle" x="220" y="254"><tspan x="220">게시글 당</tspan><tspan dy="21" x="220">평균 조회수</tspan></text><line aria-hidden="true" id="dial-pointer" pointer-events="none" stroke="#fff" stroke-width="1" x1="320" x2="470" y1="260" y2="260"></line><g id="rays"></g><path aria-hidden="true" d="M470 260 L480 255 L480 265 Z" fill="var(--fg)" id="dial-arrow"></path></svg></div></section><section aria-live="polite" class="selection-info"><h2 id="view-name"></h2><p aria-live="polite" class="category-definition" id="category-definition"></p><dl><div><dt data-short="건수">게시글 수</dt><dd id="detail-count"></dd></div><div><dt data-short="비중">게시글 비중</dt><dd id="detail-share"></dd></div><div><dt data-short="평균 조회">게시글 당 평균 조회수</dt><dd><span id="view-value"></span><small> 회</small></dd></div></dl></section><section class="donut-section"><div class="donut"><svg aria-label="게시글 수 비중" viewbox="0 0 400 400"><g id="segments"></g></svg><div aria-live="polite" class="center"><span>게시글 수와 비중</span></div></div></section></div><p class="foot">합계 <em class="key-color" style="color:#ff735f!important;font-style:normal;font-weight:750">1,261,327건</em> · 게시글당 한 유형으로 집계<br/>가운데 수치는 실제 평균 조회수이며, 구매자 수나 거래량을 뜻하지 않습니다.</p></main><script>
 const data=[{"label": "유흥", "count": 701224, "color": "#89b9d5", "views": 1.2}, {"label": "금융", "count": 202397, "color": "#d6b778", "views": 2.9}, {"label": "찌라시", "count": 121925, "color": "#b0a2cb", "views": 5.5}, {"label": "도박", "count": 112091, "color": "#8eada0", "views": 3.1}, {"label": "마약", "count": 44800, "color": "#ff786b", "views": 5.1}, {"label": "취업사기", "count": 18553, "color": "#cc9e79", "views": 1.8}, {"label": "임신중절", "count": 13790, "color": "#a9cbe0", "views": 83.6}, {"label": "약물", "count": 12682, "color": "#bca061", "views": 30.6}, {"label": "디비", "count": 9646, "color": "#9685b6", "views": 1.4}, {"label": "문서위조", "count": 9020, "color": "#6b9687", "views": 11.0}, {"label": "불법 공유", "count": 7328, "color": "#b98768", "views": 19.6}, {"label": "성인 사이트", "count": 3687, "color": "#d5c8e7", "views": 11.2}, {"label": "핸드폰해킹", "count": 3585, "color": "#b4c7a2", "views": 18.4}, {"label": "짝퉁", "count": 328, "color": "#c0a68f", "views": 48.2}, {"label": "중범죄", "count": 229, "color": "#96a6bd", "views": 13.6}, {"label": "안락사", "count": 42, "color": "#dcc497", "views": 2.3}],definitions={"유흥": "성인 노래방·성인 업소 등\n유흥업소 광고", "금융": "불법 대출·작업 대출 등\n불법 사금융 광고", "찌라시": "관리 소홀한 사이트의 빈틈을 노린\n불법 광고 대행", "도박": "바카라·바다이야기·슬롯 등\n온라인 불법 도박", "마약": "필로폰·대마초 등 마약류 거래 광고", "취업사기": "해외 고수익 알바·보이스피싱 등\n불법 업무로 유인하는 구인 광고", "임신중절": "미프진 등 임신중절 약물 판매 광고", "약물": "불법 스테로이드·허위 암 치료제 등\n진단서 없이 거래되는 약물 광고", "디비": "Database의 줄임말로 이름·전화번호 등 개인정보 판매 광고", "문서위조": "주민등록증·졸업증명서·자격증\n위조 대행 광고", "불법 공유": "웹툰·만화·드라마·영화\n불법 공유 콘텐츠 광고", "성인 사이트": "성인 만화·성인 동영상 사이트 홍보", "핸드폰해킹": "특정인의 휴대전화\n해킹·복제·위치 추적", "짝퉁": "해외 반입 모조품·이미테이션 제품 판매 광고", "중범죄": "복수 대행·청부·밀항 등 중대 범죄를 내세운 광고", "안락사": "안락사를 종용하거나 약물 판매를 내세운 광고"},total=data.reduce((s,d)=>s+d.count,0),ns='http://www.w3.org/2000/svg';const paths=[],buttons=[],rays=[],angles=[];let chosen=4,raf=0,donutRotation=0;
