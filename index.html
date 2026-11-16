@@ -988,7 +988,7 @@ body .end-statement a,body footer.article-credits{border-color:#cac8c3!important
   .data-story>.data-steps>.data-step h3{margin-top:0}
 }
 </style><style id="requested-final-adjustments">
-/* Scale layout and scroll dimensions together. */
+/* 90% like browser zoom. JS reads the real visual scale; Safari's computed zoom is "normal". */
 html { zoom: 0.9; }
 .slang-post-evidence { width: 100%; margin: 0 0 40px; padding: 0; }
 .slang-post-evidence img { display: block; width: 100%; height: auto; }
@@ -1288,9 +1288,21 @@ iframe{max-width:100%;display:block}img,video{max-width:100%}
 </footer>
 </blockquote><a class="text-illumination" href="#top" style="animation-duration:1.4s">처음부터 다시 읽기 ↑</a></section>
 </div></main><footer class="article-credits"><strong>📌 핀사이트</strong><p>기획·제작: 구예승, 유영훈, 이선호, 전보영</p></footer><dialog id="lightbox"><button id="close">닫기 ×</button><img alt="시각화 확대"/></dialog><script>document.documentElement.classList.add('js');
-const pageScale=()=>parseFloat(getComputedStyle(document.documentElement).zoom)||1; const stickyScreenTop=el=>(parseFloat(getComputedStyle(el).top)||0)*pageScale(); const stories=[...document.querySelectorAll('[data-story]')];
+let pageScaleValue=0.9;
+function refreshPageScale(){
+  const probe=document.createElement('div');
+  probe.style.cssText='position:fixed;left:0;top:0;width:100px;height:0;visibility:hidden;pointer-events:none;margin:0;padding:0;border:0';
+  document.documentElement.appendChild(probe);
+  const visual=probe.getBoundingClientRect().width/100;
+  probe.remove();
+  pageScaleValue=visual>0.2&&visual<2?visual:1;
+}
+refreshPageScale();
+const pageScale=()=>pageScaleValue;
+const stickyScreenTop=el=>(parseFloat(getComputedStyle(el).top)||0)*pageScale();
+const stories=[...document.querySelectorAll('[data-story]')];
 function update(){const h=document.documentElement.scrollHeight-innerHeight;document.querySelector('#read-progress').style.width=(h?scrollY/h*100:0)+'%';stories.forEach(s=>{const r=s.getBoundingClientRect(),stage=s.querySelector(".story-sticky"),top=stickyScreenTop(stage),range=Math.max(1,r.height-stage.getBoundingClientRect().height-(parseFloat(s.style.getPropertyValue("--photo-hold"))||0)*pageScale());if(r.top<innerHeight&&r.bottom>0){s.querySelector('iframe').contentWindow.postMessage({type:'story-progress',progress:Math.max(0,Math.min(1,(top-r.top)/range))},'*')}})}
-let pending=false;addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(()=>{update();pending=false})}},{passive:true});addEventListener('resize',update);if(window.visualViewport)visualViewport.addEventListener('resize',update,{passive:true});stories.forEach(s=>s.querySelector('iframe').addEventListener('load',update));
+let pending=false;addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(()=>{update();pending=false})}},{passive:true});addEventListener('resize',()=>{refreshPageScale();update()});if(window.visualViewport)visualViewport.addEventListener('resize',()=>{refreshPageScale();update()},{passive:true});stories.forEach(s=>s.querySelector('iframe').addEventListener('load',update));
 addEventListener('message',e=>{if(e.data?.type==='story-wheel'&&stories.some(s=>s.querySelector('iframe').contentWindow===e.source)){window.scrollBy({top:Number(e.data.delta)||0,behavior:'instant'})}});
 document.querySelectorAll('.chips button').forEach(b=>{b.setAttribute('aria-pressed','false');b.onclick=()=>{const f=b.closest('figure');f.querySelectorAll('.chips button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));f.querySelector('.insight').textContent=b.dataset.note;const m=f.querySelector('.marker');m.hidden=false;m.style.left=b.dataset.x+'%';m.style.top=b.dataset.y+'%'}});
 
@@ -1313,7 +1325,7 @@ if(matchMedia('(min-width:761px)').matches){
   story.style.setProperty('--monitor-offset',((monitor.getBoundingClientRect().top-stage.top)/pageScale())+'px');
 }
 for(const step of dataSteps)step.toggleAttribute('data-current',step===active);document.querySelector('#scene-number').textContent=active.dataset.number;document.querySelector('#scene-unit').textContent=active.dataset.unit;dataStage.dataset.mode=active.dataset.mode;document.querySelector('#scene-explainer').textContent=active.dataset.mode==='all'?'각 표시는 마약 글이 발견된 사이트 한 곳입니다.':active.dataset.mode==='top'?'반복 게시를 포함한 마약 관련 게시글의 85.8%가 강조된 세 곳에 몰렸습니다.':'6월 25일 전체 10,109건 중 두 사이트에서 10,030건.';}
-let scenePending=false;addEventListener('scroll',()=>{if(scenePending)return;scenePending=true;requestAnimationFrame(()=>{updateDataScene();scenePending=false})},{passive:true});addEventListener('resize',updateDataScene);updateDataScene();
+let scenePending=false;addEventListener('scroll',()=>{if(scenePending)return;scenePending=true;requestAnimationFrame(()=>{updateDataScene();scenePending=false})},{passive:true});addEventListener('resize',()=>{refreshPageScale();updateDataScene()});updateDataScene();
 document.querySelectorAll('[data-explain]').forEach(b=>{b.setAttribute('aria-pressed','false');b.onclick=()=>{document.querySelectorAll('[data-explain]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelector('.word-answer').textContent=b.dataset.explain}});
 // Combined slang selection highlights both original words in the supplied image.
 document.querySelectorAll('.chips button').forEach(button=>button.addEventListener('click',()=>{
@@ -1450,6 +1462,7 @@ document.querySelectorAll('.editorial-cloud').forEach(figure=>{
   const stage = wrap.querySelector('#reveal-intro');
   let revealDistance = 1;
   function measurePinnedScene() {
+    refreshPageScale();
     const scale = pageScale();
     const nav = document.querySelector('nav');
     const inset = nav ? nav.getBoundingClientRect().height : 0;
