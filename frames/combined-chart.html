@@ -100,12 +100,20 @@ const isMobile=()=>matchMedia('(max-width:720px)').matches;
 function drawGrid(){
   const grid=document.querySelector('#grid');
   grid.replaceChildren();
+  const phone=isMobile();
   for(const v of [0,1,5,20,50,100]){
     const r=100+130*Math.sqrt(v/100);
-    const a=xy(220,260,r,90),b=xy(220,260,r,270);
-    node('path',{d:`M${a} A${r},${r} 0 0 0 ${b}`,class:'gridarc'},grid);
-    const t=node('text',{x:205,y:260-r+4,class:'ticklabel'},grid);
-    t.textContent=v+'회';
+    if(phone){
+      const left=xy(220,260,r,180),right=xy(220,260,r,0);
+      node('path',{d:`M${left} A${r},${r} 0 0 1 ${right}`,class:'gridarc'},grid);
+      const t=node('text',{x:-20,y:260-r+4,class:'ticklabel','text-anchor':'start'},grid);
+      t.textContent=v+'회';
+    }else{
+      const a=xy(220,260,r,90),b=xy(220,260,r,270);
+      node('path',{d:`M${a} A${r},${r} 0 0 0 ${b}`,class:'gridarc'},grid);
+      const t=node('text',{x:205,y:260-r+4,class:'ticklabel'},grid);
+      t.textContent=v+'회';
+    }
   }
 }
 function layoutDialChrome(){
@@ -114,12 +122,21 @@ function layoutDialChrome(){
   const tspans=title.querySelectorAll('tspan');
   const line=document.getElementById('dial-pointer');
   const arrow=document.getElementById('dial-arrow');
-  document.querySelector('#chart-stage').classList.toggle('is-phone',isMobile());
-  svg.setAttribute('viewBox','0 0 560 520');
-  title.setAttribute('x','220');title.setAttribute('y','254');
-  tspans.forEach(t=>t.setAttribute('x','220'));
-  line.setAttribute('x1','320');line.setAttribute('x2','470');line.setAttribute('y1','260');line.setAttribute('y2','260');line.setAttribute('opacity','1');
-  arrow.setAttribute('d','M470 260 L480 255 L480 265 Z');arrow.setAttribute('opacity','1');
+  const phone=isMobile();
+  document.querySelector('#chart-stage').classList.toggle('is-phone',phone);
+  if(phone){
+    svg.setAttribute('viewBox','-48 4 516 292');
+    title.setAttribute('x','220');title.setAttribute('y','278');
+    tspans.forEach(t=>t.setAttribute('x','220'));
+    line.setAttribute('x1','220');line.setAttribute('x2','220');line.setAttribute('y1','160');line.setAttribute('y2','28');line.setAttribute('opacity','1');
+    arrow.setAttribute('d','M220 18 L214 30 L226 30 Z');arrow.setAttribute('opacity','1');
+  }else{
+    svg.setAttribute('viewBox','0 0 560 520');
+    title.setAttribute('x','220');title.setAttribute('y','254');
+    tspans.forEach(t=>t.setAttribute('x','220'));
+    line.setAttribute('x1','320');line.setAttribute('x2','470');line.setAttribute('y1','260');line.setAttribute('y2','260');line.setAttribute('opacity','1');
+    arrow.setAttribute('d','M470 260 L480 255 L480 265 Z');arrow.setAttribute('opacity','1');
+  }
 }
 function svgToStage(svgEl,x,y,stageRect){
   const box=svgEl.getBoundingClientRect();
@@ -172,7 +189,7 @@ function layoutConnector(){
   dot.setAttribute('cy',endY.toFixed(1));
   dot.setAttribute('fill',color);
 }
-function target(i,sel){let diff=(i-sel+16)%16;if(diff>7)diff-=16;return diff*10.5}
+function target(i,sel){let diff=(i-sel+16)%16;if(diff>7)diff-=16;return (isMobile()?270:0)+diff*10.5}
 drawGrid();layoutDialChrome();
 function render(){rays.forEach((g,i)=>{const a=angles[i],base=xy(220,260,100,a),end=xy(220,260,100+130*Math.sqrt(data[i].views/100),a),outer=xy(220,260,242,a),hit=xy(220,260,232,a);for(const [sel,b]of [['.stem',end],['.hit',hit]]){const e=g.querySelector(sel);e.setAttribute('x1',base[0]);e.setAttribute('y1',base[1]);e.setAttribute('x2',b[0]);e.setAttribute('y2',b[1])}const dot=g.querySelector('.dot');dot.setAttribute('cx',end[0]);dot.setAttribute('cy',end[1]);const label=g.querySelector('text');label.setAttribute('x',outer[0]);label.setAttribute('y',outer[1]+4);label.setAttribute('text-anchor','start');label.style.fill=i===chosen?data[i].color:'';g.style.opacity=i===chosen?'1':'.65';})}
 function select(i,instant=false){chosen=i;
