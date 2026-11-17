@@ -23,7 +23,18 @@
 @media(max-height:550px){.topbar{height:40px}.scene{inset:40px 4vw 8px;height:auto;min-height:0}.dialogue{bottom:8px;min-height:135px;padding:12px 24px 8px}.dialogue #line{font-size:16px;line-height:1.6;min-height:0;margin:8px 0}.speaker{font-size:12px}.controls button{padding:3px}}
 
 </style>
-<style id="story-surroundings">html,body,.stage,.topbar{background:var(--scene-bg,#f5e4c5)!important}.topbar{color:var(--scene-ink,#382c22)}.art{background:var(--scene-bg,#f5e4c5)!important}</style><style>html{-webkit-text-size-adjust:100%;overscroll-behavior:none} @media(pointer:coarse){button{min-height:44px;touch-action:manipulation}} @media(max-height:480px){.dialogue{padding:8px 14px!important;min-height:0!important}.dialogue #line{font-size:14px!important;line-height:1.45!important;margin:5px 0!important}.topbar{height:36px!important}.scene{top:36px!important}}</style></head>
+<style id="story-surroundings">html,body,.stage,.topbar{background:var(--scene-bg,#f5e4c5)!important}.topbar{color:var(--scene-ink,#382c22)}.art{background:var(--scene-bg,#f5e4c5)!important}</style><style>html{-webkit-text-size-adjust:100%;overscroll-behavior:none} @media(pointer:coarse){button{min-height:44px;touch-action:manipulation}} @media(max-height:480px){.dialogue{padding:8px 14px!important;min-height:0!important}.dialogue #line{font-size:14px!important;line-height:1.45!important;margin:5px 0!important}.topbar{height:36px!important}.scene{top:36px!important}}
+/* Mobile-only image framing: preserve the complete landscape artwork. */
+@media (max-width:650px) and (orientation:portrait) {
+  .scene .picture { width:100%; height:100%; overflow:hidden; }
+  .scene .picture .art {
+    object-fit:contain;
+    object-position:center 35%;
+    transform:none;
+  }
+  .scene.detail .picture .art.active { transform:none; }
+}
+</style></head>
 <body>
 <main aria-label="가벼운 한 끼, 스크롤로 읽는 이야기" id="reader">
 <div class="stage">
