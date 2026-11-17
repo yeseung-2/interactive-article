@@ -1028,6 +1028,49 @@ iframe{max-width:100%;display:block}img,video{max-width:100%}
 }
 @media(max-width:380px){.hero h1{overflow-wrap:anywhere}.brand span{display:none}.hero-index{flex-wrap:wrap}.contact-feature{padding-inline:16px}.ring b{font-size:52px}}
 @media(pointer:coarse){button,a{-webkit-tap-highlight-color:transparent}}
+</style>
+<style id="mobile-scroll-pace">
+/* Phone swipes cover the same vh tracks in fewer pixels, so scenes were finishing early. */
+@media (max-width: 760px) {
+  .embedded-story[data-story="intro"] { height: 650vh !important; }
+  .embedded-story[data-story="telegram"] { height: calc(650vh + var(--photo-hold)) !important; }
+  .overseas-scroll { height: 460vh; }
+  .data-step { min-height: 84vh; }
+}
+</style>
+<style id="pc-scroll-cue">
+@media (min-width: 761px) {
+  .cover-blend > #reveal-intro {
+    --fade-top: clamp(76px, 14svh, 150px);
+    --fade-bottom: 48px;
+    mask-image: linear-gradient(to bottom, transparent, #000 var(--fade-top), #000 calc(100% - var(--fade-bottom)), transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 var(--fade-top), #000 calc(100% - var(--fade-bottom)), transparent);
+  }
+  .reveal-hero .start {
+    color: #fff;
+    width: fit-content;
+    padding: 7px 12px 9px;
+    background: rgba(6, 10, 16, .62);
+    border-bottom-color: #fff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, .55), 0 1px 2px #000;
+    animation: scroll-cue-pc 1.15s ease-in-out infinite;
+  }
+  .reveal-hero .start span {
+    color: #ffd2c8;
+    display: inline-block;
+    text-shadow: 0 0 12px rgba(255, 140, 120, .65);
+    animation: scroll-cue-arrow 1.15s ease-in-out infinite;
+  }
+}
+@keyframes scroll-cue-pc {
+  0%, 62% { opacity: 1; }
+  76%, 84% { opacity: .55; }
+  100% { opacity: 1; }
+}
+@keyframes scroll-cue-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
 </style></head><body><div class="chem-traces" aria-hidden="true"><div class="chem-strip"><img style="left:-2vw;top:6vh;width:clamp(75px,12vw,250px);transform:rotate(-21deg);opacity:.22" alt="" src="./assets/media/2105991d8becab55.png"><img style="right:-3vw;top:1vh;width:clamp(75px,14vw,250px);transform:rotate(33deg);opacity:.16" alt="" src="./assets/media/ff67163b4a1fd3d7.png"><img style="left:5vw;top:37vh;width:clamp(75px,8vw,250px);transform:rotate(57deg);opacity:.15" alt="" src="./assets/media/bbb4cd584b8e26b5.png"><img style="right:3vw;top:29vh;width:clamp(75px,9vw,250px);transform:rotate(-32deg);opacity:.23" alt="" src="./assets/media/7f3d8304551b4cce.png"><img style="left:-4vw;top:65vh;width:clamp(75px,15vw,250px);transform:rotate(-48deg);opacity:.21" alt="" src="./assets/media/ff67163b4a1fd3d7.png"><img style="right:-2vw;top:71vh;width:clamp(75px,13vw,250px);transform:rotate(14deg);opacity:.20" alt="" src="./assets/media/2105991d8becab55.png"><img style="left:6vw;top:93vh;width:clamp(75px,8vw,250px);transform:rotate(36deg);opacity:.16" alt="" src="./assets/media/7f3d8304551b4cce.png"><img style="right:4vw;top:106vh;width:clamp(75px,10vw,250px);transform:rotate(-53deg);opacity:.20" alt="" src="./assets/media/bbb4cd584b8e26b5.png"><img style="left:-3vw;top:128vh;width:clamp(75px,15vw,250px);transform:rotate(25deg);opacity:.20" alt="" src="./assets/media/2105991d8becab55.png"><img style="right:-5vw;top:145vh;width:clamp(75px,16vw,250px);transform:rotate(62deg);opacity:.18" alt="" src="./assets/media/ff67163b4a1fd3d7.png"><img style="left:4vw;top:161vh;width:clamp(75px,9vw,250px);transform:rotate(-18deg);opacity:.19" alt="" src="./assets/media/bbb4cd584b8e26b5.png"><img style="right:5vw;top:182vh;width:clamp(75px,8vw,250px);transform:rotate(39deg);opacity:.21" alt="" src="./assets/media/7f3d8304551b4cce.png"></div><div class="chem-strip"><img style="left:-2vw;top:6vh;width:clamp(75px,12vw,250px);transform:rotate(-21deg);opacity:.22" alt="" src="./assets/media/2105991d8becab55.png"><img style="right:-3vw;top:1vh;width:clamp(75px,14vw,250px);transform:rotate(33deg);opacity:.16" alt="" src="./assets/media/ff67163b4a1fd3d7.png"><img style="left:5vw;top:37vh;width:clamp(75px,8vw,250px);transform:rotate(57deg);opacity:.15" alt="" src="./assets/media/bbb4cd584b8e26b5.png"><img style="right:3vw;top:29vh;width:clamp(75px,9vw,250px);transform:rotate(-32deg);opacity:.23" alt="" src="./assets/media/7f3d8304551b4cce.png"><img style="left:-4vw;top:65vh;width:clamp(75px,15vw,250px);transform:rotate(-48deg);opacity:.21" alt="" src="./assets/media/ff67163b4a1fd3d7.png"><img style="right:-2vw;top:71vh;width:clamp(75px,13vw,250px);transform:rotate(14deg);opacity:.20" alt="" src="./assets/media/2105991d8becab55.png"><img style="left:6vw;top:93vh;width:clamp(75px,8vw,250px);transform:rotate(36deg);opacity:.16" alt="" src="./assets/media/7f3d8304551b4cce.png"><img style="right:4vw;top:106vh;width:clamp(75px,10vw,250px);transform:rotate(-53deg);opacity:.20" alt="" src="./assets/media/bbb4cd584b8e26b5.png"><img style="left:-3vw;top:128vh;width:clamp(75px,15vw,250px);transform:rotate(25deg);opacity:.20" alt="" src="./assets/media/2105991d8becab55.png"><img style="right:-5vw;top:145vh;width:clamp(75px,16vw,250px);transform:rotate(62deg);opacity:.18" alt="" src="./assets/media/ff67163b4a1fd3d7.png"><img style="left:4vw;top:161vh;width:clamp(75px,9vw,250px);transform:rotate(-18deg);opacity:.19" alt="" src="./assets/media/bbb4cd584b8e26b5.png"><img style="right:5vw;top:182vh;width:clamp(75px,8vw,250px);transform:rotate(39deg);opacity:.21" alt="" src="./assets/media/7f3d8304551b4cce.png"></div></div><div id="read-progress"></div><nav><button aria-controls="chapters" aria-expanded="false" id="menu">목차 ☰</button><div hidden="" id="chapters"><a href="#opening">쇼핑 후기 사이의 마약 광고</a><a href="#scale">방치 사이트 79곳의 불법 광고</a><a href="#language">마약 광고의 은어와 지역명</a><a href="#case">광고 속 연락처를 따라가다</a><a href="#route">쇼핑몰 주소 옆에, 왜 이 연락처가?</a><a href="#ending">광고의 유통 경로를 끊으려면</a></div></nav><main id="top"><div class="warm-opening"><div class="opening-note" id="opening"><h2>시작은, 한 끼를 고르는 일이었다.</h2><p>지민은 가상의 인물이며, 쇼핑 장면은 취재 내용을 바탕으로 구성했습니다.</p></div></div><section class="embedded-story" data-story="intro" style="height:450vh"><div class="story-sticky"><iframe loading="eager" scrolling="no" src="frames/intro.html" title="재구성 · 가벼운 한 끼"></iframe></div></section>
 <div class="cover-blend"><section class="hero reveal-hero" id="reveal-intro"><div class="eyebrow hero-kicker-space">온라인 공간 속 범죄 통로 추적 기획</div><h2 class="hero-title paired-title"><span>화면 너머</span><em>마약</em><span class="title-closing">생각보다 가까이 있다.</span></h2><p>방치되고 관리되지 않는 온라인 공간의 속<br/>그 너머에 누군가 있었다.</p><a class="start" href="#scale">스크롤하며 따라가기 <span>↓</span></a><div aria-hidden="true" class="ghost"><span>구매 후기</span><span>배송 빨라요</span><span class="red">낯선 제목</span><span>연락처 →</span></div></section></div><div class="black-article"><header class="chapter" id="scale" style="border-top:0"><h2>후기 사이의 광고는 한 건이 아니었다.</h2></header>
 <div class="prose article-copy"><p>최근 급증하는 청소년 마약 문제부터 사적 보복 대행에 이르기까지, 심각한 강력 범죄들이 평범한 웹사이트를 통해 버젓이 홍보되고 있다. 누구나 쉽게 접근할 수 있는 일상적인 온라인 공간이 범죄의 주요 모집책이자 창구로 전락한 것이다.</p><p>서울시 자치경찰위원회에 따르면, 학교전담경찰관(SPO)이 작년 1월부터 11월까지 적발된 청소년 마약류 사범 81명의 수사 기록을 분석한 결과 청소년 마약류 사범 <em class="key-color">82.7%(67명)</em>가 텔레그램 등 SNS를 통해 마약류를 접한 것으로 나타났다.</p><p>SNS 외 유입 경로로는 친구나 또래 집단을 통한 경우가 4명(4.9%)이며, 뒤이어 동네 선배 2명(2.5%), 성인과의 만남(조건만남 등)을 통한 유입 2명(2.5%) 순으로 나타났다. 유입 경로를 특정하기 어려운 사례도 6명(7.4%)에 달했다.</p><figure id="youth-contact-chart" style="margin:2.5rem auto;width:100%"><img width="820" height="460" style="display:block;width:100%;height:auto" alt="청소년 마약 사범의 마약 접촉점. 81명 중 67명(82.7%)이 텔레그램 등 SNS를 통해 접했다." src="./assets/media/904049af49681d8a.svg"></figure><p>다이어트 식품 사이트 속에서 마약 광고를 찾은 지민 씨는 가상의 상황이지만 취재팀이 직접 확인한 온라인 공간 속에는 수백만 건의 불법 범죄 광고가 판치고 있었다. 범죄 홍보 집단은 대체로 관리가 잘 이뤄지지 않고 로그인이나 가입 없이 자유롭게 게시글을 올릴 수 있는 온라인 공간에서 활동 중이었다.</p><p>취재팀은 지난 6월 한 달간 관리가 소홀한 온라인 공간의 <em class="key-color">79개</em> 사이트에서 게시글 <em class="key-color">136만 5,678</em>건을 수집했다. 전처리를 거쳐 이 가운데 <em class="key-color">126만 1,327건</em>을 16개 유형으로 분류했다.</p></div>
@@ -1455,8 +1498,9 @@ document.querySelectorAll('.editorial-cloud').forEach(figure=>{
     const nav = document.querySelector('nav');
     const inset = nav ? nav.getBoundingClientRect().height : 0;
     const screenHeight = Math.max(1, innerHeight - inset);
-    revealDistance = Math.max(600, screenHeight * 1.2);
-    const hold = Math.max(160, screenHeight * .25);
+    const phone = matchMedia('(max-width: 760px)').matches;
+    revealDistance = Math.max(phone ? 980 : 600, screenHeight * (phone ? 1.75 : 1.2));
+    const hold = Math.max(phone ? 260 : 160, screenHeight * (phone ? .42 : .25));
     wrap.style.setProperty('--pin-top', (inset / scale) + 'px');
     wrap.style.setProperty('--pin-height', (screenHeight / scale) + 'px');
     wrap.style.height = ((screenHeight + revealDistance + hold) / scale) + 'px';
