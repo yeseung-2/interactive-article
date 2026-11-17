@@ -197,19 +197,16 @@ const mid=Number(paths[i].dataset.mid);
 const face=isMobile()?90:180;
 const turn=((face-mid-donutRotation)%360+540)%360-180;
 donutRotation+=turn;
-// Keep rotation bounded, so repeated selections never accumulate huge angles.
-const segmentsEl=document.querySelector('#segments');
-const currentRotation=donutRotation-turn;
-if(Math.abs(currentRotation)>360){
-  const normalized=((currentRotation%360)+360)%360;
-  segmentsEl.style.transition='none';
-  segmentsEl.style.transform=`rotate(${normalized}deg)`;
-  // Force the browser to commit the reset before restoring the transition.
-  segmentsEl.getBoundingClientRect();
-  segmentsEl.style.transition='';
-  donutRotation=normalized+turn;
+// Keep the SVG rotation bounded to prevent accumulated turns and browser-specific interpolation.
+if(Math.abs(donutRotation)>360){
+  const segments=document.querySelector('#segments');
+  segments.style.transition='none';
+  donutRotation=((donutRotation+180)%360+360)%360-180;
+  segments.style.transform='rotate('+ (donutRotation-turn) +'deg)';
+  void segments.getBoundingClientRect();
+  segments.style.removeProperty('transition');
 }
-segmentsEl.style.transform=`rotate(${donutRotation}deg)`;const d=data[i];document.documentElement.style.setProperty('--selected',d.color);document.querySelector('#detail-count').textContent=d.count.toLocaleString('ko-KR')+'건';const pct=d.count/total*100;document.querySelector('#detail-share').textContent=pct<.01?'0.01% 미만':pct.toFixed(2)+'%';document.querySelector('#chart-stage').classList.add('expanded');document.querySelector('#view-name').textContent=d.label;document.querySelector('#category-definition').textContent=definitions[d.label]||'';document.querySelector('#view-value').textContent=d.views.toFixed(1);paths.forEach((p,j)=>p.setAttribute('aria-pressed',i===j));buttons.forEach((p,j)=>p.setAttribute('aria-pressed',i===j));rays.forEach((g,j)=>{g.classList.toggle('selected',i===j);g.setAttribute('aria-pressed',i===j)});cancelAnimationFrame(raf);const from=angles.slice(),to=data.map((_,j)=>target(j,i));const duration=instant||matchMedia('(prefers-reduced-motion:reduce)').matches?0:750,start=performance.now();function frame(now){const t=duration?Math.min(1,(now-start)/duration):1,e=1-Math.pow(1-t,3);angles.forEach((_,j)=>angles[j]=from[j]+(to[j]-from[j])*e);render();layoutConnector();if(t<1)raf=requestAnimationFrame(frame)}raf=requestAnimationFrame(frame);document.querySelector('.dial').classList.add('open');requestAnimationFrame(layoutConnector)}
+document.querySelector('#segments').style.transform='rotate('+donutRotation+'deg)';const d=data[i];document.documentElement.style.setProperty('--selected',d.color);document.querySelector('#detail-count').textContent=d.count.toLocaleString('ko-KR')+'건';const pct=d.count/total*100;document.querySelector('#detail-share').textContent=pct<.01?'0.01% 미만':pct.toFixed(2)+'%';document.querySelector('#chart-stage').classList.add('expanded');document.querySelector('#view-name').textContent=d.label;document.querySelector('#category-definition').textContent=definitions[d.label]||'';document.querySelector('#view-value').textContent=d.views.toFixed(1);paths.forEach((p,j)=>p.setAttribute('aria-pressed',i===j));buttons.forEach((p,j)=>p.setAttribute('aria-pressed',i===j));rays.forEach((g,j)=>{g.classList.toggle('selected',i===j);g.setAttribute('aria-pressed',i===j)});cancelAnimationFrame(raf);const from=angles.slice(),to=data.map((_,j)=>target(j,i));const duration=instant||matchMedia('(prefers-reduced-motion:reduce)').matches?0:750,start=performance.now();function frame(now){const t=duration?Math.min(1,(now-start)/duration):1,e=1-Math.pow(1-t,3);angles.forEach((_,j)=>angles[j]=from[j]+(to[j]-from[j])*e);render();layoutConnector();if(t<1)raf=requestAnimationFrame(frame)}raf=requestAnimationFrame(frame);document.querySelector('.dial').classList.add('open');requestAnimationFrame(layoutConnector)}
 let a=-90;data.forEach((d,i)=>{const end=a+d.count/total*360,mid=(a+end)/2,A=xy(200,200,176,a),B=xy(200,200,176,end),C=xy(200,200,124,end),D=xy(200,200,124,a),large=end-a>180?1:0;const p=node('path',{d:`M${A} A176,176 0 ${large} 1 ${B} L${C} A124,124 0 ${large} 0 ${D} Z`,fill:d.color,class:'segment',role:'button',tabindex:0,'aria-label':d.label},document.querySelector('#segments'));p.style.setProperty('--dx',Math.cos(mid*Math.PI/180)*7+'px');p.style.setProperty('--dy',Math.sin(mid*Math.PI/180)*7+'px');p.onclick=()=>select(i);p.onkeydown=e=>{if(['Enter',' '].includes(e.key)){e.preventDefault();select(i)}};p.dataset.mid=mid;paths.push(p);a=end;const g=node('g',{class:'ray',role:'button',tabindex:0,'aria-label':d.label+' 平均'.replace('平均','평균')+' '+d.views+'회'},document.querySelector('#rays'));node('line',{class:'hit'},g);node('line',{class:'stem',stroke:d.color},g);node('circle',{class:'dot',fill:d.color},g);node('text',{class:'dial-label'},g).textContent=d.label;g.onclick=()=>select(i);g.onkeydown=e=>{if(['Enter',' '].includes(e.key)){e.preventDefault();select(i)}};rays.push(g);angles.push(target(i,4))});render();paths.forEach(p=>p.setAttribute('aria-pressed','false'));buttons.forEach(p=>p.setAttribute('aria-pressed','false'));
 let phoneLayout=isMobile();
 matchMedia('(max-width:720px)').addEventListener('change',()=>{
@@ -222,6 +219,6 @@ matchMedia('(max-width:720px)').addEventListener('change',()=>{
   else layoutConnector();
 });
 addEventListener('resize',()=>requestAnimationFrame(layoutConnector));
-document.querySelector('#segments').addEventListener('transitionend',e=>{if(e.target===e.currentTarget)layoutConnector()});
+document.querySelector('#segments').addEventListener('transitionend',layoutConnector);
 new ResizeObserver(()=>layoutConnector()).observe(document.querySelector('#chart-stage'));
 </script><script>(()=>{function resize(){parent.postMessage({type:'combined-chart-height',height:Math.ceil(document.querySelector('main').getBoundingClientRect().height)},'*')}new ResizeObserver(resize).observe(document.querySelector('main'));addEventListener('load',resize);resize()})();</script></html><style>html{-webkit-text-size-adjust:100%;overflow-x:hidden} body{max-width:100%;margin-inline:auto;overflow-x:hidden} main,.stage{min-width:0;max-width:100%} svg,img,canvas{max-width:100%} @media(max-width:720px){.dial{width:100%;margin-left:0} .dial svg{width:100%} } @media(max-width:600px){button{min-height:44px} input,select{font-size:16px}}</style>
